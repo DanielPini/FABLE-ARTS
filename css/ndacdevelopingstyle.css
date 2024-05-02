@@ -1,7 +1,8 @@
 /* ceramic stems image */
 #numberedCeramicTableContainer {
   position: relative;
-  width: 100%;
+  width: 75%;
+  margin: auto;
 }
 #numberedCeramicTable {
   width: 100%;
@@ -27,13 +28,14 @@
     url(../assets/images/mallet_1-resized.png), pointer;
   z-index: 1;
   transform: rotate(-10deg);
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 30px 40px rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px 15px rgba(255, 255, 255, 0.1);
   border-radius: 50% 50% 25% 25%;
+  transition: all .2s;
 }
 .object:hover {
-  background-color: rgba(0, 183, 255, 0.2);
-  box-shadow: 0 0 30px 40px rgba(0, 183, 255, 0.2);
+  background-color: rgba(0, 183, 255, 0.1);
+  box-shadow: 0 0 20px 30px rgba(0, 183, 255, 0.1);
 }
 #object1 {
   top: 10%;
@@ -111,7 +113,7 @@
 .mainGrid {
   padding-top: 50px;
   display: grid;
-  grid-template-columns: 1fr 2fr 600px 2fr 1fr;
+  grid-template-columns: 1fr 4fr 300px 4fr 1fr;
   max-width: 100%;
   overflow: hidden;
   grid-template-areas: 
@@ -129,6 +131,7 @@
 }
 .dti-section {
   padding: 20px 0px;
+  max-width: 720px;
 }
 
 /* images style */
@@ -137,8 +140,14 @@
   user-select: none;
 }
 
-.image1 {
+.image1{
   grid-area: image1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.image1 .descriptiveText {
+  width: 75%;
 }
 .image2 {
   grid-area: image2;
@@ -216,6 +225,7 @@
 }
 .descriptiveText h2 {
   font-size: 1em;
+  
 }
 .descriptiveText p {
   font-size: 2vw;
@@ -314,8 +324,11 @@
     flex-flow: column nowrap;
     width: 100%
   }
-  .descriptiveText p {
+  .descriptiveText p, .descriptiveText h2{
     font-size: 15px;
+  }
+  .image1 .descriptiveText {
+    width: 100%;
   }
   .dit-section, .descriptiveText, #numberedCeramicTableContainer, .object-wrapper {
     width: 100%;
@@ -323,5 +336,10 @@
   }
   #numberedCeramicTableContainer img {
     width: 100%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .descriptiveText p, .descriptiveText h2{
+    font-size: 20px;
   }
 }

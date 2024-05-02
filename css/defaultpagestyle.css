@@ -43,12 +43,15 @@ header a {
 }
 #faLogo {
   margin-left: 5%;
-  box-shadow: 10 10 10 white;
   border: 1px solid rgb(107, 107, 107);
   width: 80px;
   align-self: center;
   border-radius: 50%;
   overflow: hidden;
+  transition: all .3s;
+}
+#faLogo:hover {
+  box-shadow: 0 0 10px 1px white;
 }
 #spacer {
   flex-grow: 1;
@@ -137,7 +140,7 @@ main {
   margin: auto;
   min-width: 600px;
   max-width: 100%;
-  min-height: 70vh;
+  min-height: 60vh;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -165,6 +168,7 @@ h1 {
 /* buttons */
 .buttonSection {
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-flow: row wrap;
   height: fit-content;
@@ -206,11 +210,20 @@ footer {
   font-size: large;
   text-align: center;
 }
+#copyright span {
+  font-size: large;
+}
 .footer-right {
   justify-items: center;
 }
 
 @media only screen and (max-width: 600px) {
+  * {
+    font-size: 10px;
+  }
+  h1 {
+    font-size: 20px;
+  }
   #socialsContainer {
     display: none;
   }
@@ -220,5 +233,30 @@ footer {
   main {
     min-width: auto;
     width: 100%;
+  }
+
+  .page-heading {
+    font-size: 20px;
+  }
+  .page-subheading {
+    font-size: 15px;
+  }
+  .buttonSection a button{
+    font-size: large;
+  }
+  #copyright span {
+    font-size: large;
+  }
+}
+
+@media only screen and (min-width: 1000) {
+  * {
+    font-size: 30px;
+  }
+  .page-heading {
+    font-size: 40px;
+  }
+  .page-subheading {
+    font-size: 30px;
   }
 }
