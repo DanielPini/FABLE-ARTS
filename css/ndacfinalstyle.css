@@ -1,18 +1,17 @@
 #finalVideoPageMain {
   margin: 50px 0;
 }
-#finalVideoContainer {
-  width: 90%;
+#inner-container {
+  width: 80%;
   display: flex;
   flex-flow: column nowrap;
-  margin: 0 5%;
+  margin: 20px 10%;
   align-items: center;
 }
 .final-video-container {
   position: relative;
   width: 100%;
   padding-top: 65%;
-  border: 1px solid white;
   overflow: hidden;
 }
 .final-video-title {
@@ -29,4 +28,11 @@
   height: 100%;
   background: black;
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 700px) {
+  #inner-container {
+    width: 100vw;
+    margin: 20px 0;
+  }
 }
