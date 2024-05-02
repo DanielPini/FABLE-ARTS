@@ -1,0 +1,224 @@
+* {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue', 
+    sans-serif;
+  margin: 0px;
+  padding: 0px;
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: rgb(80, 0, 20);
+  color: white;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  background: linear-gradient(rgba(22, 22, 22, 1) 90%, rgba(143, 143, 143, 0.7));
+  box-shadow: 0px 0px 5px 5px rgba(100, 100, 100, 0.4);
+}
+header a {
+  min-width: 90px;
+  margin-left: 3%;
+}
+.title-text, .title-text:hover, .title-text:active {
+  color: white;
+  cursor: pointer;
+}
+#faLogo {
+  margin-left: 5%;
+  box-shadow: 10 10 10 white;
+  border: 1px solid rgb(107, 107, 107);
+  width: 80px;
+  align-self: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#spacer {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+/* Site Navigation */
+#navContainer {
+  display: flex;
+  flex-grow: 3;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+#navList {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  color: white;
+  list-style: none;
+}
+.navItem {
+  display: flex;
+  flex-grow: 3;
+  flex-shrink: 2;
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+}
+.navItem :link {
+  color: white;
+  text-decoration: none;
+}
+.navItem :visited {
+  color: white;
+}
+.navItem :hover {
+  cursor: pointer;
+  text-shadow: 0px 0px 20px white;
+}
+.navItem * :active {
+  box-shadow: 0 0 20 20 white;
+}
+.nav-inner-dropdown {
+  display: none;
+  padding-top: 15px;
+}
+.navItem:hover .nav-inner-dropdown {
+  display: block;
+  position: absolute;
+  float: left;
+  top: 50px;
+  text-shadow: none;
+  transform: translateX(-10px);
+}
+.navItem:hover a, .nav-inner-dropdown:hover li {
+  display: block;
+}
+
+/* Socials */
+#socialsContainer {
+  display: flex;
+  margin: 0px;
+  margin-right: 3%;
+  float: right;
+  width: fit-content;
+  overflow: hidden;
+  flex-flow: row nowrap;
+}
+#socialsContainer a {
+  max-width: 30%;
+  min-width: 30%;
+}
+
+#socialsContainer a img {
+  width: 100%;
+  height: 20px;
+  padding-right: 20px;
+  margin: 0;
+}
+
+/* Page Section */
+main {
+  font-size: 1em;
+  margin: auto;
+  min-width: 600px;
+  max-width: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+section {
+  margin: 10px;
+  margin: 20px 0px;
+}
+h1 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.page-heading {
+  font-size: 4vw;
+  padding: 10px 0;
+  overflow: hidden;
+}
+.page-subheading {
+  font-size: 2vw;
+  padding: 5px 0;
+}
+
+/* buttons */
+.buttonSection {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  height: 100px;
+  margin: 0;
+  padding: 0 0 30px 0;
+  overflow-y: hidden;
+  min-width: 300px;
+}
+button {
+  background: linear-gradient(-0.08turn, #a0a0a0, #383838 50%, #1b1b1b);
+  cursor: pointer;
+  border-radius: 15px;
+  height: 60px;
+  width: 290px;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin: 5px 10px;
+}
+
+/* Footer */
+footer {
+  display: grid;
+  grid-template-columns: 1fr 300px 1fr;
+  height: 100px;
+  background: linear-gradient(rgba(143, 143, 143, 0.7) 1%, rgba(22, 22, 22, 1) 10%);
+  box-shadow: 0px 0px 5px 5px rgba(100, 100, 100, 0.4);
+  margin-bottom: 0px;
+}
+#copyrightContainer {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#copyright {
+  color: white;
+  font-size: large;
+  text-align: center;
+}
+.footer-right {
+  justify-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #socialsContainer {
+    display: none;
+  }
+  .maingrid {
+    width: 100%;
+  }
+  main {
+    min-width: auto;
+    width: 100%;
+  }
+}

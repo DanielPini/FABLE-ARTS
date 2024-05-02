@@ -1,0 +1,33 @@
+body {
+  font-family:Arial, Helvetica, sans-serif;
+}
+h1 {
+  display: inline-block;
+}
+.ndacBackground {
+  background: 
+    radial-gradient(circle at center, rgba(50, 50, 50, 0.6), rgba(0, 0, 0, 0.8)), 
+    url("../assets/images/Object to come.png");
+}
+button {
+  background: linear-gradient(-0.12turn, #4b4b4b, #4e4e4e);
+}
+
+#nextButtonDiv {
+  display: flex;
+  flex-flow: row nowrap;
+}
+#navContainer a {
+  text-align: center;
+  flex-grow: 2;
+}
+#ndacTitle {
+  color: white;
+  cursor: pointer;
+  flex-flow: row nowrap;
+  display: inline-block;
+  overflow: hidden;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+

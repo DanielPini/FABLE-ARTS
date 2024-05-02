@@ -1,0 +1,23 @@
+#welcomeVideoPageMain {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+#welcomeVideoPageContainer {
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+#welcomeVideoContainer {
+  background-color: black;
+  display: flex;
+  margin: auto;
+  border: 1px solid black;
+}
+#welcomeVideo {
+  margin: auto;
+  min-height: 400px;
+  min-width: 700px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5)
+}
