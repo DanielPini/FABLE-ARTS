@@ -28,6 +28,11 @@ button {
   display: inline-block;
   overflow: hidden;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  transition: all .2s;
 }
-
+#ndacTitle:hover {
+  font-weight:bolder;
+  font-size: 1.01rem;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.361);
+}
 

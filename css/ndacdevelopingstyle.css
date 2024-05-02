@@ -118,16 +118,16 @@
   overflow: hidden;
   grid-template-areas: 
         ". image1 image1 image1 ."
-        ". . image2 image2 ."
-        ". image3 image3 . ."
-        ". . image4 image4 ."
-        ". image5 image5 . ."
-        ". . image6 image6 ."
-        ". image7 image7 . ."
-        ". . image8 image8 ."
-        ". image9 image9 . ."
-        ". . image10 image10 ."
-        ". image11 image11 . .";
+        ". bamboo1 image2 image2 ."
+        ". image3 image3 bamboo2 ."
+        ". bamboo3 image4 image4 ."
+        ". image5 image5 bamboo4 ."
+        ". bamboo5 image6 image6 ."
+        ". image7 image7 bamboo6 ."
+        ". bamboo7 image8 image8 ."
+        ". image9 image9 bamboo8 ."
+        ". bamboo9 image10 image10 ."
+        ". image11 image11 bamboo10 .";
 }
 .dti-section {
   padding: 20px 0px;
@@ -232,85 +232,68 @@
 }
 
 /* animation images */
-.bambooImage {
-  position: absolute; 
-  z-index:-1; 
-  opacity: 0;
-  height: 300px;
-  width: 300px;
+.bamboo-container {
+  display: none;
+  position: relative;
+  -webkit-mask-image: linear-gradient(transparent 1%, black 6%, black);
+  mask-image: linear-gradient(transparent 1%, black 6%, black);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  overflow: hidden;
 }
 #bamboo1 {
-  top: 570px;
-  left: 680px;
-  height: 300px;
-  width: 300px;
-  transform-origin: 50% 0%;
+  grid-area: bamboo1;
+  width: 100%;
+  height: 100%;
+}
+#bamboo1 img {
+  scale: 2;
+  transform: rotate(-22deg) translateY(30px) translateX(5px);
 }
 #bamboo2 {
-  top: 1400px;
-  left: 650px;
-  height: 300px;
-  width: 300px;
-  transform-origin: 100% 0%;
+  grid-area: bamboo2;
+  width: 100%;
+  height: 100%;
 }
 #bamboo3 {
-  top: 1990px;
-  left: 250px;
-  height: 300px;
-  width: 300px;
-  transform-origin: 10% 10%;
+  grid-area: bamboo3;
+  width: 100%;
+  height: 100%;
 }
 #bamboo4 {
-  top: 2550px;
-  left: 650px;
-  height: 300px;
-  width: 300px;
-  transform-origin: 90% 10%;
+  grid-area: bamboo4;
+  width: 100%;
+  height: 100%;
 }
 #bamboo5 {
-  top: 3800px;
-  left: 650px;
-  height: 300px;
-  width: 300px;
-  transform-origin: 50% 0%;
+  grid-area: bamboo5;
+  width: 100%;
+  height: 100%;
 }
 #bamboo6 {
-  top: 4950px;
-  left: 650px;
-  height: 300px;
-  width: 300px;
-  transform-origin: 90% 10%;
+  grid-area: bamboo6;
+  width: 100%;
+  height: 100%;
 }
 #bamboo7 {
-  top: 6050px;
-  left: 600px;
-  height: 300px;
-  width: 300px;
-  transform-origin: 10% 10%;
+  grid-area: bamboo7;
+  width: 100%;
+  height: 100%;
 }
 #bamboo8 {
-  top: 6750px;
-  left: 850px;
-  height: 200px;
-  width: 200px;
-  transform-origin: 90% 10%;
+  grid-area: bamboo8;
+  width: 100%;
+  height: 100%;
 }
 #bamboo9 {
-  top: 7650px;
-  left: 800px;
-  height: 200px;
-  width: 200px;
-  transform-origin: 50% 10%;
+  grid-area: bamboo9;
+  width: 100%;
+  height: 100%;
 }
 #bamboo10 {
-  top: 8550px;
-  left: 850px;
-  height:300px;
-  width: 300px;
-  transform-origin: 90% 10%;
-}
-#bamboo11 {
-  z-index: 2;
+  grid-area: bamboo10;
+  width: 100%;
+  height: 100%;
 }
 .jsGrowBamboo {
   opacity: 1;
@@ -318,6 +301,7 @@
   transition: all 2s ease-in-out;
   transition-delay: 0.7s;
 }
+
 @media only screen and (max-width: 600px) {
   .mainGrid {
     display: flex;
@@ -332,10 +316,14 @@
   }
   .dit-section, .descriptiveText, #numberedCeramicTableContainer, .object-wrapper {
     width: 100%;
+    min-width: 400px;
     max-width: 100%;
   }
   #numberedCeramicTableContainer img {
     width: 100%;
+  }
+  .bamboo-container {
+    display: none;
   }
 }
 @media only screen and (min-width: 1000px) {
