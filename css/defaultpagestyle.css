@@ -2,28 +2,19 @@
   --header-footer-color: rgba(14, 14, 43, 0.345);
   --font-color: rgb(236, 245, 234);
   --background-color: rgb(9, 61, 25);
+  --button-color: rgb(43, 33, 119);
 }
 
 * {
-  font-size: 20px;
+  font-size: 2.48vw;
   font-weight: 500;
-  font-family: 
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Open Sans',
-    'Helvetica Neue', 
-    sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   margin: 0px;
   padding: 0px;
   max-width: 100%;
   scroll-behavior: smooth;
   color: var(--font-color);
+  box-sizing: border-box;
 }
 body {
   background-color: var(--background-color);
@@ -38,8 +29,7 @@ header {
   justify-content: space-around;
   height: 100px;
   background: 
-    linear-gradient
-    (var(--header-footer-color) 90%,
+    linear-gradient(var(--header-footer-color) 99%,
     rgba(143, 143, 143, 0.7));
 }
 header * {
@@ -83,7 +73,7 @@ header a {
   overflow: hidden;
 }
 .nav-container a {
-  text-align: center;
+  text-align: left;
   flex-grow: 2;
 }
 .nav-list {
@@ -98,7 +88,7 @@ header a {
   flex-grow: 3;
   flex-shrink: 2;
   margin: 10px;
-  transition: scale 0.2s;
+  transition: all 0.2s;
   cursor: pointer;
 }
 .nav-item a {
@@ -113,7 +103,7 @@ header a {
 }
 .nav-item:hover {
   text-shadow: 0 0 10px var(--font-color);
-  scale: 1.05;
+  /* transform: scale(1.05); */
 }
 /* having difficulties with this portion.
 It sees as though the scale attribute on .nav-item:hover 
@@ -128,7 +118,14 @@ is messing with the display attribute here. */
   padding-top: 35px;
   text-shadow: none;
 }
-
+.nav-item ul {
+  position: relative;
+  left: -10px;
+  top: -10px;
+}
+.nav-item ul li a span {
+  font-style: italic;
+}
 
 /* Socials */
 .socials-container {
@@ -190,6 +187,9 @@ h1 {
   font-size: 2vw;
   padding: 5px 0;
 }
+.italic {
+  font-style: italic;
+}
 
 /* buttons */
 .button-section {
@@ -213,17 +213,17 @@ h1 {
 
 }
 button {
-  background: linear-gradient(-0.08turn, #a0a0a0, #383838 50%, #1b1b1b);
+  background: var(--button-color);
   cursor: pointer;
   border-radius: 15px;
   height: 60px;
   width: 290px;
   font-size: large;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   color: var(--font-color);
   margin: 5px 10px;
   transition: all .3s;
+  border: 1px solid rgb(24, 24, 72);
 }
 button:hover {
   position: relative;
@@ -235,8 +235,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 300px 1fr;
   height: 100px;
-  background: linear-gradient(rgba(143, 143, 143, 0.7) 1%, var(--header-footer-color) 10%);
-  box-shadow: 0px 0px 5px 5px rgba(100, 100, 100, 0.4);
+  background: linear-gradient(rgba(143, 143, 143, 0.7), var(--header-footer-color) 1%);
   margin-bottom: 0px;
 }
 .copyright-container {
@@ -273,46 +272,13 @@ footer {
 
 @media only screen and (max-width: 600px) {
   * {
-    font-size: 10px;
+    font-size: 15px;
   }
   header {
     justify-content: space-between;
   }
   h1 {
     font-size: 20px;
-  }
-  .socials-container {
-    display: none;
-  }
-  .maingrid {
-    width: 100%;
-  }
-  main {
-    min-width: auto;
-    width: 100%;
-  }
-
-  .page-heading {
-    font-size: 20px;
-  }
-  .page-subheading {
-    font-size: 15px;
-  }
-  .button-section {
-    width: fit-content;
-    height: fit-content;
-    overflow: hidden;
-  }
-  .button-section a button{
-    font-size: large;
-  }
-  .button-section a button span {
-    font-size: large;
-    font-style: italic;
-    font-weight: bold;
-  }
-  .copyright span {
-    font-size: large;
   }
   .nav-container {
     display: none;
@@ -356,11 +322,43 @@ footer {
   .nav-support-item {
     white-space: wrap;
   }
-}
+  .socials-container {
+    display: none;
+  }
+  .maingrid {
+    width: 100%;
+  }
+  main {
+    min-width: auto;
+    width: 100%;
+  }
+  .page-heading {
+    font-size: 20px;
+  }
+  .page-subheading {
+    font-size: 15px;
+  }
+  .button-section {
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+  }
+  .button-section a button{
+    font-size: large;
+  }
+  .button-section a button span {
+    font-size: large;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .copyright span {
+    font-size: large;
+  }
+}  
 
 @media only screen and (min-width: 1000px) {
   * {
-    font-size: 30px;
+    font-size: 25px;
   }
   .page-heading {
     margin: 2% 0;
