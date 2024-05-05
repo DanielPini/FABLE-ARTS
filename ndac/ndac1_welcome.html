@@ -6,62 +6,89 @@
   <link rel="stylesheet" href="../css/defaultpagestyle.css">
   <link rel="stylesheet" href="../css/ndacstyle.css">
   <link rel="stylesheet" href="../css/ndacwelcomestyle.css">
-  <title>Navigating Distance and Closeness with Niki and Hamish</title>
+  <title>Welcome to Navigating Distance and Closeness with Niki and Hamish</title>
 </head>
-<body class="ndacBackground">
+<body class="ndac-background">
 	<header>
 		<a href="../index.html">
       <img
-        id="faLogo"
+        class="fa-logo"
         src="../assets/images/logos/FA Logo Centered.jpg"
         alt="FableArts logo"
       />
     </a>
-		<nav class="navContainer">
-      <a href="#"><h1 id="ndacTitle">Navigating Distance and Closeness</h1></a> 
+		<nav class="nav-container">
+      <a href="#"><h1 class="ndac-header-title">Navigating Distance and Closeness</h1></a> 
 		</nav>
-		<img src="#d" alt="" id="ndac" />
-		<div class="socialsContainer">
+		<img src="#" alt="" id="ndac" />
+		<div class="socials-container">
 			<div class="test"></div>
-			<a href="https://www.instagram.com/fable_arts" target="_blank" id="instaLink">
+			<a href="https://www.instagram.com/fable_arts" target="_blank" class="insta-link">
         <img src="../assets/images/icons/instagram_icon.svg" alt="Instagram logo"/>
       </a>
-			<a href="https://www.youtube.com/@fable_arts" target="_blank" id="youtubeLink">
+			<a href="https://www.youtube.com/@fable_arts" target="_blank" class="youtube-link">
         <img src="../assets/images/icons/youtube_icon.svg" alt="YouTube logo"/>
       </a>
-			<a href="" target="_blank" id="facebookLink">
+			<a href="" target="_blank" class="facebook-link">
         <img src="../assets/images/icons/facebook_icon.svg" alt="Facebook logo"/>
       </a>
 		</div>
 	</header>
-  <main id="welcomeVideoPageMain">
-    <div id="welcomeVideoPageContainer">
-      <div id="welcomeTitles">   
-        <h1 class="page-heading">Navigating Distance and Closeness</h1>
-        <h2 class="page-subheading">About the work, about the performers</h2>
+  <main class="welcome-page-main">
+    <section class="welcome-container">
+      <div class="welcome-video-container">
+          <h1 class="page-heading">Navigating Distance and Closeness</h1>
+          <h2 class="page-subheading">About the work, about the performers</h2>
+        <div class="welcome-video-wrapper">
+          <video controls autoplay id="welcome-video" poster="../assets/images/NDAC_action_shot.jpeg" style="width: 100%;">
+            <source src="#" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
-      <div id="welcomeVideoContainer">
-        <video controls autoplay id="welcomeVideo" poster="../assets/images/NDAC_action_shot.jpeg" style="width: 100%;">
-          <source src="#" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+    </section>
+    <section class="about-the-artists-wrapper">
+      <div class="artist-card">
+        <figure>
+          <img src="../assets/images/niki_headshot.jpeg" alt="Portrait shot of Niki Johnson" class="ndac-headshot">
+          <figcaption>
+            Niki Johnson is a percussionist and composer-performer whose musical practice incorporates contemporary classical repertoire, improvisation, interdisciplinary collaboration, and performance art.
+            <br>
+            <br>
+            Niki holds a Bachelor of Percussion Performance from the Sydney Conservatorium of Music, and is a current PhD Candidate at Monash University. Her research explores percussionists' collaborations with sculptors and designers, and the process of co-creating, and composing for new sculptural instruments. Niki teaches at Monash University running the 2022, Semester 2 and 2023 Semester 1, undergraduate percussion ensemble, and is a percussion tutor in Sydney.
+            <br>
+            <br>
+            Niki was a 2019-2022 Speak Percussion Bespoke Artist, and a 2021 Classical Freedman nominee. She performs with Ensemble Offspring, is the co-artistic director of performance art duo Throat Pleats, and has recorded percussion for Trackdown Fox studios, and the ABC. Current project highlights include performing Damien Ricketson's Sound Touch for solo percussionist, performed at Phoenix Central Park, Sydney.</figcaption>
+        </figure>
       </div>
-    </div>
-  </main>
-  <section class="buttonSection" style="height: 120px;">
-    <div id="nextButtonDiv">
+      <div class="artist-card">
+        <figure>
+          <img src="../assets/images/hamish_headshot.jpeg" alt="Portrait shot of Hamish Upton" class="ndac-headshot">
+          <figcaption>
+            Hamish Upton is a percussionist who thrives as a contemporary percussion collaborator and educator. He holds a Master of Music Research from Griffith University, where he used four case studies to explore the use of laptop-based sound technology as an enhancement to solo percussion playing.
+            <br>
+            <br>
+            He moved to Melbourne in 2014, and spent three years at ANAM, receiving multiple awards for his curation and performance of contemporary art music. Prior to this, he was supported with full tuition and board to study at the Yong Siew Toh Conservatory at the National University of Singapore.
+            <br>
+            <br>
+            During his four-year course in Singapore, he spent two weeks in Bali immersed in Gamelan, and travelled abroad for a semester on exchange at the Peabody Institute of the Johns Hopkins University (U.S.A). </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="button-section">
       <a href="../ndac/ndac2_developing_instruments.html">
       <button onclick="">
         Next --></br>
         Developing the Instruments
       </button>
       </a>
-    </div>
-  </section>
+    </section>
+  </main>
+
   <footer>
     <div class=""></div>
-    <div id="copyrightContainer">
-      <p id="copyright">Copyright 2024 <span style="font-style: italic">FABLE ARTS</span></p>
+    <div class="copyright-container">
+      <p class="copyright">Copyright 2024 <span style="font-style: italic">FABLE ARTS</span></p>
     </div>
     <div class=""></div>
   </footer>

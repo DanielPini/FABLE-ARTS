@@ -1,3 +1,9 @@
+:root {
+  --header-footer-color: rgba(22, 22, 22, 1);
+  --font-color: rgb(250, 237, 255);
+  --background-color: rgb(80, 0, 20);
+}
+
 * {
   font-size: 20px;
   font-weight: 500;
@@ -18,10 +24,11 @@
   max-width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  color: var(--font-color);
 }
 body {
-  background-color: rgb(80, 0, 20);
-  color: white;
+  background-color: var(--background-color);
+  color: var(--font-color);
 }
 
 /* Header */
@@ -30,18 +37,17 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 100px;
-  background: linear-gradient(rgba(22, 22, 22, 1) 90%, rgba(143, 143, 143, 0.7));
-  box-shadow: 0px 0px 5px 5px rgba(100, 100, 100, 0.4);
+  background: linear-gradient(var(--header-footer-color) 90%, rgba(143, 143, 143, 0.7));
 }
 header a {
   min-width: 90px;
   margin-left: 3%;
 }
 .title-text, .title-text:hover, .title-text:active {
-  color: white;
+  color: var(--font-color);
   cursor: pointer;
 }
-#faLogo {
+.fa-logo {
   margin-left: 5%;
   border: 1px solid rgb(107, 107, 107);
   width: 80px;
@@ -50,57 +56,54 @@ header a {
   overflow: hidden;
   transition: all .2s;
 }
-#faLogo:hover {
+.fa-logo:hover {
   box-shadow: 0 0 3px .5px rgba(255, 255, 255, 0.425);
 }
 
 /* Site Navigation */
-#navContainer {
+.nav-container {
   display: flex;
   flex-grow: 3;
   align-items: center;
   justify-content: flex-end;
   overflow: hidden;
 }
-.navContainer a {
+.nav-container a {
   text-align: center;
   flex-grow: 2;
 }
-#navList {
+.nav-list {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
-  color: white;
+  color: var(--font-color);
   list-style: none;
 }
-.navItem {
+.nav-item {
   display: flex;
   flex-grow: 3;
   flex-shrink: 2;
   margin: 10px;
-  color: white;
+  color: var(--font-color);
   text-decoration: none;
   overflow: hidden;
 }
-.navItem :link {
-  color: white;
+.nav-item :link, .nav-item:visited {
+  color: var(--font-color);
   text-decoration: none;
 }
-.navItem :visited {
-  color: white;
-}
-.navItem :hover {
+.nav-item :hover {
   cursor: pointer;
-  text-shadow: 0px 0px 20px white;
+  text-shadow: 0px 0px 20px var(--font-color);
 }
-.navItem * :active {
-  box-shadow: 0 0 20 20 white;
+.nav-item * :active {
+  box-shadow: 0 0 20 20 var(--font-color);
 }
 .nav-inner-dropdown {
   display: none;
   padding-top: 15px;
 }
-.navItem:hover .nav-inner-dropdown {
+.nav-item:hover .nav-inner-dropdown {
   display: block;
   position: absolute;
   float: left;
@@ -108,12 +111,12 @@ header a {
   text-shadow: none;
   transform: translateX(-10px);
 }
-.navItem:hover a, .nav-inner-dropdown:hover li {
+.nav-item:hover a, .nav-inner-dropdown:hover li {
   display: block;
 }
 
 /* Socials */
-.socialsContainer {
+.socials-container {
   display: flex;
   margin: 0px;
   margin-right: 3%;
@@ -123,13 +126,14 @@ header a {
   height: 40px;
   align-items: center;
 }
-.socialsContainer a {
+.socials-container a {
   max-width: 30%;
   min-width: 30%;
   height: 30px;
   padding: 5px 0;
+  overflow:hidden;
 }
-.socialsContainer a img {
+.socials-container a img {
   width: 100%;
   height: 20px;
   margin: 0;
@@ -137,7 +141,7 @@ header a {
   overflow: hidden;
   transition: all .2s;
 }
-.socialsContainer a img:hover {
+.socials-container a img:hover {
   scale: 1.25;
   background-color: rgba(255, 255, 255, 0.147);
   box-shadow: 0 0 5px .3px rgba(255, 255, 255, 0.147);
@@ -151,7 +155,7 @@ main {
   margin: auto;
   min-width: 600px;
   max-width: 100%;
-  min-height: 60vh;
+  min-height: 80vh;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -177,16 +181,23 @@ h1 {
 }
 
 /* buttons */
-.buttonSection {
+.button-section {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: row wrap;
   height: fit-content;
-  margin: 0;
-  padding: 0 0 30px 0;
+  margin: 20px 0;
   overflow-y: hidden;
   min-width: 300px;
+}
+.button-section a button {
+  overflow: hidden;
+}
+.button-section a button span {
+  font-size: large;
+  font-style: italic;
+  font-weight: bold;
 }
 button {
   background: linear-gradient(-0.08turn, #a0a0a0, #383838 50%, #1b1b1b);
@@ -194,10 +205,10 @@ button {
   border-radius: 15px;
   height: 60px;
   width: 290px;
-  font-size: 1rem;
+  font-size: large;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
-  color: rgb(255, 255, 255);
+  color: var(--font-color);
   margin: 5px 10px;
 }
 
@@ -206,24 +217,23 @@ footer {
   display: grid;
   grid-template-columns: 1fr 300px 1fr;
   height: 100px;
-  background: linear-gradient(rgba(143, 143, 143, 0.7) 1%, rgba(22, 22, 22, 1) 10%);
+  background: linear-gradient(rgba(143, 143, 143, 0.7) 1%, var(--header-footer-color) 10%);
   box-shadow: 0px 0px 5px 5px rgba(100, 100, 100, 0.4);
   margin-bottom: 0px;
 }
-#copyrightContainer {
+.copyright-container {
   display: flex;
   height: 100%;
   align-items: center;
   justify-content: center;
 }
-#copyright {
-  color: white;
+.copyright, .copyright span {
+  color: var(--font-color);
   font-size: large;
   text-align: center;
+  font-style: italic;
 }
-#copyright span {
-  font-size: large;
-}
+
 .footer-right {
   justify-items: center;
 }
@@ -235,7 +245,7 @@ footer {
   h1 {
     font-size: 20px;
   }
-  .socialsContainer {
+  .socials-container {
     display: none;
   }
   .maingrid {
@@ -252,22 +262,41 @@ footer {
   .page-subheading {
     font-size: 15px;
   }
-  .buttonSection a button{
+  .button-section {
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+  }
+  .button-section a button{
     font-size: large;
   }
-  #copyright span {
+  .button-section a button span {
+    font-size: large;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .copyright span {
     font-size: large;
   }
 }
 
-@media only screen and (min-width: 1000) {
+@media only screen and (min-width: 1000px) {
   * {
     font-size: 30px;
   }
   .page-heading {
+    margin: 2% 0;
     font-size: 40px;
   }
   .page-subheading {
+    margin: 2% 0;
     font-size: 30px;
+  }
+  .button-section a button {
+    font-size: large;
+  }
+  .button-section a button span {
+    font-style: italic;
+    font-weight: bold;
   }
 }

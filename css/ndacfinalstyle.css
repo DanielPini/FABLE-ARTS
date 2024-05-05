@@ -1,12 +1,9 @@
-#finalVideoPageMain {
-  margin: 50px 0;
-}
-#inner-container {
+.final-page-wrapper {
   width: 80%;
   display: flex;
   flex-flow: column nowrap;
-  margin: 20px 10%;
   align-items: center;
+  justify-content: start;
 }
 .final-video-container {
   position: relative;
@@ -31,8 +28,9 @@
 }
 
 @media only screen and (max-width: 700px) {
-  #inner-container {
+  .final-page-container {
     width: 100vw;
     margin: 20px 0;
+    min-width: 400px;
   }
 }

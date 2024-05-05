@@ -1,28 +1,29 @@
-#welcomeVideoPageMain {
-  display: grid;
-  grid-template-columns: 1fr 2fr 400fr 2fr 1fr;
-  grid-template-areas:
-    ". main main main .";
-  justify-content: center;
-  align-items: start;
-}
-#welcomeVideoPageContainer {
+.welcome-page-main {
   margin: 0 auto;
-  max-width: 1000px;
+  width: 80%;
+  min-width: 600px;
   display: flex;
   flex-flow: column nowrap;
-  width: 85%;
-  grid-area: main;
+  justify-content: center;
+  align-items: center;
 }
-#welcomeVideoContainer {
+.welcome-container {
+  width: 100%;
+}
+.welcome-video-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  max-width: 1000px;
+}
+.welcome-video-wrapper {
   position: relative;
   width: 100%;
   padding-top: 65%;
   background-color: black;
   display: flex;
-  margin: auto;
 }
-#welcomeVideo {
+#welcome-video {
   position: absolute;
   top: 0;
   right: 0;
@@ -32,20 +33,45 @@
   height: 100%;
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5)
 }
+.about-the-artists-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  max-width: 1000px;
+}
+.artist-card {
+  width: 45%;
+  padding: 15px 0;
+}
+figcaption {
+  text-align: justify;
+  font-size: 15px;
+}
 
+.ndac-headshot {
+  width: 100%;
+}
 @media only screen and (max-width: 600px) {
   * {
     margin: none;
   }
-  #welcomeVideoPageContainer {
+  .welcome-page-main, .welcome-container {
+    min-width: 400px;
+    overflow: hidden;
+  }
+  .welcome-video-container {
     width: 100%;
     margin: none;
   }
-  #welcomeVideoContainer {
+  .welcome-video-wrapper {
     margin: none;
     width: 100%;
     min-width: 400px;
     max-width: none;
     min-height: fit-content;
+  }
+  .artist-card, .artist-card figure img {
+    width: 100%;
+    min-width: 250px;
   }
 }

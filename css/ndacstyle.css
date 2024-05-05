@@ -1,25 +1,55 @@
+:root {
+  --ndac-header-footer-color: rgb(121, 110, 92);
+  --ndac-font-color: rgb(235, 243, 234);
+  --ndac-background-color: rgb(170, 190, 170); 
+  --ndac-button-color: rgb(121, 110, 92);
+}
+header, footer{
+  background: var(--ndac-header-footer-color);
+}
 body {
   font-family:Arial, Helvetica, sans-serif;
+  color: var(--ndac-font-color);
 }
-h1 {
+h1, h2, h3, h4 {
   display: inline-block;
+  color: var(--ndac-font-color);
+  text-shadow: 0 0 1px rgb(41, 41, 41);
 }
-.ndacBackground {
-  background: 
-    radial-gradient(circle at center, rgba(50, 50, 50, 0.6), rgba(0, 0, 0, 0.8)), 
-    url("../assets/images/Object to come.png");
+p, figcaption {
+  color: var(--ndac-font-color);
+}
+.ndac-background {
+  background: var(--ndac-background-color);
+    /* radial-gradient(circle at center, rgba(50, 50, 50, 0.6), rgba(0, 0, 0, 0.8)), 
+    url("../assets/images/Object to come.png"); */
 }
 button {
-  background: linear-gradient(-0.12turn, #4b4b4b, #4e4e4e);
+  background: var(--ndac-button-color);
+  color: var(--ndac-font-color);
+  box-shadow: 0, 0, 1px, 1px grey;
+  border: 1px solid silver;
 }
-
-#nextButtonDiv {
-  display: flex;
-  flex-flow: row nowrap;
+span {
+  color: var(--ndac-font-color);
 }
-
-#ndacTitle {
-  color: white;
+.ndac-header-title {
+  font-size: 3vw;
+  color: var(--ndac-font-color);
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  transition: all .3s;
+}
+.ndac-header-title:hover {
+  font-weight:bolder;
+  font-size: 3.15vw;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.361);
+  color: var(--ndac-font-color);
+}
+.ndac-title {
+  color: var(--ndac-font-color);
   cursor: pointer;
   flex-flow: row nowrap;
   display: inline-block;
@@ -27,9 +57,19 @@ button {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   transition: all .2s;
 }
-#ndacTitle:hover {
-  font-weight:bolder;
-  font-size: 1.01rem;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.361);
+.copyright, .copyright span {
+  color: var(--ndac-font-color);
 }
-
+@media only screen and (max-width: 600px) {
+  .ndac-header-title {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .ndac-header-title {
+    font-size: 30px;
+  }
+  .ndac-header-title:hover {
+    font-size: 32px;
+  }
+}
