@@ -53,10 +53,6 @@ header a {
 #faLogo:hover {
   box-shadow: 0 0 3px .5px rgba(255, 255, 255, 0.425);
 }
-#spacer {
-  flex-grow: 1;
-  overflow: hidden;
-}
 
 /* Site Navigation */
 #navContainer {
@@ -65,6 +61,10 @@ header a {
   align-items: center;
   justify-content: flex-end;
   overflow: hidden;
+}
+.navContainer a {
+  text-align: center;
+  flex-grow: 2;
 }
 #navList {
   width: 100%;
@@ -113,7 +113,7 @@ header a {
 }
 
 /* Socials */
-#socialsContainer {
+.socialsContainer {
   display: flex;
   margin: 0px;
   margin-right: 3%;
@@ -123,13 +123,13 @@ header a {
   height: 40px;
   align-items: center;
 }
-#socialsContainer a {
+.socialsContainer a {
   max-width: 30%;
   min-width: 30%;
   height: 30px;
   padding: 5px 0;
 }
-#socialsContainer a img {
+.socialsContainer a img {
   width: 100%;
   height: 20px;
   margin: 0;
@@ -137,7 +137,7 @@ header a {
   overflow: hidden;
   transition: all .2s;
 }
-#socialsContainer a img:hover {
+.socialsContainer a img:hover {
   scale: 1.25;
   background-color: rgba(255, 255, 255, 0.147);
   box-shadow: 0 0 5px .3px rgba(255, 255, 255, 0.147);
@@ -235,7 +235,7 @@ footer {
   h1 {
     font-size: 20px;
   }
-  #socialsContainer {
+  .socialsContainer {
     display: none;
   }
   .maingrid {

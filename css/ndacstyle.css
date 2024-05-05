@@ -17,10 +17,7 @@ button {
   display: flex;
   flex-flow: row nowrap;
 }
-#navContainer a {
-  text-align: center;
-  flex-grow: 2;
-}
+
 #ndacTitle {
   color: white;
   cursor: pointer;
