@@ -1,22 +1,22 @@
 .welcome-page-main {
   margin: 0 auto;
   width: 80%;
-  min-width: 600px;
+  min-width: 400px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
-.welcome-container {
-  width: 100%;
-}
 .welcome-video-container {
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
+  margin: 0 auto;
+  width: 100%;
   max-width: 1000px;
+  text-align: center;
 }
 .welcome-video-wrapper {
+  margin: auto;
   position: relative;
   width: 100%;
   padding-top: 65%;
