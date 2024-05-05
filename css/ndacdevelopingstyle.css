@@ -218,7 +218,6 @@
   background-color: rgba(22, 22, 22, 0.2);
   box-shadow: 0 0 9px 1px rgba(22, 22, 22, 0.2);
   overflow: visible;
-  border-radius: 5px;
 }
 .descriptive-text > p, h2 {
   display: block;
@@ -310,8 +309,11 @@
     flex-flow: column nowrap;
     width: 100%
   }
-  .descriptive-text p, .descriptive-text h2{
+  .descriptive-text p {
     font-size: 15px;
+  }
+  .descriptive-text h2 {
+    font-size: 18px;
   }
   .image1 .descriptive-text {
     width: 100%;
@@ -326,7 +328,10 @@
   }
 }
 @media only screen and (min-width: 1000px) {
-  .descriptive-text p, .descriptive-text h2 {
+  .descriptive-text p {
     font-size: 20px;
+  }
+  .descriptive-text h2 {
+    font-size: 25px;
   }
 }

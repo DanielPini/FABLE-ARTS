@@ -9,7 +9,7 @@ section {
   border-radius: 5px;
   box-shadow: 0 0 10px 2px rgb(53, 133, 153);
 }
-#seasonInfo {
+.season-info {
   display: flex;
   flex-flow: row;
   max-width: 1000px;
@@ -31,6 +31,6 @@ section {
   text-align: center;
 }
 .footer-right a:link, .footer-right a:active, .footer-right a{
-  color: white;
+  color: var(--font-color);
   text-decoration: none;
 }

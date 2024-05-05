@@ -1,7 +1,7 @@
 :root {
-  --header-footer-color: rgba(22, 22, 22, 1);
-  --font-color: rgb(250, 237, 255);
-  --background-color: rgb(80, 0, 20);
+  --header-footer-color: rgba(14, 14, 43, 0.345);
+  --font-color: rgb(236, 245, 234);
+  --background-color: rgb(9, 61, 25);
 }
 
 * {
@@ -22,27 +22,39 @@
   margin: 0px;
   padding: 0px;
   max-width: 100%;
-  overflow-x: hidden;
   scroll-behavior: smooth;
   color: var(--font-color);
 }
 body {
   background-color: var(--background-color);
   color: var(--font-color);
+  overflow-x: hidden;
 }
 
 /* Header */
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 100px;
-  background: linear-gradient(var(--header-footer-color) 90%, rgba(143, 143, 143, 0.7));
+  background: 
+    linear-gradient
+    (var(--header-footer-color) 90%,
+    rgba(143, 143, 143, 0.7));
+}
+header * {
+  font-size: 20px;
 }
 header a {
   min-width: 90px;
   margin-left: 3%;
 }
+.nav-support-item a {
+  display: block;
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
 .title-text, .title-text:hover, .title-text:active {
   color: var(--font-color);
   cursor: pointer;
@@ -53,11 +65,13 @@ header a {
   width: 80px;
   align-self: center;
   border-radius: 50%;
-  overflow: hidden;
   transition: all .2s;
 }
 .fa-logo:hover {
   box-shadow: 0 0 3px .5px rgba(255, 255, 255, 0.425);
+}
+.spacer {
+  flex-grow: 2;
 }
 
 /* Site Navigation */
@@ -84,36 +98,37 @@ header a {
   flex-grow: 3;
   flex-shrink: 2;
   margin: 10px;
-  color: var(--font-color);
-  text-decoration: none;
-  overflow: hidden;
-}
-.nav-item :link, .nav-item:visited {
-  color: var(--font-color);
-  text-decoration: none;
-}
-.nav-item :hover {
+  transition: scale 0.2s;
   cursor: pointer;
-  text-shadow: 0px 0px 20px var(--font-color);
 }
-.nav-item * :active {
-  box-shadow: 0 0 20 20 var(--font-color);
+.nav-item a {
+  text-decoration: none;
 }
+.nav-item span {
+  font-style: italic;
+}
+.nav-item:link, .nav-item:visited {
+  color: var(--font-color);
+  text-decoration: none;
+}
+.nav-item:hover {
+  text-shadow: 0 0 10px var(--font-color);
+  scale: 1.05;
+}
+/* having difficulties with this portion.
+It sees as though the scale attribute on .nav-item:hover 
+is messing with the display attribute here. */
 .nav-inner-dropdown {
   display: none;
-  padding-top: 15px;
 }
 .nav-item:hover .nav-inner-dropdown {
   display: block;
   position: absolute;
-  float: left;
-  top: 50px;
+  white-space: nowrap;
+  padding-top: 35px;
   text-shadow: none;
-  transform: translateX(-10px);
 }
-.nav-item:hover a, .nav-inner-dropdown:hover li {
-  display: block;
-}
+
 
 /* Socials */
 .socials-container {
@@ -121,24 +136,20 @@ header a {
   margin: 0px;
   margin-right: 3%;
   width: fit-content;
-  overflow: hidden;
   flex-flow: row nowrap;
-  height: 40px;
+  height: fit-content;
   align-items: center;
 }
 .socials-container a {
   max-width: 30%;
   min-width: 30%;
-  height: 30px;
   padding: 5px 0;
-  overflow:hidden;
 }
 .socials-container a img {
   width: 100%;
-  height: 20px;
+  height: 25px;
   margin: 0;
   margin-right: 10px;
-  overflow: hidden;
   transition: all .2s;
 }
 .socials-container a img:hover {
@@ -146,13 +157,13 @@ header a {
   background-color: rgba(255, 255, 255, 0.147);
   box-shadow: 0 0 5px .3px rgba(255, 255, 255, 0.147);
   border-radius: 50%;
-
 }
 
 /* Page Section */
 main {
   font-size: 1em;
   margin: auto;
+  height: fit-content;
   min-width: 600px;
   max-width: 100%;
   min-height: 80vh;
@@ -188,8 +199,9 @@ h1 {
   flex-flow: row wrap;
   height: fit-content;
   margin: 20px 0;
-  overflow-y: hidden;
+  overflow: hidden;
   min-width: 300px;
+  padding: 5px;
 }
 .button-section a button {
   overflow: hidden;
@@ -198,6 +210,7 @@ h1 {
   font-size: large;
   font-style: italic;
   font-weight: bold;
+
 }
 button {
   background: linear-gradient(-0.08turn, #a0a0a0, #383838 50%, #1b1b1b);
@@ -210,6 +223,11 @@ button {
   font-weight: 700;
   color: var(--font-color);
   margin: 5px 10px;
+  transition: all .3s;
+}
+button:hover {
+  position: relative;
+  scale: 1.05;
 }
 
 /* Footer */
@@ -233,14 +251,32 @@ footer {
   text-align: center;
   font-style: italic;
 }
-
+.contact {
+  color: var(--font-color);
+  font-size: large;
+  text-align: center;
+}
+.contact span {
+  color: var(--font-color);
+  font-style: italic;
+  font-weight: 900;
+}
 .footer-right {
   justify-items: center;
+}
+.small-nav-box {
+  display: none;
+}
+.small-page-nav-list {
+  display: none;
 }
 
 @media only screen and (max-width: 600px) {
   * {
     font-size: 10px;
+  }
+  header {
+    justify-content: space-between;
   }
   h1 {
     font-size: 20px;
@@ -278,6 +314,48 @@ footer {
   .copyright span {
     font-size: large;
   }
+  .nav-container {
+    display: none;
+  }
+  .spacer {
+    display: none;
+  }
+  .small-nav-box {
+    position: absolute;
+    display: block;
+    right: 30px;
+    top: 30px;
+    width: 40px;
+    height: 50px;
+    transition: all 0.2s;
+  }
+  .small-nav-box:hover {
+    scale: 1.05;
+  }
+  .small-nav-box:hover .small-page-nav-list, .small-page-nav-list:hover {
+    display: block;
+    text-align: right;
+    position: relative;
+    left: -43px;
+  }
+  .small-page-nav-list * {
+    font-size: 18px;
+    display: block;
+    margin: 0px;
+    padding-top: 3px;
+    scale: 1;
+    float: right;
+  }
+  .small-page-nav-list ul li:hover {
+    scale: 1.05;
+  }
+  .small-page-nav-list {
+    min-width: 80px;
+    height: 120px;
+  }
+  .nav-support-item {
+    white-space: wrap;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -300,3 +378,4 @@ footer {
     font-weight: bold;
   }
 }
+

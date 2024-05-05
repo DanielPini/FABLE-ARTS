@@ -42,10 +42,18 @@
 .artist-card {
   width: 45%;
   padding: 15px 0;
+  overflow: visible;
 }
-figcaption {
+.ndac-bio-text {
+  display:block;
+  margin: auto;
+  width: 98%;
   text-align: justify;
   font-size: 15px;
+  background-color: rgba(22, 22, 22, 0.2);
+  box-shadow: 0 0 9px 1px rgba(22, 22, 22, 0.2);
+  overflow: visible;
+  text-shadow: 0 0 1px rgb(33, 33, 33);
 }
 
 .ndac-headshot {

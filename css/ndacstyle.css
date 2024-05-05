@@ -57,6 +57,17 @@ span {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   transition: all .2s;
 }
+.ndac-nav-container {
+  display: flex;
+  flex-grow: 3;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+.ndac-nav-container a {
+  text-align: center;
+  flex-grow: 2;
+}
 .copyright, .copyright span {
   color: var(--ndac-font-color);
 }
