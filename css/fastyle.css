@@ -11,14 +11,15 @@ section {
 }
 .season-info {
   display: flex;
-  flex-flow: row;
+  flex-flow: row nowrap;
+  gap: 10px;
   max-width: 1000px;
   min-width: 300px;
   text-align: left;
 }
 .season-info-sidebar {
   display: block;
-  min-width: 135px;
+  min-width: 20%;
   padding-right: 5px;
 
 }
