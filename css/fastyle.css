@@ -3,7 +3,7 @@ section {
 }
 #welcomeBanner {
   width: 100%;
-  min-width: 600px;
+  min-width: 400px;
   max-width: 1000px;
   margin: 0 auto;
   border-radius: 5px;
@@ -13,7 +13,8 @@ section {
   display: flex;
   flex-flow: row;
   max-width: 1000px;
-  min-width: 600px;
+  min-width: 300px;
+  text-align: left;
 }
 .season-info-sidebar {
   display: block;
