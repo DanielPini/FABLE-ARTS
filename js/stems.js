@@ -83,16 +83,29 @@ function playSound(soundId) {
 }
 
 
-let observer = new IntersectionObserver((entries) => {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-			entry.target.classList.add("jsGrowBamboo");
-		} else {
-			entry.target.classList.remove("jsGrowBamboo");
-		}
-	});
-});
+document.addEventListener('DOMContentLoaded', () => {
+  const observerOptions = {
+    root: null, // Use the viewport as the root
+    rootMargin: '0px',
+    threshold: 0.1 // Trigger when 10% of the element is visible
+  };
 
-document.querySelectorAll(".bambooImage").forEach((e) => {
-	observer.observe(e);
+  const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (entry.target.classList.contains('bamboo-image-left-side')) {
+          entry.target.classList.add('js-grow-bamboo');
+        } else if (entry.target.classList.contains('bamboo-image-right-side')) {
+          entry.target.classList.add('js-grow-bamboo');
+        }
+      } else {
+        entry.target.classList.remove('js-grow-bamboo');
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  const bambooImages = document.querySelectorAll('.bamboo-image-left-side, .bamboo-image-right-side');
+  bambooImages.forEach(image => observer.observe(image));
 });
