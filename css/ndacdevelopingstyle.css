@@ -6,7 +6,7 @@
 }
 #numbered-ceramic-table {
   width: 100%;
-  box-shadow: 0 2px 5px 1px black;
+  box-shadow: var(--ndac-box-shadow);
 }
 
 /* object style */
@@ -118,10 +118,13 @@
   overflow: hidden;
   grid-template-areas: 
         ". image1 image1 image1 ."
+        ". ceramic-section ceramic-section ceramic-section ."
         ". bamboo1 image2 image2 ."
         ". image3 image3 bamboo2 ."
         ". bamboo3 image4 image4 ."
+        ". bamboo-section bamboo-section bamboo-section ."
         ". image5 image5 bamboo4 ."
+        ". distance-closeness-section distance-closeness-section distance-closeness-section."
         ". bamboo5 image6 image6 ."
         ". image7 image7 bamboo6 ."
         ". bamboo7 image8 image8 ."
@@ -137,10 +140,31 @@
 
 /* images style */
 .ndac-image {
-  box-shadow: 0 0 10px 1px rgb(36, 34, 34);
+  box-shadow: var(--ndac-box-shadow);
   user-select: none;
 }
 
+.ceramic-section {
+  margin: 20px 0;
+  grid-area: ceramic-section;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center
+}
+.bamboo-section {
+  margin: 20px 0;
+  grid-area: bamboo-section;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center
+}
+.distance-closeness-section {
+  margin: 20px 0;
+  grid-area: distance-closeness-section;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center
+}
 .image1{
   justify-self: center;
   grid-area: image1;
@@ -215,8 +239,8 @@
   width: 100%;
 }
 .descriptive-text {
-  background-color: rgba(22, 22, 22, 0.2);
-  box-shadow: 0 0 9px 1px rgba(22, 22, 22, 0.2);
+  background-color: var(--ndac-text-background);
+  box-shadow: var(--ndac-box-shadow);
   overflow: visible;
 }
 .descriptive-text > p, h2 {

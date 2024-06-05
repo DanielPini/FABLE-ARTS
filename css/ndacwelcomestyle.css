@@ -20,7 +20,7 @@
   position: relative;
   width: 100%;
   padding-top: 65%;
-  background-color: black;
+  background-color: var(--ndac-background-color);
   display: flex;
 }
 #welcome-video {
@@ -31,7 +31,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5)
+  box-shadow: var(--ndac-box-shadow);
 }
 .about-the-artists-wrapper {
   display: flex;
@@ -50,10 +50,10 @@
   width: 98%;
   text-align: justify;
   font-size: 15px;
-  background-color: rgba(22, 22, 22, 0.2);
-  box-shadow: 0 0 9px 1px rgba(22, 22, 22, 0.2);
+  background-color: var(--ndac-text-background);
+  box-shadow: var(--ndac-box-shadow);
   overflow: visible;
-  text-shadow: 0 0 1px rgb(33, 33, 33);
+  text-shadow: var(--ndac-text-shadow);
 }
 
 .ndac-headshot {

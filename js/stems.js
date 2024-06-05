@@ -1,7 +1,7 @@
 const objects = document.querySelectorAll(".object");
 
 objects.forEach((object, index) => {
-	let startX, startY;
+	let startX, startY, isDragging = false;
 
 	object.addEventListener("mousedown", handleStart);
 	object.addEventListener("touchstart", handleStart);
@@ -10,6 +10,7 @@ objects.forEach((object, index) => {
 		event.preventDefault();
 		startX = event.clientX || event.touches[0].clientX;
 		startY = event.clientY || event.touches[0].clientY;
+		isDragging = false; // Reset the flag at the start of an interaction
 
 		document.addEventListener("mousemove", mousemoveHandler);
 		document.addEventListener("touchmove", touchmoveHandler);
@@ -23,6 +24,10 @@ objects.forEach((object, index) => {
 		const newY = event.clientY;
 		const deltaX = newX - startX;
 		const deltaY = newY - startY;
+
+		if (Math.abs(deltaX) > 0 || Math.abs(deltaY) > 0) {
+			isDragging = true; // Set the flag if a drag is detected
+		}
 
 		if (Math.abs(deltaX) > Math.abs(deltaY)) {
 			playSound(`horizontalDragSound${index + 1}`);
@@ -38,6 +43,10 @@ objects.forEach((object, index) => {
 		const deltaX = newX - startX;
 		const deltaY = newY - startY;
 
+		if (Math.abs(deltaX) > 0 || Math.abs(deltaY) > 0) {
+			isDragging = true; // Set the flag if a drag is detected
+		}
+
 		if (Math.abs(deltaX) > Math.abs(deltaY)) {
 			playSound(`horizontalDragSound${index + 1}`);
 		} else {
@@ -48,10 +57,13 @@ objects.forEach((object, index) => {
 	function handleEnd() {
 		document.removeEventListener("mousemove", mousemoveHandler);
 		document.removeEventListener("touchmove", touchmoveHandler);
+		isDragging = false; // Reset the flag when dragging ends
 	}
 
 	object.addEventListener("click", () => {
-		playSound(`clickSound${index + 1}`);
+		if (!isDragging) {
+			playSound(`clickSound${index + 1}`);
+		}
 	});
 });
 
