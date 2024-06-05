@@ -1,7 +1,7 @@
 const objects = document.querySelectorAll(".object");
 
 objects.forEach((object, index) => {
-	let startX, startY, isDragging = false;
+	let startX, startY, isDragging = false, soundPlayed = false;
 
 	object.addEventListener("mousedown", handleStart);
 	object.addEventListener("touchstart", handleStart);
@@ -11,6 +11,7 @@ objects.forEach((object, index) => {
 		startX = event.clientX || event.touches[0].clientX;
 		startY = event.clientY || event.touches[0].clientY;
 		isDragging = false; // Reset the flag at the start of an interaction
+		soundPlayed = false; // Reset the soundPlayed flag at the start of an interaction
 
 		document.addEventListener("mousemove", mousemoveHandler);
 		document.addEventListener("touchmove", touchmoveHandler);
@@ -29,10 +30,13 @@ objects.forEach((object, index) => {
 			isDragging = true; // Set the flag if a drag is detected
 		}
 
-		if (Math.abs(deltaX) > Math.abs(deltaY)) {
-			playSound(`horizontalDragSound${index + 1}`);
-		} else {
-			playSound(`verticalDragSound${index + 1}`);
+		if (!soundPlayed) { // Check if the sound has already been played
+			if (Math.abs(deltaX) > Math.abs(deltaY)) {
+				playSound(`horizontalDragSound${index + 1}`);
+			} else {
+				playSound(`verticalDragSound${index + 1}`);
+			}
+			soundPlayed = true; // Set the flag after playing the sound
 		}
 	}
 
@@ -47,10 +51,13 @@ objects.forEach((object, index) => {
 			isDragging = true; // Set the flag if a drag is detected
 		}
 
-		if (Math.abs(deltaX) > Math.abs(deltaY)) {
-			playSound(`horizontalDragSound${index + 1}`);
-		} else {
-			playSound(`verticalDragSound${index + 1}`);
+		if (!soundPlayed) { // Check if the sound has already been played
+			if (Math.abs(deltaX) > Math.abs(deltaY)) {
+				playSound(`horizontalDragSound${index + 1}`);
+			} else {
+				playSound(`verticalDragSound${index + 1}`);
+			}
+			soundPlayed = true; // Set the flag after playing the sound
 		}
 	}
 
@@ -74,6 +81,7 @@ function playSound(soundId) {
 		sound.play();
 	}
 }
+
 
 let observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {

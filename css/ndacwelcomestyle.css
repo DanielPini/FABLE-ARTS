@@ -1,3 +1,7 @@
+.ndac-background-welcome {
+  background-color: var(--ndac-background-color);
+  background: url("../assets/images/hamish_overlaid_background_1.png") no-repeat fixed center;
+}
 .welcome-page-main {
   margin: 0 auto;
   width: 80%;
@@ -20,7 +24,6 @@
   position: relative;
   width: 100%;
   padding-top: 65%;
-  background-color: var(--ndac-background-color);
   display: flex;
 }
 #welcome-video {
@@ -30,7 +33,6 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   box-shadow: var(--ndac-box-shadow);
 }
 .about-the-artists-wrapper {
@@ -41,7 +43,6 @@
 }
 .artist-card {
   width: 45%;
-  padding: 15px 0;
   overflow: visible;
 }
 .ndac-bio-text {
@@ -54,6 +55,7 @@
   box-shadow: var(--ndac-box-shadow);
   overflow: visible;
   text-shadow: var(--ndac-text-shadow);
+  padding: 15px;
 }
 
 .ndac-headshot {
