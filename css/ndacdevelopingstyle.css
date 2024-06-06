@@ -304,24 +304,24 @@
 }
 .bamboo-image-left-side.js-grow-bamboo {
   opacity: 1;
-  transform: scale(.7) translate(0px, -120px) rotate(-22deg);
+  transform: scale(.7) translate(100px, -120px) rotate(-22deg);
   transition: transform 2s ease, opacity .5s ease;
   transition-delay: 0.7s;
 }
 .bamboo-image-left-side {
   opacity: 0;
-  transform: scale(.7) translate(0px, -400px) rotate(-15deg);
+  transform: scale(.7) translate(100px, -400px) rotate(-15deg);
   transform-origin: top right;
 }
 .bamboo-image-right-side.js-grow-bamboo {
   opacity: 1;
-  transform: scale(.7) translate(0px, -120px) rotate(22deg);
+  transform: scale(.7) translate(100px, -120px) rotate(22deg);
   transition: transform 2s ease, opacity .5s ease;
   transition-delay: 0.7s;
 }
 .bamboo-image-right-side {
  opacity: 0;
- transform: scale(.7) translate(0px, -400px) rotate(15deg);
+ transform: scale(.7) translate(100px, -400px) rotate(15deg);
  transform-origin: top left;
 }
 
