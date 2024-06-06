@@ -1,6 +1,6 @@
 .ndac-background-welcome {
   background-color: var(--ndac-background-color);
-  background: url("../assets/images/hamish_overlaid_background_1.png") no-repeat fixed center;
+  background: url("../assets/images/hamish_overlaid_background_1.png") repeat 50% 92%;
 }
 .welcome-page-main {
   margin: 0 auto;
