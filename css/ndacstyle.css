@@ -6,10 +6,10 @@
   --ndac-text-background: rgba(132, 147, 132, 0.699);
   --ndac-box-shadow: 0 0 20px 1px rgba(81, 81, 81, 0.1);
   --ndac-text-shadow: 0 0 1px rgba(41, 41, 41, 1);
-  --ndac-font-family: ;
+  --ndac-font-family: Verdana, sans-serif;
 }
 * {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Verdana, sans-serif;
   font-family:
     var(--ndac-font-family);
 }
@@ -47,7 +47,9 @@ span {
   cursor: pointer;
   display: inline-block;
   overflow: hidden;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: var(--ndac-font-family);
+  font-weight: bold;
+  font-style: italic;
   transition: all .3s;
 }
 .ndac-header-title:hover {
@@ -62,7 +64,7 @@ span {
   flex-flow: row nowrap;
   display: inline-block;
   overflow: hidden;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: var(--ndac-font-family);
   transition: all .2s;
 }
 .ndac-nav-container {

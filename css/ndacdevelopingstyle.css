@@ -166,6 +166,8 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 .image1 .descriptive-text {
   width: 75%;
@@ -235,8 +237,7 @@
 }
 .descriptive-text {
   background-color: var(--ndac-text-background);
-  box-shadow: var(--ndac-box-shadow);
-  overflow: visible;
+  box-shadow: var(--ndac-box-shadow);  
 }
 .descriptive-text h2 {
   font-size: 4vw;
