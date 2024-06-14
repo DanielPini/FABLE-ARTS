@@ -111,26 +111,37 @@
 }
 
 /* layout */
-.developing-instruments-grid-layout {
-  display: grid;
-  grid-template-columns: 1fr 5fr 300px 5fr 1fr;
+.developing-instruments-main {
+  height: auto;
+  min-width: auto;
   max-width: 100%;
+  min-height: auto;
   overflow: hidden;
+  margin: 0 10vw;
+}
+.developing-instruments-grid-layout {
+  grid-area: section;
+  display: grid;
+  grid-template-columns: 5fr 3fr 5fr;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+  gap: 10px 0px;
   grid-template-areas: 
-        ". image1 image1 image1 ."
-        ". ceramic-section ceramic-section ceramic-section ."
-        ". bamboo1 image2 image2 ."
-        ". image3 image3 bamboo2 ."
-        ". bamboo3 image4 image4 ."
-        ". bamboo-section bamboo-section bamboo-section ."
-        ". image5 image5 bamboo4 ."
-        ". distance-closeness-section distance-closeness-section distance-closeness-section."
-        ". bamboo5 image6 image6 ."
-        ". image7 image7 bamboo6 ."
-        ". bamboo7 image8 image8 ."
-        ". image9 image9 bamboo8 ."
-        ". bamboo9 image10 image10 ."
-        ". image11 image11 bamboo10 .";
+        "image1 image1 image1"
+        "ceramic-section ceramic-section ceramic-section"
+        "bamboo1 image2 image2"
+        "image3 image3 bamboo2"
+        "bamboo3 image4 image4"
+        "bamboo-section bamboo-section bamboo-section"
+        "image5 image5 bamboo4"
+        "distance-closeness-section distance-closeness-section distance-closeness-section"
+        "bamboo5 image6 image6"
+        "image7 image7 bamboo6"
+        "bamboo7 image8 image8"
+        "image9 image9 bamboo8"
+        "bamboo9 image10 image10"
+        "image11 image11 bamboo10";
 }
 
 /* images style */
@@ -140,100 +151,98 @@
 }
 
 .ceramic-section {
-  margin: 20px 0;
   grid-area: ceramic-section;
   display: flex;
   flex-flow: column nowrap;
   align-items: center
 }
 .bamboo-section {
-  margin: 20px 0;
   grid-area: bamboo-section;
   display: flex;
   flex-flow: column nowrap;
   align-items: center
 }
+.ndac-image {
+  box-shadow: var(--ndac-box-shadow);
+  user-select: none;
+}
 .distance-closeness-section {
-  margin: 20px 0;
   grid-area: distance-closeness-section;
   display: flex;
   flex-flow: column nowrap;
   align-items: center
 }
-.image1{
-  justify-self: center;
-  grid-area: image1;
+.ceramic-section,
+.bamboo-section,
+.distance-closeness-section {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+}
+.image1,
+.image2,
+.image3,
+.image4,
+.image5,
+.image6,
+.image7,
+.image8,
+.image9,
+.image10,
+.image11 {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
-.image1 .descriptive-text {
+.image2 img,
+.image3 img,
+.image4 img,
+.image5 img,
+.image6 img,
+.image7 img,
+.image8 img,
+.image9 img,
+.image10 img,
+.image11 img {
+  width: 100%;
+}
+.image1.descriptive-text {
   width: 75%;
+}  
+.image1{
+  grid-area: image1;
 }
 .image2 {
   grid-area: image2;
-  justify-self: end;
-}
-.image2 img {
-  width: 100%;
 }
 .image3 {
   grid-area: image3;
 }
-.image3 img {
-  width: 100%;
-}
 .image4 {
   grid-area: image4;
-    justify-self: end;
-}
-.image4 img {
-  width: 100%;
 }
 .image5 {
   grid-area: image5;
 }
-.image5 img {
-  width: 100%;
-}
 .image6 {
   grid-area: image6;
-  justify-self: end;
-}
-.image6 img {
- width: 100%;
 }
 .image7 {
   grid-area: image7;
 }
-.image7 img {
-  width: 100%;
-}
 .image8 {
   grid-area: image8;
-}
-.image7 img {
-  width: 100%;
 }
 .image9 {
   grid-area: image9;
 }
-.image9 img {
-  width: 100%;
-}
 .image10 {
   grid-area: image10;
 }
-.image10 img {
-  width: 100%;
-}
 .image11 {
   grid-area: image11;
-}
-.image11 img {
-  width: 100%;
 }
 .descriptive-text {
   background-color: var(--ndac-text-background);
@@ -259,7 +268,7 @@
 .bamboo-container {
   display: none;
   margin: none;
-  height: fit-content;
+  height: 31vw;
   position: relative;
   -webkit-mask-image: linear-gradient(transparent 1%, black 6%, black);
   mask-image: linear-gradient(transparent 1%, black 6%, black);
@@ -305,28 +314,28 @@
 }
 .bamboo-image-left-side.js-grow-bamboo {
   opacity: 1;
-  transform: scale(.7) translate(100px, -120px) rotate(-22deg);
+  transform: scale(.5) translate(-10vw, -190px) rotate(-40deg);
   transition: transform 2s ease, opacity .5s ease;
-  transition-delay: 0.7s;
+  transition-delay: 0.2s;
 }
 .bamboo-image-left-side {
   opacity: 0;
-  transform: scale(.7) translate(100px, -400px) rotate(-15deg);
+  transform: scale(.5) translate(-10vw, -600px) rotate(-5deg);
   transform-origin: top right;
 }
 .bamboo-image-right-side.js-grow-bamboo {
   opacity: 1;
-  transform: scale(.7) translate(100px, -120px) rotate(22deg);
+  transform: scale(.5) translate(20vw, -190px) rotate(40deg);
   transition: transform 2s ease, opacity .5s ease;
-  transition-delay: 0.7s;
+  transition-delay: 0.2s;
 }
 .bamboo-image-right-side {
  opacity: 0;
- transform: scale(.7) translate(100px, -400px) rotate(15deg);
+ transform: scale(.5) translate(20vw, -600px) rotate(5deg);
  transform-origin: top left;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
   .developing-instruments-grid-layout {
     display: flex;
     flex-flow: column nowrap;
@@ -348,12 +357,48 @@
   .bamboo-container {
     display: none;
   }
+  .developing-instruments-main {
+    margin: 0;
+  }
 }
-@media only screen and (min-width: 701px) {
+@media only screen and (min-width: 601px) {
+  .developing-instruments-main {
+    height: auto;
+    min-width: auto;
+    max-width: 100%;
+    min-height: auto;
+    overflow: hidden;
+    margin: 0 10vw;
+  }
+  .developing-instruments-grid-layout {
+    grid-area: section;
+    display: grid;
+    grid-template-columns: 5fr 3fr 5fr;
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+    gap: 10px 0px;
+    grid-template-areas: 
+          "image1 image1 image1"
+          "ceramic-section ceramic-section ceramic-section"
+          "bamboo1 image2 image2"
+          "image3 image3 bamboo2"
+          "bamboo3 image4 image4"
+          "bamboo-section bamboo-section bamboo-section"
+          "image5 image5 bamboo4"
+          "distance-closeness-section distance-closeness-section distance-closeness-section"
+          "bamboo5 image6 image6"
+          "image7 image7 bamboo6"
+          "bamboo7 image8 image8"
+          "image9 image9 bamboo8"
+          "bamboo9 image10 image10"
+          "image11 image11 bamboo10";
+  }
   .bamboo-container {
     display: block;
   }
 }
+
 @media only screen and (min-width: 1000px) {
   .descriptive-text p {
     font-size: 20px;
