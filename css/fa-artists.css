@@ -1,0 +1,58 @@
+.fa-artists {
+  margin: 40px auto;
+  width: 80vw;
+  min-width: 420px;
+  max-width: 1200px;
+}
+.artist-heading {
+  font-size: 5vw;
+}
+section {
+  display: flex;
+  flex-flow: row wrap;
+  border: 4px solid white;
+  height: fit-content;
+  justify-content: space-around;
+}
+.headshot-section-heading {
+  display: block;
+  margin-top: 20px;
+  padding-left: 20px;
+  width: 100%;
+}
+.headshot-wrapper {
+  position: relative;
+  width: 480px;
+  padding: 20px;
+}
+.artist-headshot {
+  width: 100%;
+}
+.bio-text {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 20px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 400ms;
+  height: 661px;
+}
+.bio-text:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .artist-heading{
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 601px) {
+  
+}
+@media only screen and (min-width: 1200px) {
+  .artist-heading{
+    font-size: 60px;
+  }
+}
