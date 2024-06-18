@@ -1,4 +1,3 @@
-export function scrollButtonJS() {
   // Get the button:
   let scrollButton = document.getElementById("scroll-btn");
 
@@ -19,4 +18,3 @@ export function scrollButtonJS() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
-}

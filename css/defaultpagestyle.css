@@ -196,38 +196,49 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   height: fit-content;
   margin: 20px 0;
   overflow: hidden;
-  min-width: 300px;
   padding: 5px;
 }
-.button-section a button {
+.button-section * {
   overflow: hidden;
-}
-.button-section a button span {
-  font-size: large;
-  font-style: italic;
+  font-size: 1.8vw;
   font-weight: bold;
-
 }
+.button-section span {
+  font-style: italic;
+}
+.hidden {
+  display: inline-block;
+}
+
 button {
   background: var(--button-color);
   cursor: pointer;
   border-radius: 15px;
   height: 60px;
-  width: 290px;
+  width: 35vw;
   font-size: large;
   font-weight: 700;
   color: var(--font-color);
   margin: 5px 10px;
-  transition: all .3s;
+  transition: scale .3s;
   border: 1px solid rgb(24, 24, 72);
 }
 button:hover {
   position: relative;
   scale: 1.05;
+}
+.chevron {
+  width: 1.8vw;
+}
+.next-button {
+  transform: rotate(90deg);
+}
+.previous-button {
+  transform: rotate(-90deg);
 }
 
 /* Footer */
@@ -342,17 +353,17 @@ footer {
     width: fit-content;
     height: fit-content;
     overflow: hidden;
+    margin: auto;
   }
-  .button-section a button{
-    font-size: large;
-  }
-  .button-section a button span {
-    font-size: large;
-    font-style: italic;
+  .button-section * {
+    font-size: 12px;
     font-weight: bold;
   }
   .copyright span {
-    font-size: large;
+    font-style: italic;
+  }
+  .hidden {
+    display: none;
   }
 }  
 
@@ -368,12 +379,8 @@ footer {
     margin: 2% 0;
     font-size: 30px;
   }
-  .button-section a button {
+  .button-section * {
     font-size: large;
-  }
-  .button-section a button span {
-    font-style: italic;
-    font-weight: bold;
   }
 }
 
