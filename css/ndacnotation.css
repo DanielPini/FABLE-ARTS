@@ -1,22 +1,44 @@
+p, h2, h3, figcaption {
+  background-color: var(--ndac-text-background);
+  padding: 10px 15px;
+}
 .notation-main {
-  width: 80vw;
+  width: 85vw;
 }
 .notation-h1 {
   margin-top: 60px;
   font-weight: bold;
   font-size: 3vw;
   text-align: center;
+  background-color: var(--ndac-text-background);
+  padding: 10px 15px;
 }
 .notation-h2 {
   font-weight: bold;
   font-size: 2vw;
-  padding: 10px 0px;
+}
+.notation-video, .notation-figcaption{
+  width: 85vw;
 }
 .notation-video {
-  width: 70vw;
   height: 45vw;
 }
+.notation-panels {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.notation-movement {
+  width: 32%;
+}
+.movement-heading {
+  width: 100%;
+  text-align: center;
+}
 @media only screen and (max-width: 600px) {
+  .notation-main {
+    width: 98%;
+  }
   .notation-h1 {
     font-size: 18px;
     margin-top: 60px;
@@ -27,9 +49,18 @@
     font-weight: bold;
     font-size: 11px;
   }
-  .notation-video {
+  .notation-video, .notation-figcaption{
     width: 420px;
+  }
+  .notation-video {
     height: 237px;
+    overflow: hidden;
+  }
+  .notation-panels {
+    justify-content: center;
+  }
+  .notation-movement {
+    width: 100%;
   }
 }
 @media only screen and (min-width: 601px) {
@@ -42,8 +73,10 @@
   .notation-h2 {
     font-size: 24px;
   }
-  .notation-video {
+  .notation-video, .notation-figcaption{
     width: 840px;
+  }
+  .notation-video {
     height: 475px;
   }
 }
