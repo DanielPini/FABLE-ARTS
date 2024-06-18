@@ -1,0 +1,49 @@
+.notation-main {
+  width: 80vw;
+}
+.notation-h1 {
+  margin-top: 60px;
+  font-weight: bold;
+  font-size: 3vw;
+  text-align: center;
+}
+.notation-h2 {
+  font-weight: bold;
+  font-size: 2vw;
+  padding: 10px 0px;
+}
+.notation-video {
+  width: 70vw;
+  height: 45vw;
+}
+@media only screen and (max-width: 600px) {
+  .notation-h1 {
+    font-size: 18px;
+    margin-top: 60px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .notation-h2 {
+    font-weight: bold;
+    font-size: 11px;
+  }
+  .notation-video {
+    width: 420px;
+    height: 237px;
+  }
+}
+@media only screen and (min-width: 601px) {
+
+}
+@media only screen and (min-width: 1200px) {
+  .notation-h1 {
+    font-size: 36px;
+  }
+  .notation-h2 {
+    font-size: 24px;
+  }
+  .notation-video {
+    width: 840px;
+    height: 475px;
+  }
+}
