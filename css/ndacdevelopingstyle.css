@@ -1,10 +1,10 @@
 /* ceramic stems image */
-.numbered-ceramic-table-container {
+.ceramic-table-container {
   position: relative;
-  width: 75%;
-  margin: auto;
+  width: 100%;
+  margin: 0 auto;
 }
-#numbered-ceramic-table {
+#ceramic-table {
   width: 100%;
   box-shadow: var(--ndac-box-shadow);
 }
@@ -22,9 +22,9 @@
   width: 7%;
   height: 16%;
   position: absolute;
-  cursor: 
-    url(../assets/images/mallet_1-resized.ico), 
-    url(../assets/mallet_1-resized.cur), 
+  cursor:
+    url(../assets/images/mallet_1-resized.ico),
+    url(../assets/mallet_1-resized.cur),
     url(../assets/images/mallet_1-resized.png), pointer;
   z-index: 1;
   transform: rotate(-10deg);
@@ -119,134 +119,49 @@
   overflow: hidden;
   margin: 0 10vw;
 }
-.developing-instruments-grid-layout {
-  grid-area: section;
-  display: grid;
-  grid-template-columns: 5fr 3fr 5fr;
-  max-width: 100%;
-  width: 100%;
-  overflow: hidden;
-  gap: 10px 0px;
-  grid-template-areas: 
-        "image1 image1 image1"
-        "ceramic-section ceramic-section ceramic-section"
-        "bamboo1 image2 image2"
-        "image3 image3 bamboo2"
-        "bamboo3 image4 image4"
-        "bamboo-section bamboo-section bamboo-section"
-        "image5 image5 bamboo4"
-        "distance-closeness-section distance-closeness-section distance-closeness-section"
-        "bamboo5 image6 image6"
-        "image7 image7 bamboo6"
-        "bamboo7 image8 image8"
-        "image9 image9 bamboo8"
-        "bamboo9 image10 image10"
-        "image11 image11 bamboo10";
+.developing-instruments-flex-layout {
+display: flex;
+flex-flow: row wrap;
+width: 100%;
+max-width: 100%;
+overflow: hidden;
 }
 
 /* images style */
 .ndac-image {
   box-shadow: var(--ndac-box-shadow);
   user-select: none;
-}
-
-.ceramic-section {
-  grid-area: ceramic-section;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center
-}
-.bamboo-section {
-  grid-area: bamboo-section;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center
-}
-.ndac-image {
-  box-shadow: var(--ndac-box-shadow);
-  user-select: none;
-}
-.distance-closeness-section {
-  grid-area: distance-closeness-section;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center
-}
-.ceramic-section,
-.bamboo-section,
-.distance-closeness-section {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
-.image1,
-.image2,
-.image3,
-.image4,
-.image5,
-.image6,
-.image7,
-.image8,
-.image9,
-.image10,
-.image11 {
   margin: 0;
   padding: 0;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-}
-.image2 img,
-.image3 img,
-.image4 img,
-.image5 img,
-.image6 img,
-.image7 img,
-.image8 img,
-.image9 img,
-.image10 img,
-.image11 img {
   width: 100%;
 }
-.image1.descriptive-text {
+.ceramic-section,
+.bamboo-section,
+.distance-closeness-section,
+.installation-section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.big-dti-image {
+  width: 70%;
+  margin: 0 auto;
+}
+.dti-section {
+  width: 67%;
+}
+.stems-container {
   width: 75%;
-}  
-.image1{
-  grid-area: image1;
-}
-.image2 {
-  grid-area: image2;
-}
-.image3 {
-  grid-area: image3;
-}
-.image4 {
-  grid-area: image4;
-}
-.image5 {
-  grid-area: image5;
-}
-.image6 {
-  grid-area: image6;
-}
-.image7 {
-  grid-area: image7;
-}
-.image8 {
-  grid-area: image8;
-}
-.image9 {
-  grid-area: image9;
-}
-.image10 {
-  grid-area: image10;
-}
-.image11 {
-  grid-area: image11;
+  margin: 0 auto;
 }
 .descriptive-text {
   background-color: var(--ndac-text-background);
-  box-shadow: var(--ndac-box-shadow);  
+  box-shadow: var(--ndac-box-shadow);
 }
 .descriptive-text h2 {
   font-size: 4vw;
@@ -270,57 +185,22 @@
   margin: none;
   height: 31vw;
   position: relative;
-  -webkit-mask-image: linear-gradient(transparent 1%, black 6%, black);
-  mask-image: linear-gradient(transparent 1%, black 6%, black);
+  -webkit-mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, black 58%, transparent 60%);
+  mask-image: radial-gradient(ellipse 80% 75% at 50% 50%, black 55%, transparent 65%);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   overflow: hidden;
-}
-.bamboo {
-  width: 100%;
-}
-#bamboo1 {
-  grid-area: bamboo1;
-}
-#bamboo2 {
-  grid-area: bamboo2;
-}
-#bamboo3 {
-  grid-area: bamboo3;
-}
-#bamboo4 {
-  grid-area: bamboo4;
-}
-#bamboo5 {
-  grid-area: bamboo5;
-}
-#bamboo6 {
-  grid-area: bamboo6;
-}
-#bamboo7 {
-  grid-area: bamboo7;
-}
-#bamboo8 {
-  grid-area: bamboo8;
-}
-#bamboo9 {
-  grid-area: bamboo9;
-}
-#bamboo10 {
-  grid-area: bamboo10;
-}
-#bamboo-img-1 {
-  opacity: 0;
+  width: 33%;
 }
 .bamboo-image-left-side.js-grow-bamboo {
   opacity: 1;
-  transform: scale(.5) translate(-10vw, -190px) rotate(-40deg);
+  transform: scale(.5) translate(-20vw, -190px) rotate(-40deg);
   transition: transform 2s ease, opacity .5s ease;
   transition-delay: 0.2s;
 }
 .bamboo-image-left-side {
   opacity: 0;
-  transform: scale(.5) translate(-10vw, -600px) rotate(-5deg);
+  transform: scale(.5) translate(-20vw, -600px) rotate(-5deg);
   transform-origin: top right;
 }
 .bamboo-image-right-side.js-grow-bamboo {
@@ -336,7 +216,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .developing-instruments-grid-layout {
+  .developing-instruments-flex-layout {
     display: flex;
     flex-flow: column nowrap;
     width: 100%
@@ -347,10 +227,14 @@
   .descriptive-text h2 {
     font-size: 18px;
   }
-  .image1 .descriptive-text {
+  .stems-container .descriptive-text {
     width: 100%;
   }
-  .dit-section, .descriptive-text, .numbered-ceramic-table-container, .object-wrapper, .numbered-ceramic-table-container img  {
+  .dit-section,
+  .descriptive-text,
+  .numbered-ceramic-table-container,
+  .object-wrapper,
+  .numbered-ceramic-table-container img  {
     width: 100%;
     min-width: 300px;
   }
@@ -369,30 +253,6 @@
     min-height: auto;
     overflow: hidden;
     margin: 0 10vw;
-  }
-  .developing-instruments-grid-layout {
-    grid-area: section;
-    display: grid;
-    grid-template-columns: 5fr 3fr 5fr;
-    max-width: 100%;
-    width: 100%;
-    overflow: hidden;
-    gap: 10px 0px;
-    grid-template-areas: 
-          "image1 image1 image1"
-          "ceramic-section ceramic-section ceramic-section"
-          "bamboo1 image2 image2"
-          "image3 image3 bamboo2"
-          "bamboo3 image4 image4"
-          "bamboo-section bamboo-section bamboo-section"
-          "image5 image5 bamboo4"
-          "distance-closeness-section distance-closeness-section distance-closeness-section"
-          "bamboo5 image6 image6"
-          "image7 image7 bamboo6"
-          "bamboo7 image8 image8"
-          "image9 image9 bamboo8"
-          "bamboo9 image10 image10"
-          "image11 image11 bamboo10";
   }
   .bamboo-container {
     display: block;
