@@ -221,6 +221,12 @@ overflow: hidden;
     flex-flow: column nowrap;
     width: 100%
   }
+  .dti-section,
+  .big-dti-image,
+  .stems-container,
+  .stems-container {
+    width: 98%;
+  }
   .descriptive-text p {
     font-size: 15px;
   }
