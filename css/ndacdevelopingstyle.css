@@ -195,7 +195,7 @@ overflow: hidden;
 }
 .bamboo-image-left-side.js-grow-bamboo {
   opacity: 1;
-  transform: scale(.5) translate(-20vw, -15%) rotate(-40deg);
+  transform: scale(.6) translate(-20vw, -15%) rotate(-40deg);
   transition: transform 1000ms ease, opacity .5s;
   transition-delay: 0.2s;
 }
@@ -206,7 +206,7 @@ overflow: hidden;
 }
 .bamboo-image-right-side.js-grow-bamboo {
   opacity: 1;
-  transform: scale(.5) translate(20vw, -15%) rotate(40deg);
+  transform: scale(.6) translate(20vw, -15%) rotate(40deg);
   transition: transform 1000ms ease, opacity .5s;
   transition-delay: 0.2s;
 }
