@@ -158,6 +158,7 @@ overflow: hidden;
 .stems-container {
   width: 75%;
   margin: 0 auto;
+  text-align: center;
 }
 .descriptive-text {
   background-color: var(--ndac-text-background);
@@ -194,24 +195,24 @@ overflow: hidden;
 }
 .bamboo-image-left-side.js-grow-bamboo {
   opacity: 1;
-  transform: scale(.5) translate(-20vw, -190px) rotate(-40deg);
-  transition: transform 2s ease, opacity .5s ease;
+  transform: scale(.5) translate(-20vw, -15%) rotate(-40deg);
+  transition: transform 1000ms ease, opacity .5s;
   transition-delay: 0.2s;
 }
 .bamboo-image-left-side {
   opacity: 0;
-  transform: scale(.5) translate(-20vw, -600px) rotate(-5deg);
+  transform: scale(.5) translate(-20vw, -100%) rotate(-5deg);
   transform-origin: top right;
 }
 .bamboo-image-right-side.js-grow-bamboo {
   opacity: 1;
-  transform: scale(.5) translate(20vw, -190px) rotate(40deg);
-  transition: transform 2s ease, opacity .5s ease;
+  transform: scale(.5) translate(20vw, -15%) rotate(40deg);
+  transition: transform 1000ms ease, opacity .5s;
   transition-delay: 0.2s;
 }
 .bamboo-image-right-side {
  opacity: 0;
- transform: scale(.5) translate(20vw, -600px) rotate(5deg);
+ transform: scale(.5) translate(20vw, -100%) rotate(5deg);
  transform-origin: top left;
 }
 
