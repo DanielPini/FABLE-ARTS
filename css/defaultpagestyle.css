@@ -256,10 +256,14 @@ footer {
   justify-content: center;
 }
 .copyright, .copyright span {
+  background-color: transparent;
   color: var(--font-color);
   font-size: large;
   text-align: center;
+}
+.copyright .fa {
   font-style: italic;
+  font-weight: bold;
 }
 .contact {
   color: var(--font-color);
