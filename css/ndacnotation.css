@@ -32,7 +32,6 @@ p, h2, h3, figcaption {
 }
 .movement-heading {
   width: 100%;
-  text-align: center;
 }
 @media only screen and (max-width: 600px) {
   .notation-main {
