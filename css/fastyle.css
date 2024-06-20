@@ -7,7 +7,10 @@ section {
   max-width: 1000px;
   margin: 0 auto;
   border-radius: 5px;
-  box-shadow: 0 0 10px 2px rgb(53, 133, 153);
+  transition: all 1s ease-in-out;
+}
+#welcomeBanner:hover {
+  box-shadow: 0 0 20px 2px rgb(53, 133, 153);
 }
 .fa {
   font-weight: bold;

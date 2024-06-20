@@ -96,6 +96,7 @@ header a {
 }
 .nav-item span {
   font-style: italic;
+  /* transition: all 500ms ease-in; */
 }
 .nav-item:link, .nav-item:visited {
   color: var(--font-color);
@@ -103,11 +104,10 @@ header a {
 }
 .nav-item:hover {
   text-shadow: 0 0 10px var(--font-color);
-  /* transform: scale(1.05); */
+  /* transform: scale(1.01); */
+  /* Not working. When the scale is activated,
+  the dropdown doesn't display. */
 }
-/* having difficulties with this portion.
-It sees as though the scale attribute on .nav-item:hover 
-is messing with the display attribute here. */
 .nav-inner-dropdown {
   display: none;
 }
