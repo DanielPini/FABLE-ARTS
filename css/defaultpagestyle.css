@@ -284,7 +284,8 @@ footer {
   display: none;
 }
 .splash-hidden {
-  display: none;
+  opacity: 0;
+  z-index: -9999;
 }
 .splash {
   position: fixed;
@@ -297,6 +298,8 @@ footer {
   height: 100vh;
   width: 100vh;
   background-color: rgb(38, 38, 38);
+  opacity: 0;
+  z-index: -9999;
 }
 .welcome-to-country {
   position: relative;
@@ -314,7 +317,7 @@ footer {
   width: 100%;
   border-right: 1px solid white;
   animation: welcome-animation-box-animation 1000ms ease-in-out 100ms forwards;
-  transition: all 500ms ease-in-out;
+  transition: all 1000ms ease-in-out;
 }
 @keyframes welcome-animation-box-animation {
   0% {width: 100%;}
