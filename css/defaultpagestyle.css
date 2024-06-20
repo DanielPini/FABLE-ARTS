@@ -283,6 +283,44 @@ footer {
 .small-page-nav-list {
   display: none;
 }
+.splash-hidden {
+  display: none;
+}
+.splash {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vh;
+  background-color: rgb(38, 38, 38);
+}
+.welcome-to-country {
+  position: relative;
+  display: block;
+  font-size: 20px;
+  width: 80%;
+  user-select: none;
+}
+.welcome-animation-box {
+  position: absolute;
+  background-color: rgb(38, 38, 38);
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  border-right: 1px solid white;
+  animation: welcome-animation-box-animation 1000ms ease-in-out 100ms forwards;
+  transition: all 500ms ease-in-out;
+}
+@keyframes welcome-animation-box-animation {
+  0% {width: 100%;}
+  70% {width: 1%; height: 100%; top: 0px;}
+  100% {width: 1%; height: 0%; top: 100%}
+}
 
 @media only screen and (max-width: 600px) {
   * {
