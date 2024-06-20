@@ -318,8 +318,8 @@ footer {
 }
 @keyframes welcome-animation-box-animation {
   0% {width: 100%;}
-  70% {width: 1%; height: 100%; top: 0px;}
-  100% {width: 1%; height: 0%; top: 100%}
+  70% {width: .1%; height: 100%; top: 0px;}
+  100% {width: .1%; height: 0%; top: 100%}
 }
 
 @media only screen and (max-width: 600px) {
