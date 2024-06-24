@@ -1,0 +1,32 @@
+#welcomeBanner {
+  width: 100%;
+  min-width: 550px;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 5px;
+  transition: all 1s ease-in-out;
+}
+#welcomeBanner:hover {
+  box-shadow: 0 0 20px 2px rgb(53, 133, 153);
+}
+.season-title {
+  font-style: italic;
+  font-size: 4vw;
+}
+.season-info-sidebar {
+  display: block;
+  min-width: 20%;
+  padding-right: 5px;
+}
+.season-info {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  max-width: 1000px;
+  min-width: 300px;
+  text-align: left;
+}
+#ndac-access {
+  width: fit-content;
+  padding: 0 20px
+}

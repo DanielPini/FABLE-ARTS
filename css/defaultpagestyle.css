@@ -64,6 +64,11 @@ header a {
   flex-grow: 2;
 }
 
+.fa {
+  font-weight: bold;
+  font-style: italic;
+}
+
 /* Site Navigation */
 .nav-container {
   display: flex;
@@ -93,20 +98,21 @@ header a {
 }
 .nav-item a {
   text-decoration: none;
+  transition-property: text-shadow, transform;
+  transition-duration: 100ms;
+  transition-timing-function: ease-in-out;
 }
 .nav-item span {
   font-style: italic;
-  /* transition: all 500ms ease-in; */
 }
 .nav-item:link, .nav-item:visited {
   color: var(--font-color);
   text-decoration: none;
 }
-.nav-item:hover {
+.nav-item a:hover {
   text-shadow: 0 0 10px var(--font-color);
-  /* transform: scale(1.01); */
-  /* Not working. When the scale is activated,
-  the dropdown doesn't display. */
+  transform: scale(1.03);
+  font-style: italic;
 }
 .nav-inner-dropdown {
   display: none;
@@ -115,8 +121,8 @@ header a {
   display: block;
   position: absolute;
   white-space: nowrap;
-  margin-top: 15px;
-  padding-top: 20px;
+  margin-top: 20px;
+  padding-top: 15px;
   text-shadow: none;
 }
 .nav-item ul {
@@ -176,16 +182,15 @@ section {
   margin: 20px 0px;
 }
 h1 {
-  font-size: 1rem;
+  font-size: 5vw;
   font-weight: bold;
 }
 .page-heading {
-  font-size: 4vw;
+  font-size: 5vw;
   overflow: hidden;
 }
 .page-subheading {
-  font-size: 2vw;
-  padding: 5px 0;
+  font-size: 4vw;
 }
 .italic {
   font-style: italic;
@@ -334,7 +339,7 @@ footer {
     justify-content: space-between;
   }
   h1 {
-    font-size: 20px;
+    font-size: 30px;
   }
   .nav-container {
     display: none;
@@ -389,10 +394,10 @@ footer {
     width: 100%;
   }
   .page-heading {
-    font-size: 20px;
+    font-size: 30px;
   }
   .page-subheading {
-    font-size: 15px;
+    font-size: 25px;
   }
   .button-section {
     width: fit-content;
@@ -420,12 +425,10 @@ footer {
     font-size: 25px;
   }
   .page-heading {
-    margin: 2% 0;
-    font-size: 40px;
+    font-size: 50px;
   }
   .page-subheading {
-    margin: 2% 0;
-    font-size: 30px;
+    font-size: 40px;
   }
   .button-section * {
     font-size: large;
