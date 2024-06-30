@@ -240,7 +240,7 @@ function generateArtistInfoBlock(entry) {
   let list = "";
   list += `
   <img class="artist-info-block__artist-img" src="${entry.img}" alt="Headshot of ${entry.name}">
-  <h1 class="artist-info-block__artist-name">${entry.name}</h1>
+  <h1 class="artist-info-block__artist-name page-subheading">${entry.name}</h1>
   <div class="artist-info-block__artist-bio"><p>${entry.biography}</p></div>
   <div class="artist-info-block__artist-website"><a href="${entry.website}"><p>${entry.website}</p></a></div>`;
   return list;

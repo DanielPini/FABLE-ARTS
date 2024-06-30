@@ -168,7 +168,7 @@ main {
   font-size: 1em;
   margin: auto;
   height: fit-content;
-  min-width: 600px;
+  /* min-width: 600px; */
   max-width: 100%;
   min-height: 80vh;
   display: flex;
