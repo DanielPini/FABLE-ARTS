@@ -1,0 +1,65 @@
+body {
+  background-color: rgb(41, 41, 41);;
+}
+.main {
+  margin: 50px auto;
+  max-width: 80vw;
+  overflow: hidden;
+}
+.artist-roster {
+  display: flex;
+  height: fit-content;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 15px;
+  background-color: grey
+}
+.artist-roster__artist-card-container {
+  min-width: none;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 10px;
+  /* background-color: rgba(255, 130, 226, 0.716); */
+}
+.artist-roster__card-wrapper {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  border-radius: 5px;
+}
+.artist-roster__card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.artist-roster__card__nameplate {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  opacity: 0;
+  transition: all 100ms ease-in;
+}
+.artist-roster__card__nameplate:hover {
+  background-color: rgba(66, 14, 14, 0.342);
+  opacity: 1;
+}
+.headshot, .headshot img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    width: auto;
+    max-width: 98vw;
+  }
+
+}
