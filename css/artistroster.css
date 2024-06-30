@@ -3,8 +3,12 @@ body {
 }
 .main {
   margin: 50px auto;
+  width: auto;
   max-width: 80vw;
   overflow: hidden;
+}
+.search-bar {
+  margin-left: 10px;
 }
 .artist-roster {
   display: flex;
@@ -12,14 +16,12 @@ body {
   width: 100%;
   margin: 10px 0;
   border-radius: 15px;
-  background-color: grey
+
 }
 .artist-roster__artist-card-container {
-  min-width: none;
   display: flex;
   flex-flow: row wrap;
-  margin: 10px;
-  /* background-color: rgba(255, 130, 226, 0.716); */
+  width: max-content;
 }
 .artist-roster__card-wrapper {
   width: 250px;
@@ -59,7 +61,7 @@ body {
 @media only screen and (max-width: 600px) {
   .main {
     width: auto;
-    max-width: 98vw;
+    max-width: 80vw;
   }
 
 }

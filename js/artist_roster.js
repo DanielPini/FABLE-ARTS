@@ -226,3 +226,29 @@ const artists = [
     website: "https:www.danielpini.com/"
   },
 ];
+
+const artistRoster = document.querySelector('.artist-roster__artist-card-container');
+
+renderCardsHTML(artistRoster);
+
+function generateCardsHTML(database) {
+  let list = "";
+  database.forEach(entry => {
+    list += `
+    <div class="artist-roster__card-wrapper">
+      <div class="artist-roster__card">
+        <div class="headshot">
+          <img src="${entry.img}" alt="">
+        </div>
+        <div class="artist-roster__card__nameplate">
+          <h3 class="name">${entry.name}</h3>
+        </div>
+      </div>
+    </div>`
+  });
+  return list;
+};
+function renderCardsHTML(div) {
+  div.innerHTML = generateCardsHTML(artists);
+};
+
