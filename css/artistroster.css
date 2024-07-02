@@ -1,6 +1,3 @@
-body {
-  background-color: rgb(41, 41, 41);;
-}
 .main {
   margin: 50px auto;
   width: auto;
@@ -8,24 +5,45 @@ body {
   overflow: hidden;
 }
 .search-bar {
-  margin-left: 10px;
+  display: flex;
+  justify-content: center;;
 }
+.search-bar input {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  color: black;
+  padding-left: 10px;
+}
+.search-bar button {
+  height: 30px;
+  border-radius: 5px;
+  background-color: lightblue;
+  color: black;
+  width: 100px;
+  margin: 0;
+}
+::placeholder {
+  font-size: 20px;
+}
+
 .artist-roster {
   display: flex;
   height: fit-content;
   width: 100%;
   margin: 10px 0;
   border-radius: 15px;
-
+  
 }
 .artist-roster__artist-card-container {
+  justify-content: center;
   display: flex;
   flex-flow: row wrap;
   width: max-content;
 }
 .artist-roster__card-wrapper {
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
   margin: 10px;
   border-radius: 5px;
 }
@@ -35,28 +53,55 @@ body {
   height: 100%;
   border-radius: 5px;
 }
-.artist-roster__card__nameplate {
+.artist-roster__link {
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  padding: 10px;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border-radius: 5px;
+  text-decoration: none;
   opacity: 0;
-  transition: all 100ms ease-in;
+  transition: all 100ms ease-in-out;
+}
+.artist-roster__card__nameplate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  opacity: 0;
+  transition: all 100ms ease-in-out;
+}
+ .artist-roster__link:hover {
+  background-color: rgba(66, 14, 14, 0.4);
+  opacity: 1;
+  font-style: italic;
 }
 .artist-roster__card__nameplate:hover {
-  background-color: rgba(66, 14, 14, 0.342);
   opacity: 1;
 }
-.headshot, .headshot img{
+.headshot, .headshot__image {
   width: 100%;
   height: 100%;
   border-radius: 5px;
 }
+.headshot__image {
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+.headshot__image.loaded {
+  opacity: 1;
+}
+
 
 @media only screen and (max-width: 600px) {
   .main {

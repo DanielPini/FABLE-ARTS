@@ -6,9 +6,11 @@
   <link rel="stylesheet" href="./css/defaultpagestyle.css">
   <link rel="stylesheet" href="./css/fastyle.css">
   <link rel="stylesheet" href="./css/fa-artists.css">
+  <link rel="stylesheet" href="./css/artistroster.css">
   <title>Document</title>
 </head>
 <body>
+
   <header>
 		<img
 			class="fa-logo"
@@ -18,10 +20,10 @@
     <nav class="nav-container">
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="index.html">Home</a>
+          <a href="./index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a href="2_about.html">About</a>
+          <a href="./2_about.html">About</a>
           <div class="nav-inner-dropdown">
             <ul>
               <li class="nav-item">
@@ -96,6 +98,7 @@
       </a>
 		</div>
   </header>
+  
   <main class="fa-artists">
     <h1 class="artist-heading"><span class="artist-heading fa">FABLE ARTS</span> Artists</h1>
     <div class="about-our-artists-container">
@@ -103,133 +106,18 @@
       <p>Since 2020, <span class="fa">FABLE ARTS</span> is proud to have supported the creative work of exceptional artists from multiple artistic disciplines around the world.</p>
       <p>Below is a list of our artists as well as information about them and their <span class="fa">FABLE ARTS</span> projects.</p>
     </div>
+    
     <section class="2024-artists">
-      <label for="2024-artists" class="headshot-section-heading"><span style="font-weight: bold; font-style: italic;">FABLE ARTS'</span> 2024 Artists</label>
-      <div class="headshot-wrapper">
-        <img src="assets/images/headshots/Niki_Johnson.jpg" alt="Woman sitting on a stool smiling next to drums." class="artist-headshot">
-        <div class="bio-text">
-          <h2 class="artist-name">Name</h2>
-          <p class="artist-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate aspernatur enim nobis adipisci facere, minus atque aliquid sed laudantium ratione obcaecati exercitationem tempore labore possimus dolores aperiam qui id.</p>
+      <div class="main">
+        <form class="search-bar" action="submit">
+          <input type="text" name="search" id="search" placeholder="Search">
+          <button>Submit</button>
+        </form>
+        <div class="artist-roster">
+          <div class="artist-roster__artist-card-container">
+          </div>
         </div>
-      </div>  
-      <div class="headshot-wrapper">
-        <img src="assets/images/headshots/Hamish_Upton.jpg" alt="Smiling man seated amongst flowers in bright pink and dark blue lighting." class="artist-headshot">
-        <div class="bio-text">
-          <h2 class="artist-name">Name</h2>
-          <p class="artist-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate aspernatur enim nobis adipisci facere, minus atque aliquid sed laudantium ratione obcaecati exercitationem tempore labore possimus dolores aperiam qui id.</p>
-        </div>
-      </div>  
-      <div class="headshot-wrapper">
-        <img src="assets/images/headshots/Christine_Pan.jpg" alt="" class="artist-headshot">
-        <div class="bio-text">
-          <h2 class="artist-name">Name</h2>
-          <p class="artist-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate aspernatur enim nobis adipisci facere, minus atque aliquid sed laudantium ratione obcaecati exercitationem tempore labore possimus dolores aperiam qui id.</p>
-        </div>
-      </div>  
-    </section>
-    <section class="previous-artists">
-      <label for="previous-artists" class="headshot-section-heading">Previous <span style="font-weight: bold; font-style: italic;">FABLE ARTS</span> Artists</label>
-      <div class="headshot-wrapper">
-        <img src="assets/images/headshots/Alexander_Cigana.jpg" alt="" class="artist-headshot">
-        <div class="bio-text">
-          <h2 class="artist-name">Alexander Cigana</h2>
-          <p class="artist-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate aspernatur enim nobis adipisci facere, minus atque aliquid sed laudantium ratione obcaecati exercitationem tempore labore possimus dolores aperiam qui id.</p>
-        </div>
-      </div>  
-      <div class="headshot-wrapper">
-        <img src="assets/images/headshots/Natalia_Zdorovtsova.jpg" alt="" class="artist-headshot">
-        <div class="bio-text">
-          <h2 class="artist-name">Natalia Zdorovtsova</h2>
-          <p class="artist-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate aspernatur enim nobis adipisci facere, minus atque aliquid sed laudantium ratione obcaecati exercitationem tempore labore possimus dolores aperiam qui id.</p>
-        </div>
-      </div>  
-      <div class="headshot-wrapper">
-        <img src="assets/images/headshots/James_Hazel.jpg" alt="" class="artist-headshot">
-        <div class="bio-text">
-          <h2 class="artist-name">James Hazel</h2>
-          <p class="artist-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate aspernatur enim nobis adipisci facere, minus atque aliquid sed laudantium ratione obcaecati exercitationem tempore labore possimus dolores aperiam qui id.</p>
-        </div>
-      </div> <div class="headshot-wrapper">
-        <img src="assets/images/headshots/Sonya_Holowell(1).jpg" alt="" class="artist-headshot">
-        <div class="bio-text">
-          <h2 class="artist-name">Sonya Holowell</h2>
-          <p class="artist-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate aspernatur enim nobis adipisci facere, minus atque aliquid sed laudantium ratione obcaecati exercitationem tempore labore possimus dolores aperiam qui id.</p>
-        </div>
-      </div>  
-      <div class="headshot-wrapper">
-        <img src="assets/images/headshots/Sonja_Schebeck.jpg" alt="" class="artist-headshot">
-        <div class="bio-text">
-          <h2 class="artist-name">Sonja Schebeck</h2>
-          <p class="artist-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate aspernatur enim nobis adipisci facere, minus atque aliquid sed laudantium ratione obcaecati exercitationem tempore labore possimus dolores aperiam qui id.</p>
-        </div>
-      </div>  
-      <div class="headshot-wrapper">
-        <img src="assets/images/headshots/Xenia_Deviatkina-Loh.jpg" alt="" class="artist-headshot">
-        <div class="bio-text">
-          <h2 class="artist-name">Xenia Deviatkina-Loh</h2>
-          <p class="artist-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate aspernatur enim nobis adipisci facere, minus atque aliquid sed laudantium ratione obcaecati exercitationem tempore labore possimus dolores aperiam qui id.</p>
-        </div>
-      </div> <div class="headshot-wrapper">
-        <img src="assets/images/headshots/James_Nguyen.jpg" alt="" class="artist-headshot">
-        <div class="bio-text">
-          <h2 class="artist-name">James Nguyen</h2>
-          <p class="artist-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate aspernatur enim nobis adipisci facere, minus atque aliquid sed laudantium ratione obcaecati exercitationem tempore labore possimus dolores aperiam qui id.</p>
-        </div>
-      </div>  
-      <div class="headshot-wrapper">
-        <img src="assets/images/headshots/Lotti_Betts-Dean(1).jpg" alt="" class="artist-headshot">
-        <div class="bio-text">
-          <h2 class="artist-name">Lotte Betts-Dean</h2>
-          <p class="artist-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate aspernatur enim nobis adipisci facere, minus atque aliquid sed laudantium ratione obcaecati exercitationem tempore labore possimus dolores aperiam qui id.</p>
-        </div>
-      </div>  
-      <div class="headshot-wrapper">
-        <img src="assets/images/headshots/Mary_Osborn.jpg" alt="" class="artist-headshot">
-        <div class="bio-text">
-          <h2 class="artist-name">Mary Osborn</h2>
-          <p class="artist-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate aspernatur enim nobis adipisci facere, minus atque aliquid sed laudantium ratione obcaecati exercitationem tempore labore possimus dolores aperiam qui id.</p>
-        </div>
-      </div> <div class="headshot-wrapper">
-        <img src="assets/images/headshots/Danica_Hobden.jpg" alt="" class="artist-headshot">
-        <div class="bio-text">
-          <h2 class="artist-name">Danica Hobden</h2>
-          <p class="artist-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate aspernatur enim nobis adipisci facere, minus atque aliquid sed laudantium ratione obcaecati exercitationem tempore labore possimus dolores aperiam qui id.</p>
-        </div>
-      </div>  
-      <div class="headshot-wrapper">
-        <img src="assets/images/headshots/Justin_Julian.jpg" alt="" class="artist-headshot">
-        <div class="bio-text">
-          <h2 class="artist-name">Justin Julian</h2>
-          <p class="artist-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate aspernatur enim nobis adipisci facere, minus atque aliquid sed laudantium ratione obcaecati exercitationem tempore labore possimus dolores aperiam qui id.</p>
-        </div>
-      </div>  
-      <div class="headshot-wrapper">
-        <img src="assets/images/headshots/Sebastian_Pini.jpg" alt="" class="artist-headshot">
-        <div class="bio-text">
-          <h2 class="artist-name">Sebastian Pini</h2>
-          <p class="artist-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate aspernatur enim nobis adipisci facere, minus atque aliquid sed laudantium ratione obcaecati exercitationem tempore labore possimus dolores aperiam qui id.</p>
-        </div>
-      </div> <div class="headshot-wrapper">
-        <img src="assets/images/headshots/Daniel_Pini.jpg" alt="" class="artist-headshot">
-        <div class="bio-text">
-          <h2 class="artist-name">Daniel Pini</h2>
-          <p class="artist-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate aspernatur enim nobis adipisci facere, minus atque aliquid sed laudantium ratione obcaecati exercitationem tempore labore possimus dolores aperiam qui id.</p>
-        </div>
-      </div>  
-      <div class="headshot-wrapper">
-        <img src="assets/images/headshots/Laura_van_Holstein" alt="" class="artist-headshot">
-        <div class="bio-text">
-          <h2 class="artist-name">Laura van Holstein</h2>
-          <p class="artist-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate aspernatur enim nobis adipisci facere, minus atque aliquid sed laudantium ratione obcaecati exercitationem tempore labore possimus dolores aperiam qui id.</p>
-        </div>
-      </div>  
-      <div class="headshot-wrapper">
-        <img src="assets/images/headshots/Jaap_Saers" alt="" class="artist-headshot">
-        <div class="bio-text">
-          <h2 class="artist-name">Jaap Saers</h2>
-          <p class="artist-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate aspernatur enim nobis adipisci facere, minus atque aliquid sed laudantium ratione obcaecati exercitationem tempore labore possimus dolores aperiam qui id.</p>
-        </div>
-      </div>  
+      </div>
     </section>
   </main>
   <footer>
@@ -241,8 +129,8 @@
       <a href="8_contact.html" class="contact">Contact <span>FA</span>.</a>
     </div>
   </footer>
-  <script src="#">
-  </script>
+  <script src="#"></script>
+  <script src="../js/artist_roster.js"></script>
   
 </body>
 </html>
