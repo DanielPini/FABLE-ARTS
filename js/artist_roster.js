@@ -278,6 +278,7 @@ const artists = [
     link: "../artist_pages/nikijohnson.html"
   }
 ];
+
 const artistRoster = document.querySelector('.artist-roster__artist-card-container');
 
 renderCardsHTML(artistRoster);
@@ -291,6 +292,7 @@ images.forEach((image) => {
     image.addEventListener("load", loaded())
   }
 })
+
 function loaded() {
   images.forEach(image => {
     image.classList.add('loaded');
@@ -303,7 +305,7 @@ function generateCardsHTML(database) {
     list += `
     <div class="artist-roster__card-wrapper">
       <div class="artist-roster__card">
-        <div class="headshot" background-image="${entry.blurredimg}">
+        <div class="headshot" style="background-image url(${entry.blurredimg})">
           <img class="headshot__image" src="${entry.img}" loading="lazy" alt="">
         </div>
         <a class="artist-roster__link" href="${entry.link}">
@@ -316,6 +318,18 @@ function generateCardsHTML(database) {
   });
   return list;
 };
+
 function renderCardsHTML(div) {
   div.innerHTML = generateCardsHTML(artists);
 };
+
+// const input = getElementbyID('search')
+// console.log(input)
+// input.addEventListener("input", (e) => {
+//   const value = e.target.value.toLowerCase()
+//   artists.forEach(artist => {
+//   const isVisible = 
+//     artist.name.toLowerCase().includes(value) || artist.year.includes(value) || artist.project.toLowerCase().includes(value) || artist.disciplines.toLowerCase().includes(value);
+//   artist.classList.toggle("hide", !isVisible);
+//   })
+// })

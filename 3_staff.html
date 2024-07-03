@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/defaultpagestyle.css">
     <link rel="stylesheet" href="./css/fastyle.css">
-    <title>FABLE ARTS | DIRECTOR & COLLABORATORS</title>
+    <link rel="stylesheet" href="./css/staffstyle.css">
+
+    <title>FABLE ARTS | Our Team</title>
   </head>
 <body>
   
@@ -101,7 +103,68 @@
   </header>
  
   <main>
-
+    <h1 class="page-heading">The <span class="fa page-heading">FABLE ARTS</span> Team</h1>
+    <h2 class="page-subheading">Director</h2>
+    <figure>
+      <div class="artist-roster">
+        <div class="artist-roster__card-wrapper">
+          <div class="artist-roster__card">
+            <div class="headshot" style="background-image: url(./assets/images/headshots/Daniel_Pini_blur.webp);">
+              <img class="headshot__image" src="./assets/images/headshots/Daniel_Pini.webp" loading="lazy" alt="">
+            </div>
+            <a class="artist-roster__link" href="./artist_pages/danielpini.html">
+              <div class="artist-roster__card__nameplate">
+                <h3 class="page-subheading">Daniel Pini</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <figcaption>
+        <p>Daniel Pini, cofounder and director of <span class="fa">FABLE ARTS</span> since its inception in 2020.</p>
+      </figcaption>   
+    </figure>
+    <h2 class="page-subheading"><span class="fa page-subheading">FA</span> Collaborators</h2>    
+    <figure>
+      <div class="collaborators">
+      <div class="artist-roster">
+        <div class="artist-roster__card-wrapper">
+          <div class="artist-roster__card">
+            <div class="headshot" style="background-image: url(./assets/images/headshots/Victoria_Pham_blur.webp);">
+              <img class="headshot__image" src="./assets/images/headshots/Victoria_Pham.webp" loading="lazy" alt="">
+            </div>
+            <a class="artist-roster__link" href="./artist_pages/victoriapham.html">
+              <div class="artist-roster__card__nameplate">
+                <h3 class="page-subheading">Victoria Pham</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <figcaption>
+        <p>Victoria Pham, cofounder of <span class="fa">FABLE ARTS</span> director from 2020 to 2023 and regular consultant.</p>
+      </figcaption>  
+    </figure>
+    <figure>
+      <div class="artist-roster">
+        <div class="artist-roster__card-wrapper">
+          <div class="artist-roster__card">
+            <div class="headshot" style="background-image: url(./assets/images/headshots/Stephen_Fleri_blur.webp);">
+              <img class="headshot__image" src="./assets/images/headshots/Stephen_Fleri.webp" loading="lazy" alt="">
+            </div>
+            <a class="artist-roster__link" href="./artist_pages/stevenfleri.html">
+              <div class="artist-roster__card__nameplate">
+                <h3 class="page-subheading">Steven Fleri</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <figcaption>
+        <p>Stephen Fleri, marketing consultant for <span class="fa">FABLE ARTS</span>.</p>
+      </figcaption>
+    </figure>
+  </div>
   </main>
 
   <footer>
@@ -113,5 +176,22 @@
       <a href="./9_contact.html" class="contact">Contact <span class="fa">FA</span>.</a>
     </div>
   </footer>
+  <script>
+    const images = document.querySelectorAll(".headshot-image")
+
+    images.forEach(image => {
+      if (image.complete) {
+        image.classList.add('loaded')
+      } else {
+        image.addEventListener("load", loaded())
+      }
+    })
+
+    function loaded() {
+      images.forEach(image => {
+        image.classList.add('loaded');
+      })
+    }
+  </script>
 </body>
 </html>

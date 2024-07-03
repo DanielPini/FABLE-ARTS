@@ -99,14 +99,19 @@
   background-size: cover;
 }
 .headshot__image {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 250ms ease-in-out;
 }
 .headshot__image.loaded {
   opacity: 1;
 }
-.hide {
-  display: none;
+.collaborators {
+  display: flex;
+  flex-flow: row wrap;
+}
+figure {
+  width: 350px;
+  margin-bottom: 50px;
 }
 
 @media only screen and (max-width: 600px) {
