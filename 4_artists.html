@@ -12,10 +12,13 @@
 <body>
 
   <header>
-		<img
-			class="fa-logo"
-			src="assets/images/logos/FA Logo Centered.jpg"
-			alt="FableArts logo"/>
+		<a href="./index.html">
+      <img
+        class="fa-logo"
+        src="./assets/images/logos/FA Logo Centered.jpg"
+        alt="FableArts logo"
+      />
+    </a>
     <div class="spacer"></div>
     <nav class="nav-container">
       <ul class="nav-list">
@@ -39,27 +42,27 @@
           </div>
         </li>
         <li class="nav-item">
-          <a href="#">Discover</a>
+          <a href="./5_discover.html">Discover</a>
           <div class="nav-inner-dropdown">
             <ul>
               <li class="nav-item">
-                <a href="#">Events</a>
+                <a href="./6_events.html">Events</a>
               </li>
               <li class="nav-item">
-                <a href="#">Media</a>
+                <a href="./7_media.html">Media</a>
               </li>
             </ul>  
           </div>   
         </li>
         <li class="nav-item nav-support-item">
-          <a href="#">Support <span style="font-style: italic; font-weight: bold;">FA</span></a>
+          <a href="./8_support_FA.html">Support <span style="font-style: italic; font-weight: bold;">FA</span></a>
           <div class="nav-inner-dropdown">
             <ul>
               <li class="nav-item">
-                <a href="#">Mailing List</a>
+                <a href="./9_contact.html">Mailing List</a>
               </li>
               <li class="nav-item">
-                <a href="#">Donate</a>
+                <a href="./8_support_FA.html">Donate</a>
               </li>
             </ul>
           </div>
@@ -67,7 +70,7 @@
       </ul>
     </nav>
     <div class="small-nav-box">
-      <img src="assets/images/icons/white menu button.svg" alt="menu icon">
+      <img src="./assets/images/icons/white menu button.svg" alt="menu icon">
       <div class="small-page-nav-list">
         <ul class="">
           <li class="nav-item">
@@ -80,7 +83,7 @@
             <a href="#">Discover</a>
           </li>
           <li class="nav-item nav-support-item">
-            <a href="#">Support <span style="font-style: italic; font-weight: bold;">FA</span></a>
+            <a href="./8_support_FA.html">Support <span style="font-style: italic; font-weight: bold;">FA</span></a>
           </li>
         </ul>  
       </div>
@@ -109,9 +112,10 @@
     
     <section class="2024-artists">
       <div class="main">
-        <form class="search-bar" action="submit">
+        <form class="search-bar" action="">
           <input type="text" name="search" id="search" placeholder="Search">
         </form>
+        <div class="error-message"><p>No results!</p></div>
         <div class="artist-roster">
           <div class="artist-roster__artist-card-container">
           </div>
@@ -128,8 +132,6 @@
       <a href="8_contact.html" class="contact">Contact <span>FA</span>.</a>
     </div>
   </footer>
-  <script src="#"></script>
-  <script src="../js/artist_roster.js"></script>
-  
+  <script src="./js/artist_roster.js"></script>
 </body>
 </html>
