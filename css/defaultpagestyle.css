@@ -1,8 +1,9 @@
 :root {
-  --header-footer-color: rgba(14, 14, 43, 0.345);
-  --font-color: rgb(236, 245, 234);
-  --background-color: rgb(9, 61, 25);
-  --button-color: rgb(43, 33, 119);
+  --header-footer-color: rgb(219, 219, 219);
+  --nav-hover-color: rgb(255, 255, 255);
+  --font-color: rgb(0, 0, 0);
+  --background-color: rgb(173, 182, 176);
+  --button-color: rgb(197, 227, 237);
 }
 
 * {
@@ -58,7 +59,8 @@ header a {
   transition: all .2s;
 }
 .fa-logo:hover {
-  box-shadow: 0 0 3px .5px rgba(255, 255, 255, 0.425);
+  box-shadow: 0 0 10px 1px var(--nav-hover-color);
+  transform: scale(1.02);
 }
 .spacer {
   flex-grow: 2;
@@ -110,19 +112,25 @@ header a {
   text-decoration: none;
 }
 .nav-item a:hover {
-  text-shadow: 0 0 10px var(--font-color);
+  text-shadow: 0 0 20px var(--nav-hover-color);
   transform: scale(1.03);
   font-style: italic;
 }
 .nav-inner-dropdown {
-  display: none;
-}
-.nav-item:hover .nav-inner-dropdown {
-  display: block;
+  opacity: 0;
+  z-index: -2;
   position: absolute;
   white-space: nowrap;
   margin-top: 20px;
   padding-top: 15px;
+  transition: all 250ms ease-in-out;
+}
+.nav-item:hover .nav-inner-dropdown {
+  opacity: 1;
+  z-index: 1;
+  display: block;
+  background-color: var(--header-footer-color);
+  box-shadow: 0 0 5px 1px var(--header-footer-color);
   text-shadow: none;
 }
 .nav-item ul {

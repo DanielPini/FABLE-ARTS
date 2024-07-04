@@ -1,58 +1,81 @@
+:root {
+  --box-shadow-animation-color: rgb(10, 136, 164);
+}
 main {
   content: none;
 }
 .welcome-section, .season-info {
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
-  width: 100vw;
   max-width: none;
   margin: 0;
   padding: 0;
 }
+.welcome-section {
+  flex-flow: row wrap;
+  width: 100vw;
+}
 #welcome-banner {
   margin: 10px auto;
-  width: 90vw;
+  width: 95vw;
   min-width: 350px;
   border-radius: 5px;
-  box-shadow: 0 0 10px 1px rgb(53, 133, 153);
-  animation: pulse 2s infinite;
+  box-shadow: 1 0 20px 1px var(--box-shadow-animation-color);
+  animation: pulse 4s infinite;
 }
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 10px 1px rgb(53, 133, 153);
+    box-shadow: 1px 0 20px 1px var(--box-shadow-animation-color);
+  }
+  12% {
+    box-shadow: 2px 1px 20px 1px var(--box-shadow-animation-color);
   }
   25% {
-    box-shadow: 0 1px 10px 1px rgb(53, 133, 153);
+    box-shadow: 0 3px 20px 2px var(--box-shadow-animation-color);
+  }
+  37% {
+    box-shadow: 2px 2px 20px 2px var(--box-shadow-animation-color);
   }
   50% {
-    box-shadow: 1px 0 10px 1px rgb(53, 133, 153);  
+    box-shadow: 1px 0 20px 1px var(--box-shadow-animation-color);  
+  }
+  62% {
+    box-shadow: 0 2px 20px 1px var(--box-shadow-animation-color);  
   }
   75% {
-    box-shadow: 2px 0 10px 1px rgb(53, 133, 153);
+    box-shadow: 2px 1px 20px 2px var(--box-shadow-animation-color);
+  }
+  87% {
+    box-shadow: 3px 0 20px 2px var(--box-shadow-animation-color);
   }
   100% {
-    box-shadow: 0 1px 10px 1px rgb(53, 133, 153);
+    box-shadow: 0 2px 20px 2px var(--box-shadow-animation-color);
   }
 }
 
 #welcome-banner:hover {
-  animation: glow-grow 700ms linear both;
+  animation: glow-grow 600ms linear both;
 }
 @keyframes glow-grow {
   from {
-  box-shadow: 0 0 10px 1px rgb(53, 133, 153);
+  box-shadow: 0 0 20px 1px var(--box-shadow-animation-color);
   transform: scale(1);
 }
   to {
-    box-shadow: 0 0 20px 1px rgb(237, 250, 254);
-    transform: scale(1.005);
+    box-shadow: 0 0 30px 5px rgb(252, 254, 255);
+    transform: scale(1.02);
 
   }
 }
+.index-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
 .season-info {
+  width: 90vw;
   margin: 10px 20px;
-  flex-flow: nowrap;
+  flex-flow: row nowrap;
 }
 .season-title {
   font-style: italic;
