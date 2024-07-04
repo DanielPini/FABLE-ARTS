@@ -290,6 +290,12 @@ footer {
 }
 .footer-right {
   justify-items: center;
+  transition: all 250ms ease-in-out;
+}
+.footer-right:hover {
+  text-shadow: 0 0 20px var(--nav-hover-color);
+  transform: scale(1.04);
+  font-style: italic;
 }
 .small-nav-box {
   display: none;
