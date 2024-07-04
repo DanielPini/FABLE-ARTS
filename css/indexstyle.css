@@ -1,13 +1,58 @@
-#welcomeBanner {
-  width: 100%;
-  min-width: 550px;
-  max-width: 1000px;
-  margin: 0 auto;
-  border-radius: 5px;
-  transition: all 1s ease-in-out;
+main {
+  content: none;
 }
-#welcomeBanner:hover {
-  box-shadow: 0 0 20px 2px rgb(53, 133, 153);
+.welcome-section, .season-info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100vw;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+#welcome-banner {
+  margin: 10px auto;
+  width: 90vw;
+  min-width: 350px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 1px rgb(53, 133, 153);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px 1px rgb(53, 133, 153);
+  }
+  25% {
+    box-shadow: 0 1px 10px 1px rgb(53, 133, 153);
+  }
+  50% {
+    box-shadow: 1px 0 10px 1px rgb(53, 133, 153);  
+  }
+  75% {
+    box-shadow: 2px 0 10px 1px rgb(53, 133, 153);
+  }
+  100% {
+    box-shadow: 0 1px 10px 1px rgb(53, 133, 153);
+  }
+}
+
+#welcome-banner:hover {
+  animation: glow-grow 700ms linear both;
+}
+@keyframes glow-grow {
+  from {
+  box-shadow: 0 0 10px 1px rgb(53, 133, 153);
+  transform: scale(1);
+}
+  to {
+    box-shadow: 0 0 20px 1px rgb(237, 250, 254);
+    transform: scale(1.005);
+
+  }
+}
+.season-info {
+  margin: 10px 20px;
+  flex-flow: nowrap;
 }
 .season-title {
   font-style: italic;
@@ -18,15 +63,16 @@
   min-width: 20%;
   padding-right: 5px;
 }
-.season-info {
-  display: flex;
-  flex-flow: row nowrap;
-  gap: 10px;
-  max-width: 1000px;
-  min-width: 300px;
-  text-align: left;
+.button-section {
+  width: 100vw;
 }
 #ndac-access {
   width: fit-content;
   padding: 0 20px
+}
+
+@media only screen and (min-width: 1200px) {
+  #welcome-banner, .season-info {
+    width: 1175px
+  }
 }

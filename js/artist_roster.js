@@ -13,7 +13,7 @@ input.addEventListener("input", e => {
   if (value) {
     document.querySelector('.error-message').classList.remove('no-results')
     const sorted = artists.filter(artist => {
-      return artist.name.toLowerCase().includes(value) || artist.year.toString().includes(value) || artist.project.includes(value) || artist.disciplines.includes(value);
+      return artist.name.toLowerCase().includes(value) || artist.year.toString().includes(value) || artist.project.toString().toLowerCase().includes(value) || artist.disciplines.toString().toLowerCase().includes(value) || artist.season.toString().toLowerCase().includes(value);
     })
     roster.innerHTML = generateCardsHTML(sorted)
     if (sorted.length < 1) {
@@ -24,6 +24,8 @@ input.addEventListener("input", e => {
     document.querySelector('.error-message').classList.remove('no-results')
   }
 })
+
+
 
 images.forEach((image) => {
   if (image.complete) {
