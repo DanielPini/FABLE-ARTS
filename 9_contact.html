@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/defaultpagestyle.css">
     <link rel="stylesheet" href="./css/fastyle.css">
     <link rel="stylesheet" href="./css/contact.css">
+    <script src="https://kit.fontawesome.com/de8eb2d355.js" crossorigin="anonymous"></script>
     <title>FABLE ARTS | CONTACT US</title>
   </head>
 <body>
@@ -105,22 +106,42 @@
     <!-- Contact form -->
      <div class="contact-container">
       <h1 class="page-heading">Contact us</h1>
-      <form class="contact-form" action="" onsubmit="return validate();">
-        <div id="error_message"></div>
-        <div class="input-field">
-          <input type="text" id="name" placeholder="Name">
+      <div class="container">
+      <form id="form" class="form">
+        <div class="explaination"><p>Feel free to send us a message about anything you would like more information about or help with. <br>We love hearing from you.</p></div>
+        <div class="form-control">
+          <label for="username">Name</label>
+          <input type="text" placeholder="Name" id="username" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
         </div>
-        <div class="input-field">
-          <input type="email" id="email" placeholder="Email">
+        <div class="form-control">
+          <label for="username">Email</label>
+          <input type="email" placeholder="email@email.com" id="email" />
+          <i src="./assets/images/icons/circle-check-solid.svg" class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
         </div>
-        <div class="input-field">
-          <input type="text" id="subject" placeholder="Subject">
+        <div class="form-control">
+          <label for="username">Subject</label>
+          <input type="text" placeholder="Subject" id="subject" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
         </div>
-        <div class="input-field message-field">
-          <textarea id="message" placeholder="Message"></textarea>
+        <div class="form-control">
+          <label for="username">Message</label>
+          <textarea type="message" placeholder="Write a message." id="message"></textarea>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
         </div>
-        <input type="submit" class="submit">
+        </div>
+        <button class="button" type="submit">Submit</button>
       </form>
+    </div>
+    </div>
      </div>
   </main>
 

@@ -1,10 +1,10 @@
-
 const artists = [
   {
     id: 0,
     name: "Victoria Pham",
     img: "./assets/images/headshots/Victoria_Pham.webp",
     blurredimg: "./assets/images/headshots/Victoria_Pham_blurred.webp",
+    alt: "Headshot image of artist.",
     season: "",
     date: [210424, 210626],
     year: 2021,
@@ -19,6 +19,7 @@ const artists = [
     name: "Daniel Pini",
     img: "./assets/images/headshots/Daniel_Pini.webp",
     blurredimg: "./assets/images/headshots/Daniel_Pini_blurred.webp",
+    alt: "Headshot image of artist.",
     season: "",
     date: [201031, 210626],
     year: [2020, 2021],
@@ -33,6 +34,7 @@ const artists = [
     name: "Alison Wormell",
     img: "./assets/images/headshots/Alison_Wormell.webp",
     blurredimg: "./assets/images/headshots/Alison_Wormell_blurred.webp",
+    alt: "Headshot image of artist.",
     season: "",
     date: 210529,
     year: 2021,
@@ -47,6 +49,7 @@ const artists = [
     name: "Justin Julian",
     img: "./assets/images/headshots/Justin_Julian.webp",
     blurredimg: "./assets/images/headshots/Justin_Julian_blurred.webp",
+    alt: "Headshot image of artist.",
     season: "",
     date: 210731,
     year: 2021,
@@ -61,6 +64,7 @@ const artists = [
     name: "Lotte Betts-Dean",
     img: "./assets/images/headshots/Lotte_Betts-Dean(1).webp",
     blurredimg: "./assets/images/headshots/Lotte_Betts-Dean_blurred(1).webp",
+    alt: "Headshot image of artist.",
     season: "",
     date: 210925,
     year: 2021,
@@ -75,6 +79,7 @@ const artists = [
     name: "Sebastian Pini",
     img: "./assets/images/headshots/Sebastian_Pini.webp",
     blurredimg: "./assets/images/headshots/Sebastian_Pini_blurred.webp",
+    alt: "Headshot image of artist.",
     season: "",
     date: 211218,
     year: 2021,
@@ -89,6 +94,7 @@ const artists = [
     name: "Mary Osborn",
     img: "./assets/images/headshots/Mary_Osborn.webp",
     blurredimg: "./assets/images/headshots/Mary_Osborn_blurred.webp",
+    alt: "Headshot image of artist.",
     date: 210130,
     year: 2021,
     project: "Fable & Food | Winter",
@@ -102,6 +108,7 @@ const artists = [
     name: "James Nguyen",
     img: "./assets/images/headshots/James_Nguyen.webp",
     blurredimg: "./assets/images/headshots/James_Nguyen_blurred.webp",
+    alt: "Headshot image of artist.",
     season: "",
     date: 210828,
     year: 2021,
@@ -116,6 +123,7 @@ const artists = [
     name: "Danica Hobden",
     img: "./assets/images/headshots/Danica_Hobden.webp",
     blurredimg: "./assets/images/headshots/Danica_Hobden_blurred.webp",
+    alt: "Headshot image of artist.",
     season: "",
     date: 210828,
     year: 2021,
@@ -130,6 +138,7 @@ const artists = [
     name: "Jaap Saers",
     img: "./assets/images/headshots/Jaap_Saers.webp",
     blurredimg: "./assets/images/headshots/Jaap_Saers_blurred.webp",
+    alt: "Headshot image of artist.",
     season: "",
     date: 211127,
     year: 2021,
@@ -144,6 +153,7 @@ const artists = [
     name: "Laura van Holstein",
     img: "./assets/images/headshots/Laura_van_Holstein.webp",
     blurredimg: "./assets/images/headshots/Laura_van_Holstein_blurred.webp",
+    alt: "Headshot image of artist.",
     date: 211127,
     year: 2021,
     project: "Fable & Food | Autumn: Pholk-tales",
@@ -157,6 +167,7 @@ const artists = [
     name: "James Hazel",
     img: "./assets/images/headshots/James_Hazel.webp",
     blurredimg: "./assets/images/headshots/James_Hazel_blurred.webp",
+    alt: "Headshot image of artist.",
     season: "the threads that bind",
     date: 220601,
     year: 2022,
@@ -171,6 +182,7 @@ const artists = [
     name: "Sonya Holowell",
     img: "./assets/images/headshots/Sonya_Holowell(1).webp",
     blurredimg: "./assets/images/headshots/Sonya_Holowell(1)_blurred.webp",
+    alt: "Headshot image of artist.",
     season: "the threads that bind",
     date: 220701,
     year: 2022,
@@ -185,6 +197,7 @@ const artists = [
     name: "Alexander Cigana",
     img: "./assets/images/headshots/Alexander_Cigana.webp",
     blurredimg: "./assets/images/headshots/Alexander_Cigana_blurred.webp",
+    alt: "Headshot image of artist.",
     season: "the threads that bind",
     date: 220801,
     year: 2022,
@@ -199,6 +212,7 @@ const artists = [
     name: "Sonja Schebeck",
     img: "./assets/images/headshots/Sonja_Schebeck.webp",
     blurredimg: "./assets/images/headshots/Sonja_Schebeck_blurred.webp",
+    alt: "Headshot image of artist.",
     season: "the threads that bind",
     date: 221009,
     year: 2022,
@@ -213,6 +227,7 @@ const artists = [
     name: "Natalia Zdorovtsova",
     img: "./assets/images/headshots/Natalia_Zdorovtsova.webp",
     blurredimg: "./assets/images/headshots/Natalia_Zdorovtsova_blurred.webp",
+    alt: "Headshot image of artist.",
     season: "the threads that bind",
     date: 221107,
     year: 2022,
@@ -227,6 +242,7 @@ const artists = [
     name: "Christine Pan",
     img: "./assets/images/headshots/Christine_Pan.webp",
     blurredimg: "../assets/images/headshots/Christine_Pan_blurred.webp",
+    alt: "Headshot image of artist.",
     season: "the threads that bind",
     date: 221217,
     year: 2022,
@@ -241,6 +257,7 @@ const artists = [
     name: "Xenia Deviatkina-Loh",
     img: "./assets/images/headshots/Xenia_Deviatkina-Loh.webp",
     blurredimg: "./assets/images/headshots/Xenia_Deviatkina-Loh_blurred.webp",
+    alt: "Headshot image of artist.",
     season: "the threads that bind",
     date: 221217,
     year: 2022,
@@ -255,6 +272,7 @@ const artists = [
     name: "Hamish Upton",
     img: "./assets/images/headshots/Hamish_Upton.webp",
     blurredimg: "./assets/images/headshots/Hamish_Upton_blurred.webp",
+    alt: "Headshot image of artist.",
     season: "Reflections and Resonance",
     date: 240807,
     year: 2024,
@@ -269,6 +287,7 @@ const artists = [
     name: "Niki Johnson",
     img: "./assets/images/headshots/Niki_Johnson.webp",
     blurredimg: "./assets/images/headshots/Niki_Johnson_blurred.webp",
+    alt: "Headshot image of artist.",
     season: "Reflections and Resonance",
     date: 240807,
     year: 2024,
@@ -280,75 +299,4 @@ const artists = [
   }
 ];
 
-const roster = document.querySelector('.artist-roster__artist-card-container')
-
-const input = document.querySelector('#search')
-
-roster.innerHTML= generateCardsHTML(artists)
-
-input.addEventListener("input", e => {
-  const value = e.target.value.toLowerCase()
-  console.log(value);
-  if (value) {
-    console.log(value.length);
-    const sorted = artists.filter(artist => {
-      return artist.name.toLowerCase().includes(value) || artist.year.toString().includes(value) || artist.project.includes(value) || artist.disciplines.includes(value);
-    })
-    console.log(sorted);
-    roster.innerHTML = generateCardsHTML(sorted)
-  } else {
-    roster.innerHTML = generateCardsHTML(artists)
-    console.log("yo");
-  }
-})
-// roster.innerHTML = generateCardsHTML(filtered)
-// roster.innerHTML = generateCardsHTML(artists)
-
-// const filtered = artists.filter(matches)
-
-// function matches() {
-//   input.addEventListener("input", e => {
-//     const value = e.target.value
-//     console.log(value);
-//     return artists.forEach( artist => {artist.name.includes(value) || artist.year.includes(value) || artist.project.includes(value) || artist.disciplines.includes(value);
-//       artist.classList.toggle("hide", !isVisible)
-//     })
-//   })
-// }
-
-const images = roster.querySelectorAll(".headshot__image")
-
-function generateCardsHTML(database) {
-  let list = "";
-  database.forEach(entry => {
-    list += `
-    <div class="artist-roster__card-wrapper">
-      <div class="artist-roster__card">
-        <div class="headshot" style="background-image url('.${entry.blurredimg}')">
-          <img class="headshot__image" src=".${entry.img}" loading="lazy" alt="">
-        </div>
-        <a class="artist-roster__link" href=".${entry.link}">
-          <div class="artist-roster__card__nameplate">
-            <h3 class="page-subheading">${entry.name}</h3>
-          </div>
-        </a>
-      </div>
-    </div>`
-  });
-  return list;
-};
-
-images.forEach((image) => {
-  if (image.complete) {
-    image.classList.add('loaded')
-  } else {
-    image.addEventListener("load", loaded())
-  }
-})
-
-function loaded() {
-  images.forEach(image => {
-    image.classList.add('loaded');
-  })
-}
-
+export default artists
