@@ -4,7 +4,10 @@
   justify-content: space-around;
   width: 80vw;
   margin: 50px auto;
-  background-color: rgba(18, 117, 117, 0.352);
+  background-color: rgba(78, 144, 144, 0.352);
+}
+.artist-info-block-container {
+  width: 90%;
 }
 .artist-info-block__artist-img, .artist-info-block__artist-img img {
   width: 40vw;
@@ -13,16 +16,18 @@
   min-height: 200px;
   max-width: 350px;
   max-height: 350px;
-  margin: 30px 30px;
-  border: 1px solid white;
+  margin: 20px 0;
 }
-.artist-info-block__artist-name, .artist-info-block__artist-bio {
+.artist-info-block__artist-name, .artist-info-block__artist-bio, .artist-info-block__artist-projects {
   display: block;
-  margin: 0 50px;
   padding: 0;
 }
+.artist-info-block__artist-projects {
+  font-weight: bold;
+}
+.artist-info-block__artist-projects-list, 
 .artist-info-block__artist-bio {
-  margin: 50px;
+  margin-bottom: 20px;
 }
 .artist-info-block__artist-website {
   margin: 0 auto;
@@ -32,7 +37,7 @@
   transition-timing-function: ease-in-out;
 }
 .artist-info-block__artist-website:hover {
-  text-shadow: 0 0 10px var(--font-color);
+  text-shadow: 0 0 10px var(--nav-hover-color);
   transform: scale(1.03);
   font-style: italic;
 }

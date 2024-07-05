@@ -1,13 +1,45 @@
 const form = document.getElementById('form');
-const username = document.getElementById('username');
-const email = document.getElementById('email');
-const subject = document.getElementById('subject');
-const message = document.getElementById('message');
+const publicKey = yNVZUgWxbAhGcKpIN;
+const serviceId = service_pziawpp;
+const templateId = contact_form;
+const username = form.getElementById('username');
+const email = form.getElementById('email');
+const subject = form.getElementById('subject');
+const message = form.getElementById('message');
+const submitBtn = form.getElementById('submit-btn');
+
+email.js.init(publicKey);
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
+	submitBtn.innerText = "Just a moment...";
 	checkInputs();
 });
+
+// Getall input field values
+const inputFields = {
+	name: nameInput.value,
+	email: emailINput.value,
+	message: messageInput.value
+}
+/*Send the email
+(Add service, template ID and input field values)*/
+emailjs.send(serviceID, templateID, inputFields)
+	.then(() => {
+		//Change button text
+		submitBtn.innerText = "Message sent successfully";
+		//Clear out all input fields
+		nameInput.value = "";
+		subjectInput.value = "";
+		emailInput.value = "";
+		messageInput.value = "";
+	}, (error) => {
+		//Console log the error
+		console.log(error);
+		//Change button text
+		submitBtn.innerText = "Something went wrong";
+	})
+
 
 function checkInputs() {
 	// trim to remove the whitespaces

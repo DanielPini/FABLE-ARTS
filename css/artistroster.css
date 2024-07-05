@@ -91,6 +91,10 @@
   opacity: 0;
   transition: all 100ms ease-in-out;
 }
+.artist-roster__card__nameplate h3 {
+  color: white;
+  text-shadow: 0px 1px 3px black;
+}
  .artist-roster__link:hover {
   background-color: rgba(66, 14, 14, 0.4);
   opacity: 1;
