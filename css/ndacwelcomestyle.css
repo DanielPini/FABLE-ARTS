@@ -1,15 +1,19 @@
-.ndac-background-welcome {
-  background-color: var(--ndac-background-color);
-  background: url("../assets/images/hamish_overlaid_background_1.png") repeat 50% 92%;
-}
 .welcome-page-main {
   margin: 0 auto;
-  width: 80%;
+  width: 85%;
   min-width: 400px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+}
+.welcome-headings {
+  margin: 50px auto;
+}
+.welcome-subheading {
+  font-style: italic;
+  text-align: left;
+  margin: 15px auto 0 0;
 }
 .welcome-video-container {
   display: flex;
@@ -42,15 +46,15 @@
   max-width: 1000px;
 }
 .artist-card {
-  width: 45%;
+  width: 49%;
   overflow: visible;
 }
 .ndac-bio-text {
   display:block;
   margin: auto;
-  width: 98%;
-  text-align: justify;
-  font-size: 15px;
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
   background-color: var(--ndac-text-background);
   box-shadow: var(--ndac-box-shadow);
   overflow: visible;

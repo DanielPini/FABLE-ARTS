@@ -94,6 +94,48 @@ main {
   width: fit-content;
   padding: 0 20px
 }
+.splash-hidden {
+  opacity: 0;
+  z-index: -9999;
+}
+.splash {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(38, 38, 38);
+  opacity: 0;
+  z-index: -9999;
+}
+.welcome-to-country {
+  color: white;
+  position: relative;
+  display: block;
+  font-size: 20px;
+  width: 80%;
+  user-select: none;
+}
+.welcome-animation-box {
+  position: absolute;
+  background-color: rgb(38, 38, 38);
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  border-right: 1px solid white;
+  animation: welcome-animation-box-animation 1000ms ease-in-out 100ms forwards;
+  transition: all 1000ms ease-in-out;
+}
+@keyframes welcome-animation-box-animation {
+  0% {width: 100%;}
+  70% {width: .1%; height: 100%; top: 0px;}
+  100% {width: .1%; height: 0%; top: 100%}
+}
 
 @media only screen and (min-width: 1200px) {
   #welcome-banner, .season-info {

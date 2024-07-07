@@ -1,9 +1,9 @@
 :root {
   --ndac-header-footer-color: #4C8798;
   --ndac-font-color: rgb(243, 238, 234);
-  --ndac-background-color: #61984c;
-  --ndac-button-color: rgb(121, 110, 92);
-  --ndac-text-background: rgba(132, 147, 132, 0.699);
+  --ndac-background-color: #77946b;
+  --ndac-button-color: rgb(104, 99, 91);
+  --ndac-text-background: rgba(121, 124, 121, 0.282);
   --ndac-box-shadow: 0 0 20px 1px rgba(81, 81, 81, 0.1);
   --ndac-text-shadow: 0 0 1px rgba(41, 41, 41, 1);
   --ndac-font-family: Verdana, sans-serif;
@@ -20,6 +20,7 @@ header, footer {
 body {
   font-family: var(--ndac-font-family);
   color: var(--ndac-font-color);
+  background: linear-gradient(rgba( 0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/images/hamish_overlaid_background_1.png") repeat 50% 92%;
 }
 
 h1, h2, h3, h4 {
@@ -32,10 +33,7 @@ p, figcaption {
   color: var(--ndac-font-color);
 }
 
-.ndac-background {
-  background-color: var(--ndac-background-color);
-  background: url("../assets/images/hamish_overlaid_background_1.png") repeat 50% 92%;
-}
+
 
 button {
   background: var(--ndac-button-color);
@@ -89,7 +87,15 @@ span {
   text-align: center;
   flex-grow: 2;
 }
-
+.transcript *{
+  text-align: left;
+  margin-top: 5px;
+  color: white;
+  background-color: var(--ndac-text-background);
+}
+.transcript summary {
+  background-color: rgba(0,0,0,0);
+}
 .copyright, .copyright span {
   color: var(--ndac-font-color);
 }
