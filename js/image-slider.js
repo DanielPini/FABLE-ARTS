@@ -1,8 +1,14 @@
 import notationImageDB from "./data/notation-images.js";
 
-const imageSlider = document.querySelector(".image-slider");
+const scoresContainer = document.querySelector(".scores")
+const imageSlider = scoresContainer.querySelectorAll(".image-slider");
 
-imageSlider.innerHTML = generateSliderHTML(notationImageDB[1])
+console.log(notationImageDB)
+
+for (let i = 0; i < imageSlider.length; i++) {
+  imageSlider[i].innerHTML = generateSliderHTML(notationImageDB[i].figures);
+}
+
 
 function generateSliderHTML(movement) {
 let list = "";
@@ -14,6 +20,7 @@ movement.forEach(entry => {
   <figcaption>${entry.caption}</figcaption>
   </figure>`;
   });
+  return list;
 }
 
 
