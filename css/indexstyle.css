@@ -15,13 +15,40 @@ main {
   flex-flow: row wrap;
   width: 100vw;
 }
-#welcome-banner {
-  margin: 10px auto;
+#welcome-banner-container {
+  position: relative;
   width: 95vw;
+  height: calc(95vw * .5);
+  margin: 10px auto;
   min-width: 350px;
   border-radius: 5px;
   box-shadow: 1 0 20px 1px var(--box-shadow-animation-color);
   animation: pulse 4s infinite;
+}
+#welcome-banner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-image: url("../assets/images/resonance-reflections_banner.webp");
+  background-repeat: no-repeat;
+  background-size: 95vw calc(95vw * 0.5);
+}
+#welcome-banner_image {
+  position: absolute;
+  background: url("../assets/images/resonance-reflections_banner-turbulance.webp");
+  background-repeat: no-repeat;
+  background-size: 95vw calc(95vw * 0.5);
+  border-radius: 5px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  filter: url("#turbulence");
 }
 @keyframes pulse {
   0% {
@@ -138,7 +165,10 @@ main {
 }
 
 @media only screen and (min-width: 1200px) {
-  #welcome-banner, .season-info {
-    width: 1175px
+  #welcome-banner-container, .season-info, #welcome-banner, #welcome-banner_image {
+    height: calc(1175px * .5);
+    width: 1175px;
+    background-size: 1175px calc(1175px * 0.5);
+    background-repeat: no-repeat;
   }
 }

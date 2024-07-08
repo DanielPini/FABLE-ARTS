@@ -51,6 +51,7 @@ form.addEventListener('submit', (e) => {
 // 	email: emailInput.value,
 // 	message: messageInput.value
 // }
+
 /*Send the email
 (Add service, template ID and input field values)*/
 // emailjs.send(serviceID, templateID, inputFields)
