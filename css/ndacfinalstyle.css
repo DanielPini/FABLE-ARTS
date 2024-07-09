@@ -13,7 +13,8 @@
 }
 .final-video-title {
   text-align: center;
-  line-height: 60px;
+  line-height: calc(5vw + 10px);
+  margin: 5vw 0;
 }
 #finalVideo {
   position: absolute;
@@ -26,8 +27,18 @@
   background: black;
   box-shadow: var(--ndac-box-shadow);
 }
-
+.thank-you {
+  text-align: center;
+  background-color: var(--ndac-text-background);
+  margin: 5vw 0;
+}
+.thank-you p {
+  text-align: left;
+}
 @media only screen and (max-width: 700px) {
+  .final-page-wrapper {
+    width: 95vw;
+  }
   .final-page-container {
     width: 100vw;
     margin: 20px 0;

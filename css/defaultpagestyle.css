@@ -180,7 +180,7 @@ main {
   height: fit-content;
   /* min-width: 600px; */
   max-width: 100%;
-  min-height: 80vh;
+  min-height: calc(100vh - 200px);
   display: flex;
   flex-flow: column;
   align-items: center;

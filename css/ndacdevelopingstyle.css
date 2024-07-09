@@ -1,4 +1,11 @@
 /* ceramic stems image */
+.stems-container {
+  width: 80%;
+  min-width: 500px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
 .ceramic-table-container {
   position: relative;
   width: 100%;
@@ -155,11 +162,7 @@ overflow: hidden;
 .dti-section {
   width: 67%;
 }
-.stems-container {
-  width: 75%;
-  margin: 0 auto;
-  text-align: center;
-}
+
 .descriptive-text {
   background-color: var(--ndac-text-background);
   box-shadow: var(--ndac-box-shadow);
@@ -216,7 +219,7 @@ overflow: hidden;
  transform-origin: top left;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .developing-instruments-flex-layout {
     display: flex;
     flex-flow: column nowrap;
@@ -224,7 +227,6 @@ overflow: hidden;
   }
   .dti-section,
   .big-dti-image,
-  .stems-container,
   .stems-container {
     width: 98%;
   }
@@ -239,9 +241,7 @@ overflow: hidden;
   }
   .dit-section,
   .descriptive-text,
-  .numbered-ceramic-table-container,
-  .object-wrapper,
-  .numbered-ceramic-table-container img  {
+  .object-wrapper {
     width: 100%;
     min-width: 300px;
   }
@@ -251,16 +251,61 @@ overflow: hidden;
   .developing-instruments-main {
     margin: 0;
   }
-}
-@media only screen and (min-width: 601px) {
-  .developing-instruments-main {
-    height: auto;
+  .ceramic-table-container, .ceramic-table-container img {
+    width: 100%;
     min-width: auto;
-    max-width: 100%;
-    min-height: auto;
-    overflow: hidden;
-    margin: 0 10vw;
   }
+  #ceramic-table {
+    width: 100%;
+    box-shadow: var(--ndac-box-shadow);
+  }
+  /* object style */
+  .object-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .object {
+    width: 12%;
+    height: 16%;
+  }
+  #object1 {
+    top: 15%;
+    left: 1%;
+    height: 25%;
+    transform: rotate(-18deg);
+  }
+  #object2 {
+    top: 15%;
+    left: 23%;
+    height: 25%;
+  }
+  #object3 {
+    top: 13%;
+    left: 44%;
+    width: 18%;
+    height: 36%;
+    transform: rotate(-12deg);
+  }
+  #object4 {
+    top: 28%;
+    left: 68%;
+    width: 18%;
+    height: 38%;
+    transform: rotate(-2deg);
+    border-radius: 50% 50% 50% 20%;
+  }
+  #object5 {
+    top: 47%;
+    left: 79%;
+    width: 20%;
+    height: 45%;
+    transform: rotate(18deg);
+  }
+}
+@media only screen and (min-width: 701px) {
   .bamboo-container {
     display: block;
   }

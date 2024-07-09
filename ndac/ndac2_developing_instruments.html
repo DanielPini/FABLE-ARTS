@@ -129,10 +129,18 @@
                 class="object"
                 id="object5"></div>
             </div>
-            <img
-              id="ceramic-table"
-              src="../assets/images/figures/ceramics.png"
-              alt="Table with numbered white ceramic instruments arranged." />
+            <picture>
+              <source
+                media="(min-width: 701px)"
+                srcset="../assets/images/figures/ceramics.png" />
+              <source
+                media="(max-width: 700px)"
+                srcset="../assets/images/figures/ceramics-focussed.webp" />
+              <img
+                id="ceramic-table"
+                src="../assets/images/figures/ceramics.png"
+                alt="Table with numbered white ceramic instruments arranged." />
+            </picture>
           </div>
           <div class="descriptive-text">
             <p>Play these ceramic instruments to hear how they sound.</p>
