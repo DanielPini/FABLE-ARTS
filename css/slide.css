@@ -1,8 +1,8 @@
-.carousel {
+.carousel{
   position: relative;
-  height: calc(90vw * .75);
-  width: 80vw;
-  margin: 0 auto;
+  height: calc((100vw * .5) + 40px);
+  width: 100vw;
+  margin: 30px auto;
 }
 
 .carousel__image {
@@ -37,23 +37,33 @@
 
 .carousel__button {
   position: absolute;
-  top: 50%;
+  top: calc(50% - 2vw);
+  width: 5vw;
+  height: 5vw;
   transform: translateY(-50%);
-  background-color: transparent;
+  background-color: rgba(206, 206, 206, 0.507);
   border: none;
+  border-radius: 50%;
   cursor: pointer;
+}
+.carousel__button:hover {
+  scale: 1;
+  position: absolute;
 }
 
 .carousel__button--left {
-  left: -4vw;
+  left: -1vw;
+  z-index: 2;
 }
 
 .carousel__button--right {
-  right: -4vw;
+  right: -1vw;
+  z-index: 2;
 }
 
 .carousel__button img {
-  width: 3vw;
+  margin: auto;
+  width: 5vw;
 }
 
 .carousel__nav {
@@ -74,5 +84,15 @@
 .carousel__indicator.current-slide {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+.movement-figure_image {
+  height: calc(100vw * .5);
+  width: 100vw;
+}
+
+.movement-figure_caption{
+  background-color: var(--ndac-text-background);
+}
+
 
 .is-hidden { display: none;}

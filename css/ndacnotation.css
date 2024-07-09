@@ -48,6 +48,7 @@ p, h2, h3, figcaption {
   margin: 2vw 0;
 }
 
+
 @media only screen and (max-width: 600px) {
   .notation-h1 {
     font-size: 18px;
