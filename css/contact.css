@@ -88,12 +88,37 @@
 .form-control.error small {
 	visibility: visible;
 }
-.button {
+.subscribe {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+#subscribe {
+	margin: 10px;
+}
+#subscribe:hover {
+	transform: scale(1.1);
+}
+.subscribe p {
+	margin-left: 10px;
+	font-size: 14px;
+}
+#submit-btn {
   background-color: #b8dde4;
 	border-radius: 4px;
 	color: #000000;
   width: 100%;
+	max-width: 400px;
   padding: 0;
   margin: 5px auto;
   margin-bottom: 20px;
+}
+#submit-btn:hover {
+  position: relative;
+  scale: 1.05;
+}
+#submit-btn:disabled, button:disabled:hover {
+  background: grey;
+  cursor: default;
+  scale: 1;
 }

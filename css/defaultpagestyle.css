@@ -302,6 +302,7 @@ footer {
 }
 .small-nav-box {
   display: none;
+  z-index: 1;
 }
 .small-page-nav-list {
   display: none;

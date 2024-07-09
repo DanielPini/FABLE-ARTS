@@ -1,19 +1,38 @@
 const form = document.getElementById('form');
 const publicKey = "yNVZUgWxbAhGcKpIN";
-const serviceId = "service_pziawpp";
-const templateId = "contact_form";
+const serviceID = "service_pziawpp";
+const templateID = "contact_form";
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 const subject = document.getElementById('subject');
 const message = document.getElementById('message');
 const submitBtn = document.getElementById('submit-btn');
+const subscribe = document.getElementById('subscribe');
+
+let subscribeConsent = ""
+
+subscribe.addEventListener("click", () => {
+	if(subscribe.checked) {
+		subscribeConsent = "Subscribe me please!";
+	} else {
+		subscribeConsent = "No subscription needed.";
+	}
+});
+
+(function() {
+	// https://dashboard.emailjs.com/admin/account
+	emailjs.init({
+		publicKey: publicKey,
+	});
+})();
+
 let userSuccess, emailSuccess, subjectSuccess, messageSuccess;
+
 submitBtn.disabled = true;
 userSuccess = false;
 emailSuccess = false;
 subjectSuccess = false;
 messageSuccess = false;
-// emailjs.init(publicKey);
 
 username.addEventListener('input', (e) => {
 	checkUsername(e)
@@ -38,10 +57,39 @@ function isVerified() {
 }
 
 
-form.addEventListener('submit', (e) => {
+form.addEventListener("submit", (e) => {
 	e.preventDefault();
 	submitBtn.innerText = "Just a moment...";
-	checkInputs();
+	isVerified();
+	const inputFields = {
+		name: username.value,
+		subject: subject.value,
+		email: email.value,
+		message: message.value,
+		"subscribe_consent": subscribeConsent,
+	};
+	emailjs.send(serviceID, templateID, inputFields)
+	.then(() => {
+		//Change button text
+		submitBtn.innerText = "Message sent successfully";
+		resetAfterWait(1500);
+		//Clear out all input fields
+		username.value = "";
+		setResetFor(username);
+		subject.value = "";
+		setResetFor(subject);
+		email.value = "";
+		setResetFor(email);
+		message.value = "";
+		setResetFor(message);;
+		subscribe.checked = false;
+	}, (error) => {
+		//Console log the error
+		console.log(error);
+		//Change button text
+		submitBtn.innerText = "Something went wrong";
+		setTimeout((submitBtn.innerText = "Submit") ,1500);
+	})
 	submitBtn.disabled = true;
 });
 
@@ -54,21 +102,7 @@ form.addEventListener('submit', (e) => {
 
 /*Send the email
 (Add service, template ID and input field values)*/
-// emailjs.send(serviceID, templateID, inputFields)
-// 	.then(() => {
-// 		//Change button text
-// 		submitBtn.innerText = "Message sent successfully";
-// 		//Clear out all input fields
-// 		nameInput.value = "";
-// 		subjectInput.value = "";
-// 		emailInput.value = "";
-// 		messageInput.value = "";
-// 	}, (error) => {
-// 		//Console log the error
-// 		console.log(error);
-// 		//Change button text
-// 		submitBtn.innerText = "Something went wrong";
-// 	})
+
 
 function checkUsername(e) {
 	const value = e.target.value
@@ -79,10 +113,7 @@ function checkUsername(e) {
 		
 	} else {
 		setSuccessFor(username)
-		console.log(userSuccess);
 		userSuccess = true;
-		console.log(userSuccess);
-		console.log("postUsernameSuccess");
 	}
 }
 function checkEmail(e) {
@@ -95,11 +126,8 @@ function checkEmail(e) {
 		setErrorFor(email, 'Not a valid email');
 		emailSuccess = false;
 	} else {
-		console.log(emailSuccess);
 		setSuccessFor(email);
 		emailSuccess = true;
-		console.log(emailSuccess);
-		console.log("postEmailSuccess");
 	}
 }
 function checkSubject(e) {
@@ -108,12 +136,8 @@ function checkSubject(e) {
 		setErrorFor(subject, 'Subject cannot be blank');
 		subjectSuccess = false;
 	} else {
-		console.log(subjectSuccess);
 		setSuccessFor(subject);
 		subjectSuccess = true;
-		console.log(subjectSuccess);
-		console.log("postSubjectSuccess");
-
 	}
 }
 function checkMessage(e) {
@@ -123,47 +147,44 @@ function checkMessage(e) {
 		messageSuccess = false;
 	} else {
 		setSuccessFor(message);
-		console.log(messageSuccess);
 		messageSuccess = true;
-		console.log(messageSuccess);
-		console.log("postmessageSuccess");
 	}
 }
-function checkInputs() {
-	// trim to remove the whitespaces
-	const usernameValue = username.value.trim();
-	const emailValue = email.value.trim();
-	const subjectValue = subject.value;
-	const messageValue = message.value;
+// function checkInputs() {
+// 	// trim to remove the whitespaces
+// 	const usernameValue = username.value.trim();
+// 	const emailValue = email.value.trim();
+// 	const subjectValue = subject.value;
+// 	const messageValue = message.value;
 
 	
-	if(usernameValue === '') {
-		setErrorFor(username, 'Name cannot be blank');
-	} else {
-		setSuccessFor(username);
+// 	if(usernameValue === '') {
+// 		setErrorFor(username, 'Name cannot be blank');
+// 	} else {
+// 		setSuccessFor(username);
 
-	}
+// 	}
 	
-	if(emailValue === '') {
-        setErrorFor(email, 'Email cannot be blank');
-	} else if (!isEmail(emailValue)) {
-        setErrorFor(email, 'Not a valid email');
-	} else {
-        setSuccessFor(email);
-	}
+// 	if(emailValue === '') {
+//         setErrorFor(email, 'Email cannot be blank');
+// 	} else if (!isEmail(emailValue)) {
+//         setErrorFor(email, 'Not a valid email');
+// 	} else {
+//         setSuccessFor(email);
+// 	}
     
-	if(subjectValue === '') {
-			setErrorFor(subject, 'Subject cannot be blank');
-	} else {
-			setSuccessFor(subject);
-	}
+// 	if(subjectValue === '') {
+// 			setErrorFor(subject, 'Subject cannot be blank');
+// 	} else {
+// 			setSuccessFor(subject);
+// 	}
 	
-	if(messageValue === '') {
-		setErrorFor(message, 'Message cannot be blank');
-	} else {
-		setSuccessFor(message);
-	}
-}
+// 	if(messageValue === '') {
+// 		setErrorFor(message, 'Message cannot be blank');
+// 	} else {
+// 		setSuccessFor(message);
+// 	}
+// }
 
 function setErrorFor(input, message) {
 	const formControl = input.parentElement;
@@ -176,7 +197,17 @@ function setSuccessFor(input) {
 	const formControl = input.parentElement;
 	formControl.className = 'form-control success';
 }
+
+function setResetFor(input) {
+	const formControl = input.parentElement;
+	formControl.className = 'form-control';
+}
 	
 function isEmail(email) {
 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
+
+function resetAfterWait(delay = 1500) {
+	setTimeout(() => {
+		submitBtn.innerText = "Submit"}, delay);
 }
