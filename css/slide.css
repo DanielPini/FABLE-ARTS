@@ -1,6 +1,6 @@
-.carousel{
+.carousel {
   position: relative;
-  height: calc((100vw * .5) + 40px);
+  height: calc((100vw * .5) + 7vw);
   width: 100vw;
   margin: 30px auto;
 }
@@ -37,7 +37,7 @@
 
 .carousel__button {
   position: absolute;
-  top: calc(50% - 2vw);
+  top: calc(50% - 3vw);
   width: 5vw;
   height: 5vw;
   transform: translateY(-50%);
@@ -75,9 +75,9 @@
   background-color: rgba(0, 0, 0, 0.3);
   border: none;
   border-radius: 50%; 
-  margin: 10px;
-  height: 20px;
-  width: 20px;
+  margin: 1vw;
+  height: 2vw;
+  width: 2vw;
   cursor: pointer;
 }
 
@@ -92,6 +92,7 @@
 
 .movement-figure_caption{
   background-color: var(--ndac-text-background);
+  font-size: 2.5vw;
 }
 
 

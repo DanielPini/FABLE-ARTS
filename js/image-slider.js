@@ -1,17 +1,28 @@
 import notationImageDB from "./data/notation-images.js";
 
 const scoresContainer = document.querySelector(".scores");
-const carousel = scoresContainer.querySelector(".carousel");
+
+//Grab all carousel divs:
+const carouselArray = scoresContainer.querySelectorAll(".carousel");
+
+//Define each separately because code is dumb:
+const carousel = carouselArray[0];
+const carousel1 = carouselArray[1];
+const carousel2 = carouselArray[2];
+
+//--------------------------
+//                         |
+// Code for first movement:|
+//                         |
+//--------------------------
 
 carousel.innerHTML = renderSliderHTML(notationImageDB[0].figures);
 
-console.log(notationImageDB[0].figures[0])
-
-const track = scoresContainer.querySelector('.carousel__track')
+const track = carousel.querySelector('.carousel__track')
 const slides = Array.from(track.children);
-const nextButton = scoresContainer.querySelector('.carousel__button--right');
-const prevButton = scoresContainer.querySelector('.carousel__button--left');
-const dotsNav = scoresContainer.querySelector('.carousel__nav');
+const nextButton = carousel.querySelector('.carousel__button--right');
+const prevButton = carousel.querySelector('.carousel__button--left');
+const dotsNav = carousel.querySelector('.carousel__nav');
 const dots = Array.from(dotsNav.children);
 const slideWidth = slides[0].getBoundingClientRect().width;
 
@@ -57,6 +68,127 @@ dotsNav.addEventListener("click", e => {
   hideShowArrows(slides, prevButton, nextButton, targetIndex);
 });
 
+//--------------------------
+//                          |
+// Code for second movement:|
+//                          |
+//--------------------------
+
+carousel1.innerHTML = renderSliderHTML(notationImageDB[1].figures);
+
+const track1 = carousel1.querySelector('.carousel__track')
+const slides1 = Array.from(track1.children);
+const nextButton1 = carousel1.querySelector('.carousel__button--right');
+const prevButton1 = carousel1.querySelector('.carousel__button--left');
+const dotsNav1 = carousel1.querySelector('.carousel__nav');
+const dots1 = Array.from(dotsNav1.children);
+const slideWidth1 = slides1[0].getBoundingClientRect().width;
+
+slides1.forEach(setSlidePosition)
+
+//click left moves slides left
+prevButton1.addEventListener("click", e => {
+  const currentSlide = track1.querySelector('.current-slide');
+  const prevSlide = currentSlide.previousElementSibling;
+  const currentDot = dotsNav1.querySelector('.current-slide');
+  const prevDot = currentDot.previousElementSibling;
+  const prevIndex = slides1.findIndex(slide => slide === prevSlide);
+  
+  moveToSlide(track1, currentSlide, prevSlide);
+  updateDots(currentDot, prevDot);
+  hideShowArrows(slides1, prevButton1, nextButton1, prevIndex);
+})
+//click right moves slides right
+nextButton1.addEventListener("click", e => {
+  const currentSlide = track1.querySelector('.current-slide');
+  const nextSlide = currentSlide.nextElementSibling;
+  const currentDot = dotsNav1.querySelector('.current-slide');
+  const nextDot = currentDot.nextElementSibling;
+  const nextIndex = slides1.findIndex(slide => slide === nextSlide);
+
+  moveToSlide(track1, currentSlide, nextSlide);
+  updateDots(currentDot, nextDot);
+  hideShowArrows(slides1, prevButton1, nextButton1, nextIndex);
+})
+//nav moves to slide
+dotsNav1.addEventListener("click", e => {
+  const targetDot = e.target.closest('button');
+  
+  if (!targetDot) return;
+  const currentSlide = track1.querySelector('.current-slide');
+  const currentDot = dotsNav1.querySelector('.current-slide');
+  const targetIndex = dots1.findIndex(dot => dot === targetDot);
+  const targetSlide = slides1[targetIndex];
+  
+  moveToSlide(track1, currentSlide, targetSlide);
+  updateDots(currentDot, targetDot);
+  
+  hideShowArrows(slides1, prevButton1, nextButton1, targetIndex);
+});
+
+
+// //--------------------------
+// //                         |
+// // Code for third movement:|
+// //                         |
+// //--------------------------
+
+carousel2.innerHTML = renderSliderHTML(notationImageDB[2].figures);
+
+const track2 = carousel2.querySelector('.carousel__track')
+const slides2 = Array.from(track2.children);
+const nextButton2 = carousel2.querySelector('.carousel__button--right');
+const prevButton2 = carousel2.querySelector('.carousel__button--left');
+const dotsNav2 = carousel2.querySelector('.carousel__nav');
+const dots2 = Array.from(dotsNav2.children);
+const slideWidth2 = slides2[0].getBoundingClientRect().width;
+
+slides2.forEach(setSlidePosition);
+
+//click left moves slides left
+prevButton2.addEventListener("click", e => {
+  const currentSlide = track2.querySelector('.current-slide');
+  const prevSlide = currentSlide.previousElementSibling;
+  const currentDot = dotsNav2.querySelector('.current-slide');
+  const prevDot = currentDot.previousElementSibling;
+  const prevIndex = slides2.findIndex(slide => slide === prevSlide);
+  
+  moveToSlide(track2, currentSlide, prevSlide);
+  updateDots(currentDot, prevDot);
+  hideShowArrows(slides2, prevButton2, nextButton2, prevIndex);
+})
+//click right moves slides right
+nextButton2.addEventListener("click", e => {
+  const currentSlide = track2.querySelector('.current-slide');
+  const nextSlide = currentSlide.nextElementSibling;
+  const currentDot = dotsNav2.querySelector('.current-slide');
+  const nextDot = currentDot.nextElementSibling;
+  const nextIndex = slides2.findIndex(slide => slide === nextSlide);
+  
+  moveToSlide(track2, currentSlide, nextSlide);
+  updateDots(currentDot, nextDot);
+  hideShowArrows(slides2, prevButton2, nextButton2, nextIndex);
+})
+//nav moves to slide
+dotsNav2.addEventListener("click", e => {
+  const targetDot = e.target.closest('button');
+  
+  if (!targetDot) return;
+  const currentSlide = track2.querySelector('.current-slide');
+  const currentDot = dotsNav2.querySelector('.current-slide');
+  const targetIndex = dots2.findIndex(dot => dot === targetDot);
+  const targetSlide = slides2[targetIndex];
+  
+  moveToSlide(track2, currentSlide, targetSlide);
+  updateDots(currentDot, targetDot);
+  
+  hideShowArrows(slides2, prevButton2, nextButton2, targetIndex);
+});
+
+
+
+
+
 
 function setSlidePosition(slide, index) {
   slide.style.left = index * slideWidth + 'px';
@@ -89,7 +221,7 @@ function renderSliderHTML(array) {
   let list = ""
   list += 
   `
-  <button class="carousel__button carousel__button--left">
+  <button class="carousel__button carousel__button--left is-hidden">
   <img src="../assets/images/icons/left.svg" alt="">
   </button>
   <button class="carousel__button carousel__button--right">
