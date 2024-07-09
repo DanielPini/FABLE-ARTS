@@ -176,10 +176,8 @@ header a {
 /* Page Section */
 main {
   font-size: 1em;
-  margin: auto;
+  margin: 0 auto;
   height: fit-content;
-  /* min-width: 600px; */
-  max-width: 100%;
   min-height: calc(100vh - 200px);
   display: flex;
   flex-flow: column;
