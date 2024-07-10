@@ -131,3 +131,6 @@ const navList = smallNav.querySelector(".small-page-nav-list")
 smallNav.addEventListener("click", (e) => {
   navList.classList.toggle("visible-nav-list")
 })
+smallNav.addEventListener("hover", (e) => {
+  navList.classList.toggle("visible-nav-list")
+})
