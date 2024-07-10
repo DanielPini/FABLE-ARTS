@@ -62,7 +62,7 @@ header.innerHTML = `
     </ul>
   </nav>
   <div class="small-nav-box">
-    <img alt="menu icon" />
+    <img alt="menu icon" onclick="toggleShow()"/>
     <div class="small-page-nav-list">
       <ul class="">
         <li class="nav-item">
@@ -124,3 +124,10 @@ footer.innerHTML = `
       >Contact <span class="fa contact">FA</span>.</a
     >
   </div>`;
+
+const smallNav = document.querySelector(".small-nav-box")
+const navList = smallNav.querySelector(".small-page-nav-list")
+
+smallNav.addEventListener("click", (e) => {
+  navList.classList.toggle("visible-nav-list")
+})

@@ -325,7 +325,7 @@ footer {
   }
   .small-nav-box {
     position: absolute;
-    display: none;
+    display: block;
     right: 30px;
     top: 30px;
     width: 40px;
@@ -333,19 +333,29 @@ footer {
     transition: all 0.2s;
 
   }
-  .small-nav-box:hover, .small-nav-box:active {
-    display: block;
-    scale: 1.03;
-    z-index: 1;
-  }
   .small-nav-box img {
     content: url(../assets/images/icons/black-menu-button.svg);
     transition: all 300ms ease-in-out;
   }
-  .small-nav-box:hover img{
-    content: url(../assets/images/icons/black-menu-button-cross.svg);;
+  .small-page-nav-list * {
+    font-size: 18px;
+    margin: 0px;
+    padding-top: 3px;
+    scale: 1;
   }
-  .small-nav-box:hover .small-page-nav-list, .small-page-nav-list:hover {
+  .visible-nav-list {
+    display: block;
+    z-index: 1
+  }
+  .small-nav-box:hover {
+    display: block;
+    scale: 1.03;
+    z-index: 1;
+  }
+  .small-nav-box:hover img{
+    content: url(../assets/images/icons/black-menu-button-cross.svg);
+  }
+  .small-nav-box:hover .small-page-nav-list, .small-page-nav-list:hover,.small-nav-box:active {
     display: block;
     text-align: right;
     position: relative;
@@ -353,20 +363,14 @@ footer {
     background-color: var(--header-footer-color);
     box-shadow: 0 0 5px 1px var(--header-footer-color);
   }
-  .small-page-nav-list * {
-    font-size: 18px;
-    display: block;
-    margin: 0px;
-    padding-top: 3px;
-    scale: 1;
-  }
   .small-page-nav-list ul li:hover {
     scale: 1.05;
   }
   .small-page-nav-list {
     min-width: 100px;
-    height: 140px;
+    height: 130px;
     padding-right: 10px;
+    display: none;
   }
   .nav-support-item {
     white-space: wrap;
