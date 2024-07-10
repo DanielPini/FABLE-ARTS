@@ -10,6 +10,7 @@
 	overflow: hidden;
 	width: 400px;
 	max-width: 100%;
+	margin-bottom: 30px;
 }
 .explaination {
   padding: 10px 0 25px 0;
@@ -23,7 +24,7 @@
   flex-flow: column nowrap;
   justify-content: center;
 	padding: 30px 40px;	
-  background-color: #e4e4e4;
+  background-color: #e4e4e4;;
 }
 .form-control {
 	margin-bottom: 10px;
@@ -84,7 +85,6 @@
 	left: 0;
 	visibility: hidden;
 }
-
 .form-control.error small {
 	visibility: visible;
 }
@@ -111,7 +111,6 @@
 	max-width: 400px;
   padding: 0;
   margin: 5px auto;
-  margin-bottom: 20px;
 }
 #submit-btn:hover {
   position: relative;
