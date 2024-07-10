@@ -1,5 +1,11 @@
 import notationImageDB from "./data/notation-images.js";
 
+window.addEventListener("resize", (e) => {
+  e.target.value.onchange(() => {
+
+  })
+})
+
 const scoresContainer = document.querySelector(".scores");
 
 //Grab all carousel divs:
