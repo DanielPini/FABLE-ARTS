@@ -1,7 +1,6 @@
 /* ceramic stems image */
 .stems-container {
   width: 80%;
-  min-width: 500px;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
@@ -239,11 +238,10 @@ overflow: hidden;
   .stems-container .descriptive-text {
     width: 100%;
   }
-  .dit-section,
+  .dti-section,
   .descriptive-text,
   .object-wrapper {
     width: 100%;
-    min-width: 300px;
   }
   .bamboo-container {
     display: none;

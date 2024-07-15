@@ -1,3 +1,4 @@
+
 .fa-artists {
   margin: 40px auto;
   width: 85vw;
@@ -12,6 +13,8 @@ section {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   height: fit-content;
+  /* max-width: fit-content; */
+  width: fit-content;
   justify-content: space-around;
 }
 .about-our-artists-container {
