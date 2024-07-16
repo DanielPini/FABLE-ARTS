@@ -37,9 +37,9 @@ header.innerHTML = `
             <li class="nav-item">
               <a href="./6_events.html">Events</a>
             </li>
-            <li class="nav-item">
+          <!--  <li class="nav-item">
               <a href="./7_media.html">Media</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </li>
@@ -66,13 +66,22 @@ header.innerHTML = `
     <div class="small-page-nav-list">
       <ul class="">
         <li class="nav-item">
-          <a href="#">Home</a>
+          <a href="./index">Home</a>
         </li>
         <li class="nav-item">
-          <a href="#">About</a>
+          <a href="./2_about">About</a>
         </li>
         <li class="nav-item">
-          <a href="#">Discover</a>
+          <a href="./3_staff">The Team</a>
+        </li>
+        <li class="nav-item">
+          <a href="./4_artists">The Artists</a>
+        </li>
+        <li class="nav-item">
+          <a href="./5_discover">Discover</a>
+        </li>
+        <li class="nav-item">
+          <a href="./6_events">Events</a>
         </li>
         <li class="nav-item nav-support-item">
           <a href="./8_support_FA.html"

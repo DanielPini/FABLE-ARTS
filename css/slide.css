@@ -3,6 +3,7 @@
   height: calc((100vw * .5) + 7vw);
   width: 100vw;
   margin: 30px auto;
+  margin-bottom: 50px;
 }
 
 .carousel__image {

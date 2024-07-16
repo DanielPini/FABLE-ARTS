@@ -30,7 +30,7 @@ const nextButton = carousel.querySelector('.carousel__button--right');
 const prevButton = carousel.querySelector('.carousel__button--left');
 const dotsNav = carousel.querySelector('.carousel__nav');
 const dots = Array.from(dotsNav.children);
-const slideWidth = slides[0].getBoundingClientRect().width;
+let slideWidth = slides[0].getBoundingClientRect().width;
 
 slides.forEach(setSlidePosition);
 
@@ -283,3 +283,10 @@ function generateDotsNavIndicators(arg) {
   return list;
  }
 }
+
+window.addEventListener("resize", () => {
+  slideWidth = slides[0].getBoundingClientRect().width;
+  slides.forEach(setSlidePosition)
+  slides1.forEach(setSlidePosition)
+  slides2.forEach(setSlidePosition)
+})

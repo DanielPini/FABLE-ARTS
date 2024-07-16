@@ -14,11 +14,14 @@ h1 {
 
 .support-link-div {
   display: flex;
-  width: 300px;
+  width: 500px;
   flex-flow: column nowrap;
   margin: 30px auto 10px;
 }
-
+.support-link-div p {
+  margin-top: 10px;
+  width: 500px;
+}
 p {
   text-align: left;
 }

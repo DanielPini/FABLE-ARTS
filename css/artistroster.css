@@ -2,6 +2,7 @@
   margin: 50px auto;
   max-width: fit-content;
   max-width: 90vw;
+  min-width: 320px;
   overflow: hidden;
   flex-basis: auto;
 }
@@ -56,11 +57,13 @@
   justify-content: center;
   display: flex;
   flex-flow: row wrap;
+  min-width: 300px;
 }
 .artist-roster__card-wrapper {
   width: 300px;
+  min-width: 300px;
   height: 300px;
-  margin: 10px;
+  margin: 20px;
   border-radius: 5px;
 }
 .artist-roster__card {
@@ -68,6 +71,7 @@
   width: 100%;
   height: 100%;
   border-radius: 5px;
+  box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.2);
 }
 .artist-roster__link {
   position: absolute;

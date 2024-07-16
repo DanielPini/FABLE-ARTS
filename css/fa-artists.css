@@ -13,8 +13,7 @@ section {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   height: fit-content;
-  /* max-width: fit-content; */
-  width: fit-content;
+  margin: 0 auto;
   justify-content: space-around;
 }
 .about-our-artists-container {
