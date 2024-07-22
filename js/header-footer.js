@@ -25,7 +25,7 @@ header.innerHTML = `
               <a href="./3_staff.html">Team</a>
             </li>
             <li class="nav-item">
-              <a href="./4_artists.html">Artists</a>
+              <a href="../4_artists.html">Artists</a>
             </li>
           </ul>
         </div>
@@ -66,22 +66,22 @@ header.innerHTML = `
     <div class="small-page-nav-list">
       <ul class="">
         <li class="nav-item">
-          <a href="./index">Home</a>
+          <a href="./index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a href="./2_about">About</a>
+          <a href="./2_about.html">About</a>
         </li>
         <li class="nav-item">
-          <a href="./3_staff">The Team</a>
+          <a href="./3_staff.html">The Team</a>
         </li>
         <li class="nav-item">
-          <a href="./4_artists">The Artists</a>
+          <a href="./4_artists.html">The Artists</a>
         </li>
         <li class="nav-item">
-          <a href="./5_discover">Discover</a>
+          <a href="./5_discover.html">Discover</a>
         </li>
         <li class="nav-item">
-          <a href="./6_events">Events</a>
+          <a href="./6_events.html">Events</a>
         </li>
         <li class="nav-item nav-support-item">
           <a href="./8_support_FA.html"
