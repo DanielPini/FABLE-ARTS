@@ -355,11 +355,19 @@ footer {
   .small-nav-box:hover img{
     content: url(../assets/images/icons/black-menu-button-cross.svg);
   }
-  .small-nav-box:hover .small-page-nav-list, .small-page-nav-list:hover,.small-nav-box:active {
+  .small-nav-box:hover .small-page-nav-list, .small-page-nav-list:hover {
     display: block;
     text-align: right;
     position: relative;
     left: -65px;
+    background-color: var(--header-footer-color);
+    box-shadow: 0 0 5px 1px var(--header-footer-color);
+  }
+  .small-nav-box:active {
+    display: block;
+    text-align: right;
+    position: relative;
+    /* left: -65px; */
     background-color: var(--header-footer-color);
     box-shadow: 0 0 5px 1px var(--header-footer-color);
   }
