@@ -1,6 +1,7 @@
 p, h2, h3, figcaption {
   background-color: var(--ndac-text-background);
-  max-width: 90vw;
+  display: block;
+  max-width: 85%;
   margin: 0 auto;
 }
 
@@ -12,7 +13,7 @@ p, h2, h3, figcaption {
 }
 .notation-video-wrapper {
   position: relative;
-  width: 98%;
+  width: 85%;
   margin: 0 auto;
   padding-top: 55%;
   overflow: hidden;
@@ -33,12 +34,12 @@ p, h2, h3, figcaption {
 } 
 .notation-video,
 .scores {
-  width: 98%;
+  width: 85%;
   margin: 0 auto;
 }
 .notation-h1 {
-  width: 40vw;
-  margin: 2vw 30vw;
+  width: 60vw;
+  margin: 2vw 20vw;
   font-weight: bold;
   font-size: 3vw;
   text-align: center;
@@ -48,16 +49,16 @@ p, h2, h3, figcaption {
   font-weight: bold;
   max-width: 90vw;
   font-size: 2vw;
-  margin: 1vw auto 1vw 2.5vw;
+  margin: 1vw auto 1vw 0vw;
 }
 .scores p {
   max-width: 90vw;
   margin: 0 auto;
 }
 .ndac-notation-heading {
-  width: 100%;
+  width: 85%;
   margin: none;
-  margin: 3vw auto 1vw 2.5vw;
+  margin: 3vw 15vw 1vw 0vw;
 }
 
 
