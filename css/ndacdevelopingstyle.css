@@ -207,7 +207,7 @@ overflow: hidden;
 .bamboo-image-left-side {
   opacity: 0;
   margin-left: 15vw;
-  transform: scale(.5) translate(-120%, -50%) rotate(-5deg);
+  transform: scale(.5) translate(-150%, -50%) rotate(-5deg);
   transform-origin: top right;
 }
 .bamboo-image-right-side.js-grow-bamboo {
@@ -219,7 +219,7 @@ overflow: hidden;
 }
 .bamboo-image-right-side {
  opacity: 0;
- transform: scale(.5) translate(5%, -50%) rotate(5deg);
+ transform: scale(.5) translate(15%, -50%) rotate(5deg);
  transform-origin: top left;
 }
 
