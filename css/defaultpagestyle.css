@@ -4,8 +4,7 @@
   --font-color: rgb(0, 0, 0);
   --background-color: rgb(173, 182, 176);
   --button-color: rgb(241, 251, 255);
-  --default-font: Verdana, Geneva, Tahoma, sans-serif;
-
+  --default-font: "Lemonada", Verdana, Geneva, Tahoma, sans-serif;
 }
 * {
   font-size: 2.48vw;
@@ -122,8 +121,8 @@ header a {
   z-index: -2;
   position: absolute;
   white-space: nowrap;
-  margin-top: 20px;
-  padding-top: 15px;
+  margin-top: 28px;
+  padding-top: 12px;
   transition: all 250ms ease-in-out;
 }
 .nav-item:hover .nav-inner-dropdown {
@@ -354,9 +353,8 @@ footer {
   }
   .small-nav-box:hover .small-page-nav-list, .small-page-nav-list:hover {
     display: block;
-    text-align: right;
     position: relative;
-    left: -65px;
+    left: -85px;
     background-color: var(--header-footer-color);
     box-shadow: 0 0 5px 1px var(--header-footer-color);
   }
@@ -372,10 +370,15 @@ footer {
     scale: 1.05;
   }
   .small-page-nav-list {
-    min-width: 100px;
+    min-width: 140px;
     height: 230px;
-    padding-right: 10px;
+    padding-right: 0px;
+    padding-left: 20px;
     display: none;
+  }
+  .small-page-nav-list li {
+    line-height: 25px;
+    text-align: right;
   }
   .nav-support-item {
     white-space: wrap;

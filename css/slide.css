@@ -1,7 +1,7 @@
 .carousel {
   position: relative;
   height: calc((100vw * .5) + 7vw);
-  width: 100vw;
+  width: 85vw;
   margin: 30px auto;
   margin-bottom: 50px;
 }
@@ -53,18 +53,18 @@
 }
 
 .carousel__button--left {
-  left: -1vw;
+  left: -0.7vw;
   z-index: 2;
 }
 
 .carousel__button--right {
-  right: -1vw;
+  right: -.7vw;
   z-index: 2;
 }
 
 .carousel__button img {
-  margin: auto;
-  width: 5vw;
+  margin: .5vw .4vw;
+  width: 4vw;
 }
 
 .carousel__nav {
