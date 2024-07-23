@@ -1,5 +1,5 @@
 :root {
-  --header-footer-color: rgb(193, 211, 210);
+  --header-footer-color: rgba(193, 211, 210, .7);
   --nav-hover-color: rgb(255, 255, 255);
   --font-color: rgb(0, 0, 0);
   --background-color: rgb(173, 182, 176);
@@ -13,7 +13,6 @@
   font-family: var(--default-font);
   margin: 0px;
   padding: 0px;
-  max-width: 100%;
   scroll-behavior: smooth;
   color: var(--font-color);
   box-sizing: border-box;
@@ -31,8 +30,8 @@ header {
   justify-content: space-around;
   height: 100px;
   background: 
-    linear-gradient(var(--header-footer-color) 99%,
-    rgba(143, 143, 143, 0.7));
+    linear-gradient(var(--header-footer-color) 70%,
+    rgba(140, 139, 139, 0));
 }
 header * {
   font-size: 20px;
@@ -211,7 +210,7 @@ h1 {
   justify-content: center;
   flex-flow: row nowrap;
   height: fit-content;
-  margin: 20px 0;
+  margin: 10px 0;
   padding: 5px;
 }
 .button-section * {
@@ -262,7 +261,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 300px 1fr;
   height: 100px;
-  background: linear-gradient(rgba(143, 143, 143, 0.7), var(--header-footer-color) 1%);
+  background: linear-gradient(rgba(143, 143, 143, 0.035), var(--header-footer-color) 30%);
   margin-bottom: 0px;
 }
 .copyright-container {

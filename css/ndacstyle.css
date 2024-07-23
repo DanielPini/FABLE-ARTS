@@ -1,7 +1,7 @@
 :root {
-  --ndac-header-footer-color: #4C8798;
+  --ndac-header-footer-color: rgb(137, 168, 176);
   --ndac-font-color: rgb(0, 0, 0);
-  --ndac-background-color: #77946b;
+  --ndac-background-color: rgb(119, 148, 107);
   --ndac-button-color: rgb(219, 233, 233);
   --ndac-text-background: rgba(225, 225, 225, 0.069);
   --ndac-box-shadow: 0 0 20px 1px rgba(81, 81, 81, 0.1);
@@ -13,10 +13,12 @@
   font-family: var(--ndac-font-family);
 }
 
-header, footer {
-  background: var(--ndac-header-footer-color);
+header {
+  background: linear-gradient(var(--ndac-header-footer-color) 85%, rgba(173, 173, 173, 0));
 }
-
+footer {
+  background: linear-gradient(rgba(173, 173, 173, 0) 10%, var(--ndac-header-footer-color));
+}
 body {
   font-family: var(--ndac-font-family);
   color: var(--ndac-font-color);
@@ -104,12 +106,13 @@ span {
 @media only screen and (max-width: 600px) {
   .ndac-header-title {
     font-size: 20px;
+    /* margin-bottom: 10px; */
   }
 }
 
 @media only screen and (min-width: 1000px) {
   .ndac-header-title {
-    font-size: 30px;
+    font-size: 30px; 
   }
   .ndac-header-title:hover {
     font-size: 32px;

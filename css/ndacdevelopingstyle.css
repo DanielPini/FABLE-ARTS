@@ -11,6 +11,7 @@
   margin: 0 auto;
 }
 #ceramic-table {
+  margin-top: 10px;
   width: 100%;
   box-shadow: var(--ndac-box-shadow);
 }
@@ -160,6 +161,7 @@ overflow: hidden;
 }
 .dti-section {
   width: 67%;
+  margin: 10px 0;
 }
 
 .descriptive-text {
@@ -197,24 +199,27 @@ overflow: hidden;
 }
 .bamboo-image-left-side.js-grow-bamboo {
   opacity: 1;
-  transform: scale(.6) translate(-10vw, -15%) rotate(-30deg);
+  margin-left: 15vw;
+  transform: scale(.6) translate(-120%, -15%) rotate(-30deg);
   transition: transform 1000ms ease, opacity .5s;
   transition-delay: 0.2s;
 }
 .bamboo-image-left-side {
   opacity: 0;
-  transform: scale(.5) translate(-20vw, -50%) rotate(-5deg);
+  margin-left: 15vw;
+  transform: scale(.5) translate(-120%, -50%) rotate(-5deg);
   transform-origin: top right;
 }
 .bamboo-image-right-side.js-grow-bamboo {
   opacity: 1;
-  transform: scale(.6) translate(10vw, -15%) rotate(30deg);
+  margin-right: 15vw;
+  transform: scale(.6) translate(5%, -15%) rotate(30deg);
   transition: transform 1000ms ease, opacity .5s;
   transition-delay: 0.2s;
 }
 .bamboo-image-right-side {
  opacity: 0;
- transform: scale(.5) translate(20vw, -50%) rotate(5deg);
+ transform: scale(.5) translate(5%, -50%) rotate(5deg);
  transform-origin: top left;
 }
 
@@ -222,12 +227,13 @@ overflow: hidden;
   .developing-instruments-flex-layout {
     display: flex;
     flex-flow: column nowrap;
-    width: 100%
+    width: 98%
   }
   .dti-section,
   .big-dti-image,
   .stems-container {
-    width: 98%;
+    width: 90%;
+    height: 90%;
   }
   .descriptive-text p {
     font-size: 15px;

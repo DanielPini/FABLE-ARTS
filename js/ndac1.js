@@ -4,7 +4,7 @@ const ndac1Body = document.querySelector("body");
 ndac1Body.innerHTML = `
 <div class="pass-background">
   <form class="pass-container" action="#">
-    <p>Please enter the passphrase to enter <span style="font-style: italic; font-weight: 600;">Navigating Distance and Closeness</span></p>
+    <p>Please enter the passphrase to enter <span style="font-size: 18px; font-style: italic; font-weight: 600;">Navigating Distance and </br> Closeness</span></p>
     <input class="pass-field" id="pass-field" type="password" placeholder="Password">
     <input class="pass-submit-btn" type="submit" value="Submit">
     </form>
@@ -18,13 +18,13 @@ passField.addEventListener("input", (e) => {
 })
 console.log(passField.innerText);
 submitBtn.addEventListener("click", () => {
-  const userPassword = document.getElementById("pass-field").value;
+  const userPassword = document.getElementById("pass-field").value.toLowerCase();
   if(userPassword != password) {
     console.log(password);
     console.log(userPassword);
     console.log(userPassword + " does not equal " + password);
-    alert("Wrong password");
     passField.classList.add("wrong");
+    passField.value = "";
     passField.placeholder = "Wrong password";
     submitBtn.value = "Please try again";
     console.log(userPassword);

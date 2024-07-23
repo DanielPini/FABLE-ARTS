@@ -64,7 +64,7 @@
               id="welcome-banner_image"
               class="shimmer">
               <svg>
-                <filter
+                <!-- <filter
                   id="turbulence"
                   x="0"
                   y="0"
@@ -86,7 +86,7 @@
                   <feDisplacementMap
                     scale="2"
                     in="SourceGraphic"></feDisplacementMap>
-                </filter>
+                </filter> -->
               </svg>
             </div>
           </div>
@@ -131,6 +131,12 @@
     </main>
 
     <footer></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+    <script>
+      $("#welcome-banner_image").ripples();
+      $("#welcome-banner_image").ripples("updateSize");
+    </script>
     <script src="./js/header-footer.js"></script>
     <script src="./js/splash.js"></script>
   </body>
