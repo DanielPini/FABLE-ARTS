@@ -34,8 +34,8 @@
     url(../assets/images/mallet_1-resized.png), pointer;
   z-index: 1;
   transform: rotate(-10deg);
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 10px 15px rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.15);
   border-radius: 50% 50% 25% 25%;
   transition: all .2s;
 }
