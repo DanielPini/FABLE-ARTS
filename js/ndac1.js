@@ -4,7 +4,7 @@ const ndac1Body = document.querySelector("body");
 ndac1Body.innerHTML = `
 <div class="pass-background">
   <form class="pass-container" action="#">
-    <p>Please enter the passphrase to enter <span style="font-size: 18px; font-style: italic; font-weight: 600;">Navigating Distance and </br> Closeness</span></p>
+    <p>Please enter the passphrase to access <span style="font-size: 18px; font-style: italic; font-weight: 600;">Navigating Distance and </br> Closeness</span></p>
     <input class="pass-field" id="pass-field" type="password" placeholder="Password">
     <input class="pass-submit-btn" type="submit" value="Submit">
     </form>

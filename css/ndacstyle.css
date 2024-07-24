@@ -3,8 +3,8 @@
   --ndac-font-color: rgb(0, 0, 0);
   --ndac-background-color: rgb(119, 148, 107);
   --ndac-button-color: rgb(219, 233, 233);
-  --ndac-text-background: rgba(225, 225, 225, 0.069);
-  --ndac-box-shadow: 0 0 20px 1px rgba(81, 81, 81, 0.1);
+  --ndac-text-background: rgba(225, 225, 225, 0.05);
+  --ndac-box-shadow: 0 0 20px 1px rgba(81, 81, 81, 0.05);
   --ndac-text-shadow: 0 0 1px rgba(41, 41, 41, 0);
   --ndac-font-family: Verdana, sans-serif;
 }
@@ -22,7 +22,7 @@ footer {
 body {
   font-family: var(--ndac-font-family);
   color: var(--ndac-font-color);
-  background: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url("../assets/images/hamish_overlaid_background_1.png") repeat 50% 92%;
+  background: linear-gradient(rgba(255, 255, 255, 0.578), rgba(255, 255, 255, 0.578)), url("../assets/images/hamish_overlaid_background_1.png") repeat 50% 92%;
 }
 
 h1, h2, h3, h4 {
