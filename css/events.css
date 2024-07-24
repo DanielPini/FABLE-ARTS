@@ -2,3 +2,17 @@
   display: block;
   width: 90%;
 }
+.banner {
+  width: 75vw;
+  height: calc(75vw * .6)
+}
+.banner-2020 {
+  height: calc(75vw)
+}
+
+@media only screen and (max-width: 600px) {
+  .r-and-r-banner {
+    width: 100%;
+    height: calc(90vw * .5)
+  }
+}
