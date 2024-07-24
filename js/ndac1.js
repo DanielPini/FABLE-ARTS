@@ -167,7 +167,7 @@ submitBtn.addEventListener("click", () => {
           <div class="artist-card">
             <figure>
               <img
-                src="../assets/images/headshots/Niki_Johnson.webp"
+                src="../assets/images/headshots/Niki_Johnson--larger.jpg"
                 alt="Portrait shot of Niki Johnson"
                 class="ndac-headshot" />
               <figcaption class="ndac-bio-text">
@@ -190,7 +190,7 @@ submitBtn.addEventListener("click", () => {
           <div class="artist-card">
             <figure>
               <img
-                src="../assets/images/headshots/Hamish_Upton.webp"
+                src="../assets/images/headshots/Hamish_Upton--larger.jpg"
                 alt="Portrait shot of Hamish Upton"
                 class="ndac-headshot" />
               <figcaption class="ndac-bio-text">
