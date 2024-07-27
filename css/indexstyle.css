@@ -18,13 +18,14 @@ main {
 }
 #welcome-banner-container {
   position: relative;
-  width: 90vw;
-  height: calc(90vw * .5);
-  margin: 20px 5vw;
+  width: 85vw;
+  height: calc(85vw * .5);
+  margin: 20px auto;
   min-width: 350px;
   border-radius: 5px;
   box-shadow: 1 0 20px 1px var(--box-shadow-animation-color);
   animation: pulse 4s infinite;
+  margin: 15vh 0;
 }
 #welcome-banner {
   position: absolute;
@@ -37,13 +38,13 @@ main {
   border-radius: 5px;
   background-image: url("../assets/images/resonance-reflections_banner.webp");
   background-repeat: no-repeat;
-  background-size: 90vw calc(90vw * 0.5);
+  background-size: 85vw calc(85vw * 0.5);
 }
 #welcome-banner_image {
   position: absolute;
   background: url("../assets/images/resonance-reflections_banner-turbulance.webp");
   background-repeat: no-repeat;
-  background-size: 90vw calc(90vw * 0.5);
+  background-size: 85vw calc(85vw * 0.5);
   border-radius: 5px;
   top: 0px;
   left: 0px;
@@ -51,30 +52,34 @@ main {
   height: 100%;
   /* filter: url("#turbulence"); */
 }
+.index-heading {
+  font-weight: bold;
+
+}
 @keyframes pulse {
   0% {
-    box-shadow: 1px 0 20px 1px var(--box-shadow-animation-color);
+    box-shadow: 1px 0 20px 5px var(--box-shadow-animation-color);
   }
   12% {
-    box-shadow: 2px 1px 20px 1px var(--box-shadow-animation-color);
+    box-shadow: 5px 1px 20px 1px var(--box-shadow-animation-color);
   }
   25% {
-    box-shadow: 0 3px 20px 2px var(--box-shadow-animation-color);
+    box-shadow: 0 5px 20px 2px var(--box-shadow-animation-color);
   }
   37% {
-    box-shadow: 2px 2px 20px 2px var(--box-shadow-animation-color);
+    box-shadow: 2px 2px 20px 5px var(--box-shadow-animation-color);
   }
   50% {
     box-shadow: 1px 0 20px 1px var(--box-shadow-animation-color);  
   }
   62% {
-    box-shadow: 0 2px 20px 1px var(--box-shadow-animation-color);  
+    box-shadow: 0 2px 20px 0px var(--box-shadow-animation-color);  
   }
   75% {
-    box-shadow: 2px 1px 20px 2px var(--box-shadow-animation-color);
+    box-shadow: 2px 5px 20px 2px var(--box-shadow-animation-color);
   }
   87% {
-    box-shadow: 3px 0 20px 2px var(--box-shadow-animation-color);
+    box-shadow: 5px 0 20px 2px var(--box-shadow-animation-color);
   }
   100% {
     box-shadow: 0 2px 20px 2px var(--box-shadow-animation-color);
@@ -98,12 +103,12 @@ main {
 .index-title {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin: 8vh 0;
   width: 100vw;
 }
 .season-info {
-  width: 90vw;
-  margin: 10px 20px;
+  width: 80vw;
+  margin: 8vh 20px;
   flex-flow: row nowrap;
 }
 .season-title {
@@ -115,8 +120,17 @@ main {
   min-width: 20%;
   padding-right: 5px;
 }
+.reflection-season {
+  display: block;
+  text-shadow: 0 0 .3vw rgba(200, 200, 0, .5);
+  margin-top: 10px;
+  font-size: 4vw;
+}
 .button-section {
+  display: flex;
+  flex-flow: column;
   width: 100vw;
+  margin: 20px;
 }
 #ndac-access {
   width: fit-content;
@@ -164,12 +178,35 @@ main {
   70% {width: .1%; height: 100%; top: 0px;}
   100% {width: .1%; height: 0%; top: 100%}
 }
+.ndac-access-date {
+  display: block;
+  width: 40vw;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  #welcome-banner-container, #welcome-banner, #welcome-banner_image {
+    width: 90vw;
+    height: calc(90vw * .5);
+    background-size: 90vw calc(90vw * 0.5);
+  }
+  .season-info {
+    width: 80vw;
+  }
+  .season-info-sidebar {
+    display: none;
+  }
+}
 
 @media only screen and (min-width: 1200px) {
-  #welcome-banner-container, .season-info, #welcome-banner, #welcome-banner_image {
-    height: calc(1175px * .5);
-    width: 1175px;
-    background-size: 1175px calc(1175px * 0.5);
+  #welcome-banner-container, #welcome-banner, #welcome-banner_image {
+    height: calc(1000px * .5);
+    width: 1000px;
+    background-size: 1000px calc(1000px * 0.5);
     background-repeat: no-repeat;
+  }
+  .reflection-season {
+    font-size: 40px;
   }
 }

@@ -4,6 +4,9 @@
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  .page-heading {
+    margin: 6vh auto;
+  }
 }
 .ceramic-table-container {
   position: relative;
@@ -170,6 +173,8 @@ overflow: hidden;
 }
 .descriptive-text h2 {
   font-size: 4vw;
+  font-weight: bold;
+  margin: 3vh auto;
 }
 .descriptive-text > p, h3, h2 {
   display: block;

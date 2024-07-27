@@ -1,10 +1,10 @@
 :root {
-  --header-footer-color: rgba(193, 211, 210, .7);
+  --header-footer-color: rgba(153, 162, 186, .7);
   --nav-hover-color: rgb(255, 255, 255);
   --font-color: rgb(0, 0, 0);
   --background-color: rgb(173, 182, 176);
-  --button-color: rgb(241, 251, 255);
-  --default-font: Geneva, Tahoma, sans-serif;
+  --button-color: rgb(169, 197, 208);
+  --default-font: "Helvetica Neue", Geneva, Tahoma, sans-serif;
 }
 * {
   font-size: 2.48vw;
@@ -29,7 +29,7 @@ header {
   justify-content: space-around;
   height: 100px;
   background: 
-    linear-gradient(var(--header-footer-color) 70%,
+    linear-gradient(var(--header-footer-color) 82%,
     rgba(140, 139, 139, 0));
 }
 header * {

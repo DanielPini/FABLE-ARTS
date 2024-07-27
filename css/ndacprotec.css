@@ -1,3 +1,6 @@
+* {
+  font-size: 18px;;
+}
 .pass-background {
   position: relative;
   width: 100vw;
@@ -12,10 +15,10 @@
   align-items: center;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -70%);
-  width: 280px;
-  height: 270px;
-  padding: 10px;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  padding: 17px;
   border-radius: 5px;
   background-color: rgb(227, 228, 227);
   box-shadow: var(--ndac-box-shadow);

@@ -4,6 +4,7 @@ const ndac1Body = document.querySelector("body");
 ndac1Body.innerHTML = `
 <div class="pass-background">
   <form class="pass-container" action="#">
+    <p><span class="fa" style="font-size: 20px;">Navigating Distance and Closeness</span> will be available  from August 20th.<br/>If you have any difficulty accessing NDAC past this date, please contact us at our <a href="../9_contact.html">contact page</a></p>
     <p>Please enter the passphrase to access <span style="font-size: 18px; font-style: italic; font-weight: 600;">Navigating Distance and </br> Closeness</span></p>
     <input class="pass-field" id="pass-field" type="password" placeholder="Password">
     <input class="pass-submit-btn" type="submit" value="Submit">
@@ -166,10 +167,10 @@ submitBtn.addEventListener("click", () => {
         <section class="about-the-artists-wrapper">
           <div class="artist-card">
             <figure>
-              <img
+              <a href="../artist_pages/nikijohnson.html"><img
                 src="../assets/images/headshots/Niki_Johnson--larger.jpg"
                 alt="Portrait shot of Niki Johnson"
-                class="ndac-headshot" />
+                class="ndac-headshot" /></a>
               <figcaption class="ndac-bio-text">
                 Niki Johnson is a contemporary percussionist and
                 composer-performer whose musical practice incorporates
@@ -189,10 +190,10 @@ submitBtn.addEventListener("click", () => {
           </div>
           <div class="artist-card">
             <figure>
-              <img
+              <a href="../artist_pages/hamishupton.html"><img
                 src="../assets/images/headshots/Hamish_Upton--larger.jpg"
                 alt="Portrait shot of Hamish Upton"
-                class="ndac-headshot" />
+                class="ndac-headshot" /></a>
               <figcaption class="ndac-bio-text">
                 Hamish Upton is a percussionist who thrives as a contemporary
                 music collaborator and educator. <br /><br />He has performed with

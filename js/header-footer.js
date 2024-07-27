@@ -34,9 +34,9 @@ header.innerHTML = `
         <a href="./5_discover.html">Discover</a>
         <div class="nav-inner-dropdown">
           <ul>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="./6_events.html">Events</a>
-            </li>
+            </li> -->
           <!--  <li class="nav-item">
               <a href="./7_media.html">Media</a>
             </li> -->
@@ -80,9 +80,9 @@ header.innerHTML = `
         <li class="nav-item">
           <a href="./5_discover.html">Discover</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a href="./6_events.html">Events</a>
-        </li>
+        </li> -->
         <li class="nav-item nav-support-item">
           <a href="./8_support_FA.html"
             >Support <span class="fa">FA</span></a
