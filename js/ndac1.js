@@ -8,28 +8,21 @@ ndac1Body.innerHTML = `
     <p>Please enter the passphrase to access <span style="font-size: 18px; font-style: italic; font-weight: 600;">Navigating Distance and </br> Closeness</span></p>
     <input class="pass-field" id="pass-field" type="password" placeholder="Password">
     <input class="pass-submit-btn" type="submit" value="Submit">
+    <a href="https://www.fable-arts.com" style="margin: 20px 0;">Return to homepage</a>
     </form>
 </div>`;
 
 const passForm = document.querySelector(".pass-container")
 const passField = passForm.querySelector(".pass-field");
 const submitBtn = passForm.querySelector(".pass-submit-btn");
-passField.addEventListener("input", (e) => {
-  console.log(e.target.value)
-})
 console.log(passField.innerText);
-submitBtn.addEventListener("click", () => {
+submitBtn.addEventListener("click", (e) => {
   const userPassword = document.getElementById("pass-field").value.toLowerCase();
   if(userPassword != password) {
-    console.log(password);
-    console.log(userPassword);
-    console.log(userPassword + " does not equal " + password);
     passField.classList.add("wrong");
     passField.value = "";
     passField.placeholder = "Wrong password";
     submitBtn.value = "Please try again";
-    console.log(userPassword);
-    // window.location.assign("../index.html");
   } else {
     ndac1Body.classList.add("ndac-background-welcome")
     ndac1Body.innerHTML = `

@@ -50,7 +50,7 @@ main {
 }
 .welcome-banner--small {
   position: absolute;
-  background-image: url(../assets/images/reflections-resonance_banner_mobile.webp);
+  background-image: url(../assets/images/resonance-reflections_banner.webp);
   background-repeat: no-repeat;
   background-size: 85vw calc(85vw * 0.5);
   border-radius: 5px;
