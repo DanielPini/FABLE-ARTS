@@ -22,7 +22,7 @@ header.innerHTML = `
               <a href="./about.html"><span>FABLE ARTS</span></a>
             </li>
             <li class="nav-item">
-              <a href="./staff.html">Team</a>
+              <a href="./team.html">Team</a>
             </li>
             <li class="nav-item">
               <a href="../artists.html">Artists</a>
@@ -72,7 +72,7 @@ header.innerHTML = `
           <a href="./about.html">About</a>
         </li>
         <li class="nav-item">
-          <a href="./staff.html">The Team</a>
+          <a href="./team.html">The Team</a>
         </li>
         <li class="nav-item">
           <a href="./artists.html">The Artists</a>
