@@ -1,21 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/defaultpagestyle.css">
-  <link rel="stylesheet" href="../css/fa-artists.css">
-  <link rel="stylesheet" href="../css/artistroster.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../css/defaultpagestyle.css" />
+    <link
+      rel="stylesheet"
+      href="../css/fa-artists.css" />
+    <link
+      rel="stylesheet"
+      href="../css/artistroster.css" />
+    <link
+      rel="stylesheet"
+      href="../css/test.css" />
 
-  <title>Document</title>
-</head>
-<body>
-  <div class="main">
-    <div class="artist-roster">
-      <div class="artist-roster__artist-card-container">
-      </div>
-    </div>
-  </div>
-  <script type="module" src="../js/tests/search.js"></script>
-</body>
+    <title>Test Header</title>
+    <style>
+      header {
+        position: relative;
+        height: 100px;
+      }
+      nav {
+        position: absolute;
+        display: flex;
+        flex-flow: column;
+        align-items: end;
+        justify-content: center;
+        right: 0;
+        top: 0;
+        width: 100px;
+        height: 100px;
+        transition: all 300ms ease;
+      }
+      .nav-button {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+        background: none;
+        border: none;
+        transition: all 350ms ease;
+      }
+      .line {
+        background-color: black;
+        width: 35px;
+        height: 3px;
+        border-radius: 5px;
+        margin: 10px auto;
+        transition: all 150ms ease;
+        right: 15px;
+        top: 20px;
+      }
+      .nav-list {
+        position: absolute;
+        display: flex;
+        flex-flow: column;
+        top: 30px;
+        right: 10px;
+        height: 30px;
+        align-items: end;
+      }
+      .nav-list__items {
+        transition: all 450ms ease;
+        height: 50px;
+        line-height: 0;
+        opacity: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .nav-list__items:hover {
+        transform: scale(1.1);
+      }
+      .nested-nav {
+        display: none;
+      }
+      @media only screen and (min-width: 700px) {
+        nav {
+          right: calc(100% - 100px);
+        }
+        .nav-list {
+          flex-flow: row nowrap;
+          width: 70vw;
+          height: 50px;
+          left: 40px;
+          top: 5px;
+        }
+        .nav-list__items {
+          height: 50px;
+          line-height: 50px;
+          flex: 0 0 0px;
+        }
+        .nested-nav {
+          position: absolute;
+          /* right: 20px; */
+          top: 0;
+          justify-content: flex-start;
+          margin-top: -20px;
+          padding: 45px 0 20px 0;
+          display: flex;
+          flex-flow: column;
+          list-style-type: none;
+          opacity: 0;
+          transition: all 350ms ease;
+        }
+        .nested-nav:hover {
+          opacity: 1;
+          margin-top: 10px;
+          padding-top: 30px;
+        }
+        .nested-nav .nested-nav-list__items {
+          flex: 0;
+          margin: 0 0 0 3vw;
+          padding: 0 3vw 0 3vw;
+          height: 0px;
+          line-height: 0;
+          transition: all 350ms ease;
+        }
+        .nested-nav:hover .nested-nav-list__items {
+          margin: 0 0 0 3vw;
+          padding: 25px 3vw 20px 3vw;
+          opacity: 1;
+        }
+        .nested-nav-list__items:hover {
+          transform: scale(1.1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button class="nav-button">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+          <ul class="nav-list">
+            <li class="nav-list__items">About</li>
+            <li class="nav-list__items">Discover</li>
+            <li class="nav-list__items">Contact</li>
+          </ul>
+        </button>
+      </nav>
+    </header>
+    <script>
+      const headerLinks = [
+        {
+          siteName: "Home",
+          siteURL: "./index.html",
+        },
+        {
+          siteName: "About",
+          siteURL: "./about.html",
+          nested: [
+            {
+              siteName: "Team",
+              siteURL: "./team.html",
+            },
+            {
+              siteName: "Artists",
+              siteURL: "./artists.html",
+            },
+          ],
+        },
+        {
+          siteName: "Discover",
+          siteURL: "./discover.html",
+        },
+        {
+          siteName: "Support",
+          siteURL: "./support.html",
+          nested: [
+            {
+              siteName: "Contact",
+              siteURL: "./contact.html",
+            },
+            {
+              siteName: "Donate",
+              siteURL: "./support.html",
+            },
+          ],
+        },
+      ];
+
+      const header = document.querySelector("header");
+      header.innerHTML = `
+      <nav>
+        <button class="nav-button">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+          <ul class="nav-list">
+            ${generateList()}
+          </ul>
+        </button>
+      </nav>`;
+
+      const nav = document.querySelector("nav");
+      const navButton = nav.querySelector(".nav-button");
+      const line = navButton.querySelectorAll(".line");
+      const line1 = navButton.querySelector(".line1");
+      const line2 = navButton.querySelector(".line2");
+      const line3 = navButton.querySelector(".line3");
+      const navList = navButton.querySelector(".nav-list");
+      const navListItems = navList.querySelectorAll(".nav-list__items");
+
+      let isOpen = false;
+
+      navButton.addEventListener("click", (e) => {
+        if (!isOpen) {
+          changeNav();
+          isOpen = true;
+        } else {
+          revertNav();
+          isOpen = false;
+        }
+      });
+      navButton.addEventListener("mouseenter", (e) => {
+        changeNav();
+      });
+      navButton.addEventListener("mouseleave", (e) => {
+        revertNav();
+      });
+
+      function generateList() {
+        let list = "";
+        for (let i = 0; i < headerLinks.length; i++) {
+          list += `
+            <li class="nav-list__items">
+              <a href="${headerLinks[i].siteURL}">
+                ${headerLinks[i].siteName}
+              </a>`;
+          if (!(headerLinks[i].nested == undefined)) {
+            list += `
+              <ul class="nested-nav">`;
+            for (let j = 0; j < headerLinks[i].nested.length; j++) {
+              list += `
+                <li class="nested-nav-list__items"
+                  <a href="${headerLinks[i].nested[j].siteURL}">
+                    ${headerLinks[i].nested[j].siteName}
+                    </a>
+                </li>`;
+            }
+            list += `
+                </ul>`;
+          }
+          list += `
+            </li>`;
+        }
+        return list;
+      }
+
+      function changeNav() {
+        const windowWidth = window.innerWidth;
+        line.forEach((line) => {
+          line.style.position = "absolute";
+          line.style.transform = "scale(1.1)";
+        });
+
+        line1.style.transform = "rotate(45deg)";
+        line2.style.opacity = "0";
+        line3.style.transform = "rotate(-45deg)";
+
+        if (windowWidth < 700) {
+          navList.style.top = "50px";
+          navListItems.forEach((element) => {
+            element.style.paddingTop = "40px";
+            element.style.paddingBottom = "10px";
+            element.style.opacity = "1";
+          });
+        } else {
+          navListItems.forEach((element) => {
+            element.style.top = "5px";
+            element.style.paddingTop = "0px";
+            element.style.paddingBottom = "0px";
+            element.style.opacity = "1";
+            element.style.flex = "1 1 50px";
+          });
+        }
+      }
+
+      function revertNav() {
+        const windowWidth = window.innerWidth;
+        line.forEach((line) => {
+          line.style.position = "static";
+          line.style.transform = "scale(1)";
+        });
+        line1.style.transform = "rotate(0deg)";
+        line2.style.opacity = "1";
+        line3.style.transform = "rotate(0deg)";
+
+        if (windowWidth < 700) {
+          navList.style.top = "5px";
+          navListItems.forEach((element) => {
+            element.style.paddingTop = "0";
+            element.style.paddingBottom = "0px";
+            element.style.opacity = "0";
+          });
+        } else {
+          navListItems.forEach((element) => {
+            element.style.top = "30px";
+            element.style.paddingTop = "0px";
+            element.style.paddingBottom = "0px";
+            element.style.opacity = "0";
+            element.style.flex = "0 0 0px";
+          });
+        }
+      }
+    </script>
+  </body>
 </html>

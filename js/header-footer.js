@@ -15,46 +15,46 @@ header.innerHTML = `
         <a href="./index.html">Home</a>
       </li>
       <li class="nav-item">
-        <a href="./2_about.html">About</a>
+        <a href="./about.html">About</a>
         <div class="nav-inner-dropdown">
           <ul>
             <li class="nav-item">
-              <a href="./2_about.html"><span>FABLE ARTS</span></a>
+              <a href="./about.html"><span>FABLE ARTS</span></a>
             </li>
             <li class="nav-item">
-              <a href="./3_staff.html">Team</a>
+              <a href="./staff.html">Team</a>
             </li>
             <li class="nav-item">
-              <a href="../4_artists.html">Artists</a>
+              <a href="../artists.html">Artists</a>
             </li>
           </ul>
         </div>
       </li>
       <li class="nav-item">
-        <a href="./5_discover.html">Discover</a>
+        <a href="./discover.html">Discover</a>
         <div class="nav-inner-dropdown">
           <ul>
             <!-- <li class="nav-item">
-              <a href="./6_events.html">Events</a>
+              <a href="./events.html">Events</a>
             </li> -->
           <!--  <li class="nav-item">
-              <a href="./7_media.html">Media</a>
+              <a href="./media.html">Media</a>
             </li> -->
           </ul>
         </div>
       </li>
       <li class="nav-item nav-support-item">
-        <a href="./8_support_FA.html"
-          >Support
-          <span style="font-style: italic; font-weight: bold">FA</span></a
-        >
+        <a href="./support_FA.html">
+          Support
+          <span style="font-style: italic; font-weight: bold">FA</span>
+        </a>
         <div class="nav-inner-dropdown">
           <ul>
             <li class="nav-item">
-              <a href="./9_contact.html">Mailing List</a>
+              <a href="./contact.html">Mailing List</a>
             </li>
             <li class="nav-item">
-              <a href="./8_support_FA.html">Donate</a>
+              <a href="./support_FA.html">Donate</a>
             </li>
           </ul>
         </div>
@@ -62,29 +62,29 @@ header.innerHTML = `
     </ul>
   </nav>
   <div class="small-nav-box">
-    <img alt="menu icon" onclick="toggleShow()"/>
+    <img class="burger-menu-image" alt="menu icon" onclick="toggleShow()"/>
     <div class="small-page-nav-list">
       <ul class="">
         <li class="nav-item">
           <a href="./index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a href="./2_about.html">About</a>
+          <a href="./about.html">About</a>
         </li>
         <li class="nav-item">
-          <a href="./3_staff.html">The Team</a>
+          <a href="./staff.html">The Team</a>
         </li>
         <li class="nav-item">
-          <a href="./4_artists.html">The Artists</a>
+          <a href="./artists.html">The Artists</a>
         </li>
         <li class="nav-item">
-          <a href="./5_discover.html">Discover</a>
+          <a href="./discover.html">Discover</a>
         </li>
         <!-- <li class="nav-item">
-          <a href="./6_events.html">Events</a>
+          <a href="./events.html">Events</a>
         </li> -->
         <li class="nav-item nav-support-item">
-          <a href="./8_support_FA.html"
+          <a href="./support_FA.html"
             >Support <span class="fa">FA</span></a
           >
         </li>
@@ -136,10 +136,12 @@ footer.innerHTML = `
 
 const smallNav = document.querySelector(".small-nav-box")
 const navList = smallNav.querySelector(".small-page-nav-list")
+const smallNavImg = smallNav.querySelector(".burger-menu-image")
 
-smallNav.addEventListener("click", (e) => {
+function toggleShow() {
   navList.classList.toggle("visible-nav-list")
-})
-smallNav.addEventListener("hover", (e) => {
-  navList.classList.toggle("visible-nav-list")
-})
+  smallNavImg.classList.toggle("burger-menu-image--clicked")
+}
+// smallNav.addEventListener("click", (e) => {
+//   navList.classList.toggle("visible-nav-list")
+// })
