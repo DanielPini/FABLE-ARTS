@@ -25,24 +25,21 @@ main {
   border-radius: 5px;
   box-shadow: 1 0 20px 1px var(--box-shadow-animation-color);
   animation: pulse 4s infinite;
-  margin: 15vh 0;
+  margin: 10vh 0;
 }
 #welcome-banner {
   position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  background-image: url("../assets/images/resonance-reflections_banner.webp");
   background-repeat: no-repeat;
   background-size: 85vw calc(85vw * 0.5);
+  border-radius: 5px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
 }
-#welcome-banner_image {
+.welcome-banner--large {
   position: absolute;
-  background: url("../assets/images/resonance-reflections_banner-turbulance.webp");
+  background-image: url(../assets/images/resonance-reflections_banner.webp);
   background-repeat: no-repeat;
   background-size: 85vw calc(85vw * 0.5);
   border-radius: 5px;
@@ -50,7 +47,17 @@ main {
   left: 0px;
   width: 100%;
   height: 100%;
-  /* filter: url("#turbulence"); */
+}
+.welcome-banner--small {
+  position: absolute;
+  background-image: url(../assets/images/reflections-resonance_banner_mobile.webp);
+  background-repeat: no-repeat;
+  background-size: 85vw calc(85vw * 0.5);
+  border-radius: 5px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
 }
 .index-heading {
   font-weight: bold;
@@ -92,12 +99,9 @@ main {
 @keyframes glow-grow {
   from {
   box-shadow: 0 0 20px 1px var(--box-shadow-animation-color);
-  transform: scale(1);
 }
   to {
     box-shadow: 0 0 30px 30px rgb(252, 254, 255);
-    transform: scale(1.01);
-
   }
 }
 .index-title {
@@ -185,11 +189,15 @@ main {
   margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 700px) {
-  #welcome-banner-container, #welcome-banner, #welcome-banner_image {
-    width: 90vw;
-    height: calc(90vw * .5);
-    background-size: 90vw calc(90vw * 0.5);
+@media only screen and (max-width: 600px) {
+  #welcome-banner {
+    width: 85vw;
+    height: calc(85vw * 1.24);
+    background-size: 85vw calc(85vw * 1.24);
+  }
+  #welcome-banner-container {
+    height: calc(85vw * 1.24);
+    margin: 1vh 0;
   }
   .season-info {
     width: 80vw;
@@ -197,10 +205,55 @@ main {
   .season-info-sidebar {
     display: none;
   }
+  .index-title {
+    display: flex;
+    justify-content: center;
+    margin: 3vh 0;
+    width: 100vw;
+  }
+  .season-info {
+    width: 80vw;
+    margin: 0vh 20px;
+    flex-flow: row nowrap;
+  }
+  .season-title {
+    font-style: italic;
+    font-size: 4vw;
+  }
+  .season-info-sidebar {
+    display: block;
+    min-width: 20%;
+    padding-right: 5px;
+  }
+  .reflection-season {
+    display: block;
+    text-shadow: 0 0 .3vw rgba(200, 200, 0, .5);
+    margin-top: 10px;
+    font-size: 4vw;
+  }
+  .button-section {
+    display: flex;
+    flex-flow: column;
+    width: 90vw;
+    margin: 5vh;
+  }
+  #ndac-access {
+    width: fit-content;
+    padding: 0 20px
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  #welcome-banner-container {
+    background-size: 85vw calc(85vw * 0.5);
+  }
+  #welcome-banner {
+    background-size: 85vw calc(85vw * 0.5);
+  }
 }
 
 @media only screen and (min-width: 1200px) {
-  #welcome-banner-container, #welcome-banner, #welcome-banner_image {
+  #welcome-banner-container, #welcome-banner {
     height: calc(1000px * .5);
     width: 1000px;
     background-size: 1000px calc(1000px * 0.5);
