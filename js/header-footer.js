@@ -137,11 +137,17 @@ footer.innerHTML = `
 const smallNav = document.querySelector(".small-nav-box")
 const navList = smallNav.querySelector(".small-page-nav-list")
 const smallNavImg = smallNav.querySelector(".burger-menu-image")
-
+let isNavShown = false;
 function toggleShow() {
+  if (!isNavShown) {
+    navList.style.display = "block";
+  } else {
+    navList.style.display = "none";
+  }
   navList.classList.toggle("visible-nav-list")
+  isNavShown = !isNavShown
+  console.log(navList)
   smallNavImg.classList.toggle("burger-menu-image--clicked")
+
 }
-// smallNav.addEventListener("click", (e) => {
-//   navList.classList.toggle("visible-nav-list")
-// })
+

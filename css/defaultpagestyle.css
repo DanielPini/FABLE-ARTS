@@ -2,7 +2,7 @@
   --header-footer-color: rgba(153, 162, 186, .7);
   --nav-hover-color: rgb(255, 255, 255);
   --font-color: rgb(0, 0, 0);
-  --background-color: rgb(173, 182, 176);
+  --background-color: rgb(139, 152, 143);
   --button-color: rgb(169, 197, 208);
   --default-font: "Helvetica Neue", Geneva, Tahoma, sans-serif;
 }
@@ -332,9 +332,11 @@ footer {
   .burger-menu-image {
     content: url(../assets/images/icons/black-menu-button.svg);
     transition: all 300ms ease-in-out;
+    width: 40px;
   }
   .burger-menu-image--clicked {
     content: url(../assets/images/icons/black-menu-button-cross.svg);
+    width: 40px;
   }
   .small-page-nav-list {
     opacity: 0;
@@ -348,26 +350,10 @@ footer {
   .visible-nav-list {
     display: block;
     opacity: 1;
-  }
-  .small-nav-box:hover {
-    display: block;
     scale: 1.03;
     z-index: 1;
-  }
-  .small-nav-box:hover .burger-menu-image{
-    content: url(../assets/images/icons/black-menu-button-cross.svg);
-  }
-  .small-nav-box:hover .small-page-nav-list, .small-page-nav-list:hover {
-    display: block;
     position: relative;
     left: -85px;
-    background-color: var(--header-footer-color);
-    box-shadow: 0 0 5px 1px var(--header-footer-color);
-  }
-  .small-nav-box:active {
-    display: block;
-    text-align: right;
-    position: relative;
     background-color: var(--header-footer-color);
     box-shadow: 0 0 5px 1px var(--header-footer-color);
   }
@@ -379,7 +365,6 @@ footer {
     height: 230px;
     padding-right: 0px;
     padding-left: 20px;
-    display: none;
   }
   .small-page-nav-list li {
     line-height: 25px;

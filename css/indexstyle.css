@@ -13,15 +13,16 @@ main {
 }
 .welcome-section {
   flex-flow: row wrap;
-  width: 100vw;
+  width: 100%;
   overflow: visible;
+}
+.season-link {
+  width: 85vw;
 }
 #welcome-banner-container {
   position: relative;
   width: 85vw;
   height: calc(85vw * .5);
-  margin: 20px auto;
-  min-width: 350px;
   border-radius: 5px;
   box-shadow: 1 0 20px 1px var(--box-shadow-animation-color);
   animation: pulse 4s infinite;
@@ -190,13 +191,19 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
+  main {
+    width: 100%;
+  }
+  .season-link {
+    width: 90vw;
+  }
   #welcome-banner {
-    width: 85vw;
-    height: calc(85vw * 1.24);
-    background-size: 85vw calc(85vw * 1.24);
+    width: 90vw;
+    height: calc(90vw * .8);
+    background-size: 90vw calc(90vw * .8);
   }
   #welcome-banner-container {
-    height: calc(85vw * 1.24);
+    height: calc(90vw * .8);
     margin: 1vh 0;
   }
   .season-info {
