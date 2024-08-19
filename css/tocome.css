@@ -1,4 +1,7 @@
-
+main {
+  justify-content: start;
+  min-height: calc(100vh - 250px);
+}
 p {
   margin: 20px 0px;
 }
