@@ -128,10 +128,10 @@ footer.innerHTML = `
   </div>
   <div class="footer-right">
     <a
-      href="./9_contact.html"
-      class="contact"
-      >Contact <span class="fa contact">FA</span>.</a
-    >
+      href="./contact.html"
+      class="contact">
+      Contact <span class="fa contact">FA</span>. 
+    </a>
   </div>`;
 
 const smallNav = document.querySelector(".small-nav-box")

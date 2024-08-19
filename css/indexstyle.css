@@ -266,6 +266,9 @@ main {
     background-size: 1000px calc(1000px * 0.5);
     background-repeat: no-repeat;
   }
+  #welcome-banner-container {
+    margin: 10vh auto;
+  }
   .reflection-season {
     font-size: 40px;
   }

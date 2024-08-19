@@ -17,6 +17,7 @@ h1 {
   width: 500px;
   flex-flow: column nowrap;
   margin: 30px auto 10px;
+  align-items: center;
 }
 .support-link-div p {
   margin-top: 10px;
@@ -24,4 +25,37 @@ h1 {
 }
 p {
   text-align: left;
+}
+.support-button, .support-button button {
+  width: 400px;
+}
+.support-button button {
+  background: linear-gradient(0.4turn, yellow 13%, green 37%, rgb(153, 162, 186) 62%, yellow 87%);
+  background-size: 700% 100%;
+  animation: gradient 8s linear infinite;
+  /* background: linear-gradient(0.4turn, yellow, green, red); */
+  /* animation: colorChange 1s infinite; */
+}
+
+@keyframes colorChange {
+  0% {
+    background: linear-gradient(0.4turn, yellow 33%, green 66%, red 100%, yellow, green);
+  }
+  33% {
+    background: linear-gradient(0.4turn, yellow 0%, green 33%, red 66%, yellow 100%, green);
+  }
+  66% {
+    background: linear-gradient(0.4turn, yellow 0%, green 0%, red 33%, yellow 66%, green);
+  }
+  100% {
+    background: linear-gradient(0.4turn, yellow 0%, green 0%, red 0%, yellow 33%, green 66%);
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }

@@ -28,6 +28,9 @@
   height: 100%;
 
 }
+a *, a {
+  font-size: clamp(15px, 2vw, 20px);
+}
 .object {
   width: 7%;
   height: 16%;
