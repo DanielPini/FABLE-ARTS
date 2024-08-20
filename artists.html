@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/defaultpagestyle.css">
-  <link rel="stylesheet" href="./css/fastyle.css">
-  <link rel="stylesheet" href="./css/fa-artists.css">
-  <link rel="stylesheet" href="./css/artistroster.css">
-  <meta
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-GNMCBLML6N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-GNMCBLML6N");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./css/defaultpagestyle.css" />
+    <link
+      rel="stylesheet"
+      href="./css/fastyle.css" />
+    <link
+      rel="stylesheet"
+      href="./css/fa-artists.css" />
+    <link
+      rel="stylesheet"
+      href="./css/artistroster.css" />
+    <meta
       name="theme-color"
       content="rgba(153, 162, 186, .7)" />
     <link
@@ -34,52 +58,71 @@
     <meta
       name="msapplication-TileColor"
       content="#da532c" />
-  <title>Document</title>
-</head>
-<body>
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
 
-  <header></header>
-  
-  <main class="fa-artists">
-    <h1 class="artist-heading"><span class="artist-heading fa">FABLE ARTS</span> Artists</h1>
-    <div class="about-our-artists-container">
-      <h2>Our Artists and Programs</h2>
-      <p>Since 2020, <span class="fa">FABLE ARTS</span> is proud to have supported the creative work of exceptional artists from multiple artistic disciplines around the world.</p>
-      <p>Below is a list of our artists as well as information about them and their <span class="fa">FABLE ARTS</span> projects.</p>
-    </div>
-    
-    <section class="artists">
-      <div class="main">
-        <form class="search-bar" action="">
-          <input type="text" name="search" id="search" placeholder="Search">
-          <details class="read-more">    
-          <summary>
-            Hint:    
-          </summary>
-          <div class="hint">
-            <p>Search by one of the following: 
-              <ul>
-                <li>Artist Name <span class="suggestion">(Victoria)</span></li>
-                <li>Artist Discipline <span class="suggestion">(composition)</span></li>
-                <li>Project Name <span class="suggestion">(Solos ii)</span></li>
-                <li>Project Year <span class="suggestion">(2021)</span></li>
-                <li>Season <span class="suggestion">(Solos)</span></li>
-              </ul>
-            </p>
-          </div>
-      </details>
-        </form>
-        <div class="error-message"><p>No results!</p></div>
-        <div class="artist-roster">
-          <div class="artist-roster__artist-card-container">
+    <main class="fa-artists">
+      <h1 class="artist-heading">
+        <span class="artist-heading fa">FABLE ARTS</span> Artists
+      </h1>
+      <div class="about-our-artists-container">
+        <h2>Our Artists and Programs</h2>
+        <p>
+          Since 2020, <span class="fa">FABLE ARTS</span> is proud to have
+          supported the creative work of exceptional artists from multiple
+          artistic disciplines around the world.
+        </p>
+        <p>
+          Below is a list of our artists as well as information about them and
+          their <span class="fa">FABLE ARTS</span> projects.
+        </p>
+      </div>
+
+      <section class="artists">
+        <div class="main">
+          <form
+            class="search-bar"
+            action="">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Search" />
+            <details class="read-more">
+              <summary>Hint:</summary>
+              <div class="hint">
+                <p>Search by one of the following:</p>
+                <ul>
+                  <li>
+                    Artist Name <span class="suggestion">(Victoria)</span>
+                  </li>
+                  <li>
+                    Artist Discipline
+                    <span class="suggestion">(composition)</span>
+                  </li>
+                  <li>
+                    Project Name <span class="suggestion">(Solos ii)</span>
+                  </li>
+                  <li>Project Year <span class="suggestion">(2021)</span></li>
+                  <li>Season <span class="suggestion">(Solos)</span></li>
+                </ul>
+              </div>
+            </details>
+          </form>
+          <div class="error-message"><p>No results!</p></div>
+          <div class="artist-roster">
+            <div class="artist-roster__artist-card-container"></div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-  
-  <footer></footer>
-  <script src="./js/header-footer.js"></script>
-  <script type="module" src="./js/artist_roster.js"></script>
-</body>
+      </section>
+    </main>
+
+    <footer></footer>
+    <script src="./js/header-footer.js"></script>
+    <script
+      type="module"
+      src="./js/artist_roster.js"></script>
+  </body>
 </html>
