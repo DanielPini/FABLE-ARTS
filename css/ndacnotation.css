@@ -5,6 +5,34 @@ p, h2, h3, figcaption {
   margin: 0 auto;
 }
 
+figcaption {
+  font-size: clamp(16px, 1.8vw, 18px);
+}
+.ndac-bio-text {
+  margin: auto;
+  /* width: 85%; */
+  text-align: left;
+  font-size: 18px;
+  background-color: var(--ndac-text-background);
+  box-shadow: var(--ndac-box-shadow);
+  overflow: visible;
+  text-shadow: var(--ndac-text-shadow);
+  padding: 15px;
+}
+summary > h3 {
+  padding: 0
+}
+.transcript * {
+  text-align: left;
+  margin: 0;
+  color: var(--ndac-font-color);
+  font-size: 18px;
+  /* background-color: var(--ndac-text-background); */
+}
+.transcript summary {
+  background-color: rgba(0,0,0,0);
+}
+
 .notation-video-section {
   display: flex;
   flex-flow: column nowrap;
@@ -13,18 +41,26 @@ p, h2, h3, figcaption {
 }
 .notation-video-wrapper {
   position: relative;
-  width: 85%;
+  width: 85vw;
+  max-width: 840px;
+  height: calc(85vw * .6);
+  max-height: 480px;
   margin: 0 auto;
   margin-top: 10px;
   overflow: hidden;
 }
 #movement-2__iframe {
   width: 85vw;
+  max-width: 840px;
+  height: calc(85vw * .6);
+  max-height: 480px;
 }
 .notation-video-wrapper figure, 
 .notation-video-wrapper iframe {
-  width: 100%;
-  height: calc(85vw * .57);
+  width: 85vw;
+  max-width: 840px;
+  height: calc(85vw * .6);
+  max-height: 480px;
 }
 .notation-video {
   position: absolute;
@@ -42,21 +78,23 @@ p, h2, h3, figcaption {
   width: 60vw;
   margin: 2vw 20vw;
   font-weight: bold;
-  font-size: 3vw;
+  font-size: clamp(18px, 3vw, 36px);
   text-align: center;
   background-color: var(--ndac-text-background);
 }
 .notation-h2 {
   font-weight: bold;
   max-width: 90vw;
-  font-size: 2vw;
+  font-size: clamp(16px, 1.9vw, 24px);
   margin: 1vw auto 1vw 0vw;
 }
 .scores p {
+  font-size: clamp(16px, 1.8vw, 18px);
   max-width: 90vw;
   margin: 0 auto;
 }
 .ndac-notation-heading {
+  font-size: clamp(18px, 2.7vw, 35px);
   width: 85%;
   margin: none;
   margin: 3vw 15vw 1vw 0vw;
@@ -71,16 +109,9 @@ p, h2, h3, figcaption {
   .notation-h1 {
     margin: 0 auto;
     width: 100%;
-    font-size: 18px;
     margin-top: 20px;
-    font-weight: bold;
     text-align: center;
   }
-  .notation-h2 {
-    font-weight: bold;
-    font-size: 11px;
-  }
-
   .notation-video {
     overflow: hidden;
     margin: 0 auto;
@@ -91,12 +122,6 @@ p, h2, h3, figcaption {
 }
 
 @media only screen and (min-width: 1200px) {
-  .notation-h1 {
-    font-size: 36px;
-  }
-  .notation-h2 {
-    font-size: 24px;
-  }
   .notation-video-wrapper iframe {
     width: 840px;
     height: 480px;

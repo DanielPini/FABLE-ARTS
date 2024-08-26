@@ -76,9 +76,9 @@
   background-color: rgba(0, 0, 0, 0.3);
   border: none;
   border-radius: 50%; 
-  margin: 1vw;
-  height: 2vw;
-  width: 2vw;
+  margin: 0 1vw;
+  height: clamp(10px, 2vw, 20px);
+  width: clamp(10px, 2vw, 20px);
   cursor: pointer;
 }
 
@@ -93,8 +93,8 @@
 
 .movement-figure_caption{
   background-color: var(--ndac-text-background);
-  font-size: 2.5vw;
 }
 
-
-.is-hidden { display: none;}
+.is-hidden {
+  display: none;
+}

@@ -89,7 +89,7 @@ span {
   text-align: center;
   flex-grow: 2;
 }
-.transcript *{
+.transcript * {
   text-align: left;
   margin-top: 5px;
   color: var(--ndac-font-color);
