@@ -59,7 +59,7 @@ summary > h3 {
 .notation-video-wrapper iframe {
   width: 85vw;
   max-width: 840px;
-  height: calc(85vw * .6);
+  height: calc(85vw * .55);
   max-height: 480px;
 }
 .notation-video {
