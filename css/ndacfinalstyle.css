@@ -3,12 +3,11 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  justify-content: start;
 }
 .final-video-container {
   position: relative;
   width: 100%;
-  padding-top: 65%;
+  padding-top: 55%;
   overflow: hidden;
 }
 .final-video-title {
