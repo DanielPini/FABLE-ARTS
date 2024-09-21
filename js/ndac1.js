@@ -1,7 +1,7 @@
 import password from "./data/ndac-password.js"
 
 const ndac1Body = document.querySelector("body");
-let isTime = true;
+let isTime = false;
 
 const passwordSplash = `
 <div class="pass-background">
