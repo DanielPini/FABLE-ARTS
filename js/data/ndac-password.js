@@ -1,3 +1,3 @@
-const password = "horse";
+const password = "Anabelle";
 
 export default password;
