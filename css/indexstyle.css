@@ -120,6 +120,12 @@ main {
   font-style: italic;
   font-size: 4vw;
 }
+.section-title {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
 .pixel-figures {
   width: 80px;
 }

@@ -123,7 +123,7 @@ footer.innerHTML = `
   <div class="footer-left"></div>
   <div class="copyright-container">
     <p class="copyright">
-      Copyright 2024 <span class="fa">FABLE ARTS</span>
+      Copyright 2024 <span class="fa">FABLE\&nbsp;ARTS</span>
     </p>
   </div>
   <div class="footer-right">
@@ -134,9 +134,9 @@ footer.innerHTML = `
     </a>
   </div>`;
 
-const smallNav = document.querySelector(".small-nav-box")
-const navList = smallNav.querySelector(".small-page-nav-list")
-const smallNavImg = smallNav.querySelector(".burger-menu-image")
+const smallNav = document.querySelector(".small-nav-box");
+const navList = smallNav.querySelector(".small-page-nav-list");
+const smallNavImg = smallNav.querySelector(".burger-menu-image");
 let isNavShown = false;
 function toggleShow() {
   if (!isNavShown) {
@@ -144,10 +144,8 @@ function toggleShow() {
   } else {
     navList.style.display = "none";
   }
-  navList.classList.toggle("visible-nav-list")
-  isNavShown = !isNavShown
-  console.log(navList)
-  smallNavImg.classList.toggle("burger-menu-image--clicked")
-
+  navList.classList.toggle("visible-nav-list");
+  isNavShown = !isNavShown;
+  console.log(navList);
+  smallNavImg.classList.toggle("burger-menu-image--clicked");
 }
-
