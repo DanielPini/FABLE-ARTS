@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Parts We Give | The Game</title>
+    <!-- Font -->
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ribeye&display=swap"
+      rel="stylesheet" />
+    <!-- Font Press Start 2p -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Charm:wght@400;700&family=Delius&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Kode+Mono:wght@400..700&family=Lexend+Deca:wght@100..900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap"
+      rel="stylesheet" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./favicon.ico" />
+    <!-- Overworld styles -->
+    <link
+      href="./styles/global.css"
+      type="text/css"
+      rel="stylesheet" />
+    <link
+      href="./styles/QuestTimer.css"
+      type="text/css"
+      rel="stylesheet" />
+    <link
+      href="./styles/YesNoPrompt.css"
+      type="text/css"
+      rel="stylesheet" />
+    <link
+      href="./styles/WelcomeMessage.css"
+      type="text/css"
+      rel="stylesheet" />
+    <link
+      href="./styles/TextMessage.css"
+      type="text/css"
+      rel="stylesheet" />
+    <link
+      href="./styles/SceneTransition.css"
+      type="text/css"
+      rel="stylesheet" />
+    <link
+      href="./styles/KeyboardMenu.css"
+      type="text/css"
+      rel="stylesheet" />
+    <link
+      href="./styles/Hud.css"
+      type="text/css"
+      rel="stylesheet" />
+    <link
+      href="./styles/TitleScreen.css"
+      type="text/css"
+      rel="stylesheet" />
+    <link
+      href="./styles/EndGameMessage.css"
+      type="text/css"
+      rel="stylesheet" />
+    <!-- Battle css -->
+    <link
+      href="./styles/Battle.css"
+      type="text/css"
+      rel="stylesheet" />
+    <link
+      href="./styles/Combatant.css"
+      type="text/css"
+      rel="stylesheet" />
+    <link
+      href="./styles/SubmissionMenu.css"
+      type="text/css"
+      rel="stylesheet" />
+    <link
+      href="./styles/Team.css"
+      type="text/css"
+      rel="stylesheet" />
+    <link
+      href="./styles/Menus.css"
+      type="text/css"
+      rel="stylesheet" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Delius&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Kode+Mono:wght@400..700&family=Lexend+Deca:wght@100..900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap"
+      rel="stylesheet" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"
+      integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <div class="game-container">
+      <canvas
+        class="game-canvas"
+        width="352"
+        height="198"></canvas>
+    </div>
+    <p class="how-to-play">
+      Use Arrow Keys to move. Enter to select/talk. <br />Press escape to pause
+      and open the menu.
+    </p>
+    <div class="credits">
+      <p>
+        The Parts We Give, The Game is a FABLE ARTS production and was created,
+        produced, and coded by Daniel Pini. <br /><br />The Parts We Give, The
+        Game accompanies Christine Pan's Song Cycle of the same name and has
+        been made with cultural and story consultation with Christine.
+        <br /><br />Read more
+        <a href="https://www.christinepanmusic.com/">here</a>.
+      </p>
+
+      <p>
+        If you are one of our lovely beta testers, please note that this is an
+        early preview.<br /><br />Please use
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSckWn40IkIR43s5fk9XuE3EqnQQdk56ycYpL64ScdRtD9ccAA/viewform?usp=sharing&ouid=109196545122115717094"
+          >this form</a
+        >
+        for all bug reports.<br /><br />I hope you enjoy the game and thank you
+        for your help in making it shine!
+      </p>
+    </div>
+
+    <script src="utils.js"></script>
+
+    <!-- State -->
+    <script src="State/PlayerState.js"></script>
+
+    <!-- Game object classes and registry -->
+    <script src="GameObject.js"></script>
+    <script src="GameObjectClasses.js"></script>
+    <script src="Person.js"></script>
+    <script src="Knife.js"></script>
+    <script src="Apple.js"></script>
+    <script src="AppleBit.js"></script>
+    <script src="PizzaStone.js"></script>
+    <script src="Plates.js"></script>
+    <script src="Chopsticks.js"></script>
+    <script src="Table.js"></script>
+    <script src="Nerf.js"></script>
+    <script src="NerfPile.js"></script>
+
+    <!-- Content -->
+    <script src="Content/pizzas.js"></script>
+    <script src="Content/actions.js"></script>
+    <script src="Content/enemies.js"></script>
+    <script src="Content/Quests.js"></script>
+
+    <!-- Scripts -->
+    <script src="QuestTimer.js"></script>
+    <script src="MultiChoicePrompt.js"></script>
+    <script src="MediationQuestRunner.js"></script>
+    <script src="QuestArrow.js"></script>
+    <script src="DirectionInput.js"></script>
+    <script src="Sprite.js"></script>
+    <script src="ChopFruitRoom.js"></script>
+    <script src="OverworldMap.js"></script>
+    <script src="QuestManager.js"></script>
+    <script src="Hud.js"></script>
+    <script src="Overworld.js"></script>
+    <script src="OverworldEvent.js"></script>
+    <script src="YesNoPrompt.js"></script>
+    <script src="TextMessage.js"></script>
+    <script src="WelcomeMessage.js"></script>
+    <script src="EndGameMessage.js"></script>
+    <script src="KeyPressListener.js"></script>
+    <script src="RevealingText.js"></script>
+    <script src="SceneTransition.js"></script>
+    <script src="KeyboardMenu.js"></script>
+    <script src="PauseMenu.js"></script>
+    <script src="CraftingMenu.js"></script>
+    <script src="Progress.js"></script>
+    <script src="TitleScreen.js"></script>
+
+    <!-- Battle -->
+    <script src="Battle/Battle.js"></script>
+    <script src="Battle/Combatant.js"></script>
+    <script src="Battle/Team.js"></script>
+    <script src="Battle/SubmissionMenu.js"></script>
+    <script src="Battle/ReplacementMenu.js"></script>
+    <script src="Battle/BattleEvent.js"></script>
+    <script src="Battle/TurnCycle.js"></script>
+    <script src="Battle/BattleAnimations.js"></script>
+
+    <script src="init.js"></script>
+  </body>
+</html>

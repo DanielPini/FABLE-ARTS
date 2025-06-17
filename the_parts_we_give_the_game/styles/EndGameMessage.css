@@ -1,0 +1,55 @@
+.EndGameMessage_content h2 {
+  font-size: 3px;
+  margin-bottom: 10px;
+}
+.EndGameMessage_content p {
+  font-size: 2px;
+}
+.EndGameMessage_print,
+.EndGameMessage_return,
+.song-cycle {
+  font-size: 1px;
+  padding: 5px 10px;
+  font-size: 3px;
+  font-family: inherit;
+  border-radius: 3px;
+  border: 1px solid hsl(289, 50%, 85%);
+  background: hsl(193, 50%, 85%);
+  cursor: pointer;
+}
+
+.EndGameMessage_print:hover,
+.EndGameMessage_return:hover,
+.song-cycle:hover {
+  transform: scale(1.01);
+  transition: all 200ms linear;
+}
+.EndGameMessage_print:active,
+.EndGameMessage_return:active,
+.song-cycle:active {
+  transform: scale(0.99);
+  transition: all 50ms linear;
+  box-shadow: inset 0 0 1px 1px hsla(193, 50%, 30%, 0.2);
+}
+.WelcomeMessage_p img {
+  max-width: 40%;
+  padding: 5px;
+}
+.WelcomeMessage_p > p {
+  padding: 5px;
+}
+.inner-div {
+  display: flex;
+}
+.WelcomeMessage {
+  padding: 10px 8px;
+}
+.codes {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.codes p {
+  padding: 2px;
+}
