@@ -37,7 +37,7 @@ body {
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 1056px;
   margin: 0 auto;
   top: 600px;
   left: 0;
@@ -46,9 +46,10 @@ body {
   color: #fff;
   border: 1px solid white;
   padding: 10px;
+  line-height: 1.5;
 }
-.credits p:first-of-type {
-  margin-bottom: 50px;
+.credits p {
+  margin-bottom: 5px;
 }
 .credits a {
   color: inherit;

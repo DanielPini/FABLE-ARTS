@@ -4,7 +4,8 @@
 main {
   content: none;
 }
-.welcome-section, .season-info {
+.welcome-section,
+.season-info {
   display: flex;
   justify-content: center;
   max-width: none;
@@ -22,7 +23,7 @@ main {
 #welcome-banner-container {
   position: relative;
   width: 85vw;
-  height: calc(85vw * .5);
+  height: calc(85vw * 0.5);
   border-radius: 5px;
   box-shadow: 1 0 20px 1px var(--box-shadow-animation-color);
   animation: pulse 4s infinite;
@@ -62,7 +63,6 @@ main {
 }
 .index-heading {
   font-weight: bold;
-
 }
 @keyframes pulse {
   0% {
@@ -78,10 +78,10 @@ main {
     box-shadow: 2px 2px 20px 5px var(--box-shadow-animation-color);
   }
   50% {
-    box-shadow: 1px 0 20px 1px var(--box-shadow-animation-color);  
+    box-shadow: 1px 0 20px 1px var(--box-shadow-animation-color);
   }
   62% {
-    box-shadow: 0 2px 20px 0px var(--box-shadow-animation-color);  
+    box-shadow: 0 2px 20px 0px var(--box-shadow-animation-color);
   }
   75% {
     box-shadow: 2px 5px 20px 2px var(--box-shadow-animation-color);
@@ -99,8 +99,8 @@ main {
 }
 @keyframes glow-grow {
   from {
-  box-shadow: 0 0 20px 1px var(--box-shadow-animation-color);
-}
+    box-shadow: 0 0 20px 1px var(--box-shadow-animation-color);
+  }
   to {
     box-shadow: 0 0 30px 30px rgb(252, 254, 255);
   }
@@ -120,14 +120,12 @@ main {
   font-style: italic;
   font-size: 4vw;
 }
-.season-info-sidebar {
-  display: block;
-  min-width: 20%;
-  padding-right: 5px;
+.pixel-figures {
+  width: 80px;
 }
 .reflection-season {
   display: block;
-  text-shadow: 0 0 .3vw rgba(200, 200, 0, .5);
+  text-shadow: 0 0 0.3vw rgba(200, 200, 0, 0.5);
   margin-top: 10px;
   font-size: 4vw;
 }
@@ -139,7 +137,7 @@ main {
 }
 #ndac-access {
   width: fit-content;
-  padding: 0 20px
+  padding: 0 20px;
 }
 .splash-hidden {
   opacity: 0;
@@ -179,9 +177,19 @@ main {
   transition: all 1000ms ease-in-out;
 }
 @keyframes welcome-animation-box-animation {
-  0% {width: 100%;}
-  70% {width: .1%; height: 100%; top: 0px;}
-  100% {width: .1%; height: 0%; top: 100%}
+  0% {
+    width: 100%;
+  }
+  70% {
+    width: 0.1%;
+    height: 100%;
+    top: 0px;
+  }
+  100% {
+    width: 0.1%;
+    height: 0%;
+    top: 100%;
+  }
 }
 .ndac-access-date {
   display: block;
@@ -199,11 +207,11 @@ main {
   }
   #welcome-banner {
     width: 90vw;
-    height: calc(90vw * .8);
-    background-size: 90vw calc(90vw * .8);
+    height: calc(90vw * 0.8);
+    background-size: 90vw calc(90vw * 0.8);
   }
   #welcome-banner-container {
-    height: calc(90vw * .8);
+    height: calc(90vw * 0.8);
     margin: 1vh 0;
   }
   .season-info {
@@ -234,7 +242,7 @@ main {
   }
   .reflection-season {
     display: block;
-    text-shadow: 0 0 .3vw rgba(200, 200, 0, .5);
+    text-shadow: 0 0 0.3vw rgba(200, 200, 0, 0.5);
     margin-top: 10px;
     font-size: 4vw;
   }
@@ -246,7 +254,7 @@ main {
   }
   #ndac-access {
     width: fit-content;
-    padding: 0 20px
+    padding: 0 20px;
   }
 }
 
@@ -260,8 +268,9 @@ main {
 }
 
 @media only screen and (min-width: 1200px) {
-  #welcome-banner-container, #welcome-banner {
-    height: calc(1000px * .5);
+  #welcome-banner-container,
+  #welcome-banner {
+    height: calc(1000px * 0.5);
     width: 1000px;
     background-size: 1000px calc(1000px * 0.5);
     background-repeat: no-repeat;

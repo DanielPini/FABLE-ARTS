@@ -1,13 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Charm:wght@400;700&family=Delius&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Kode+Mono:wght@400..700&family=Lexend+Deca:wght@100..900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap");
+
 :root {
-  --header-footer-color: rgba(153, 162, 186, .7);
+  --header-footer-color: rgba(153, 162, 186, 0.7);
   --nav-hover-color: rgb(255, 255, 255);
   --font-color: rgb(0, 0, 0);
-  --background-color: rgb(139, 152, 143);
+  --background: url(../assets/images/pixel-background.png);
   --button-color: rgb(169, 197, 208);
-  --default-font: "Helvetica Neue", Geneva, Tahoma, sans-serif;
+  --default-font: "Press Start 2p", "Helvetica Neue", Geneva, Tahoma, sans-serif;
 }
 * {
-  font-size: 2.48vw;
   font-weight: 500;
   font-family: var(--default-font);
   margin: 0px;
@@ -17,7 +18,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: var(--background-color);
+  background: var(--background);
   color: var(--font-color);
   overflow-x: hidden;
 }
@@ -28,12 +29,13 @@ header {
   align-items: center;
   justify-content: space-around;
   height: 100px;
-  background: 
-    linear-gradient(var(--header-footer-color) 82%,
-    rgba(140, 139, 139, 0));
+  background: linear-gradient(
+    var(--header-footer-color) 2%,
+    rgba(140, 139, 139, 0)
+  );
 }
 header * {
-  font-size: 20px;
+  font-size: 15px;
 }
 header a {
   min-width: 90px;
@@ -45,7 +47,9 @@ header a {
   min-width: fit-content;
 }
 
-.title-text, .title-text:hover, .title-text:active {
+.title-text,
+.title-text:hover,
+.title-text:active {
   color: var(--font-color);
   cursor: pointer;
 }
@@ -55,7 +59,7 @@ header a {
   width: 80px;
   align-self: center;
   border-radius: 50%;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 .fa-logo:hover {
   box-shadow: 0 0 10px 1px var(--nav-hover-color);
@@ -68,7 +72,8 @@ header a {
 .fa {
   font-weight: bold;
   font-style: italic;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 /* Site Navigation */
@@ -107,7 +112,8 @@ header a {
 .nav-item span {
   font-style: italic;
 }
-.nav-item:link, .nav-item:visited {
+.nav-item:link,
+.nav-item:visited {
   color: var(--font-color);
   text-decoration: none;
 }
@@ -162,18 +168,18 @@ header a {
   height: 25px;
   margin: 0;
   margin-right: 10px;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 .socials-container a img:hover {
   scale: 1.25;
   background-color: rgba(255, 255, 255, 0.147);
-  box-shadow: 0 0 5px .3px rgba(255, 255, 255, 0.147);
+  box-shadow: 0 0 5px 0.3px rgba(255, 255, 255, 0.147);
   border-radius: 50%;
 }
 
 /* Page Section */
 main {
-  font-size: 1em;
+  font-size: 1rem;
   margin: 0 auto;
   height: fit-content;
   min-height: calc(100vh - 200px);
@@ -188,15 +194,15 @@ section {
   margin: 20px 0px;
 }
 h1 {
-  font-size: 5vw;
+  font-size: 2rem;
   font-weight: bold;
 }
 .page-heading {
-  font-size: 5vw;
+  font-size: 2rem;
   overflow: hidden;
 }
 .page-subheading {
-  font-size: 4vw;
+  font-size: 1.5rem;
 }
 .italic {
   font-style: italic;
@@ -213,7 +219,7 @@ h1 {
   padding: 5px;
 }
 .button-section * {
-  font-size: 1.8vw;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 .button-section span {
@@ -229,18 +235,18 @@ button {
   border-radius: 15px;
   height: 60px;
   width: 35vw;
-  font-size: large;
   font-weight: 700;
   color: var(--font-color);
   margin: 5px 10px;
-  transition: scale .3s;
+  transition: scale 0.3s;
   border: 1px solid rgb(24, 24, 72);
 }
 button:hover {
   position: relative;
   scale: 1.05;
 }
-button:disabled, button:disabled:hover {
+button:disabled,
+button:disabled:hover {
   background: grey;
   cursor: default;
   scale: 1;
@@ -260,7 +266,10 @@ footer {
   display: grid;
   grid-template-columns: 1fr 300px 1fr;
   height: 100px;
-  background: linear-gradient(rgba(143, 143, 143, 0.035), var(--header-footer-color) 30%);
+  background: linear-gradient(
+    rgba(143, 143, 143, 0.035),
+    var(--header-footer-color) 98%
+  );
   margin-bottom: 0px;
 }
 .copyright-container {
@@ -269,10 +278,11 @@ footer {
   align-items: center;
   justify-content: center;
 }
-.copyright, .copyright span {
+.copyright,
+.copyright span {
   background-color: transparent;
   color: var(--font-color);
-  font-size: large;
+  font-size: medium;
   text-align: center;
 }
 .copyright .fa {
@@ -281,7 +291,7 @@ footer {
 }
 .contact {
   color: var(--font-color);
-  font-size: large;
+  font-size: medium;
   text-align: center;
 }
 .contact span {
@@ -307,13 +317,13 @@ footer {
 
 @media only screen and (max-width: 600px) {
   * {
-    font-size: 15px;
+    font-size: 10px;
   }
   header {
     justify-content: space-between;
   }
   h1 {
-    font-size: 30px;
+    font-size: 20px;
   }
   .nav-container {
     display: none;
@@ -342,7 +352,7 @@ footer {
     opacity: 0;
   }
   .small-page-nav-list * {
-    font-size: 18px;
+    font-size: 12px;
     margin: 0px;
     padding-top: 3px;
     scale: 1;
@@ -384,10 +394,10 @@ footer {
     width: 100%;
   }
   .page-heading {
-    font-size: 30px;
+    font-size: 20px;
   }
   .page-subheading {
-    font-size: 25px;
+    font-size: 15px;
   }
   .button-section {
     width: fit-content;
@@ -395,7 +405,7 @@ footer {
     margin: auto;
   }
   .button-section * {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
   }
   .copyright span {
@@ -407,23 +417,22 @@ footer {
   .chevron {
     width: 8px;
   }
-}  
+}
 
 @media only screen and (min-width: 1000px) {
   * {
-    font-size: 25px;
+    font-size: 15px;
   }
   .page-heading {
-    font-size: 50px;
+    font-size: 30px;
   }
   .page-subheading {
-    font-size: 40px;
+    font-size: 25px;
   }
   .button-section * {
-    font-size: large;
+    font-size: medium;
   }
   .chevron {
     width: 12px;
   }
 }
-
