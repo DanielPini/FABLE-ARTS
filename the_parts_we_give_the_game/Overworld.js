@@ -653,8 +653,6 @@ class Overworld {
           // playerState.storyFlags.SEEN_INTRO = true;
           // Start the map and game loop
 
-          window.playerState.character = "sister";
-
           this.startMap(this.progress.mapId, window.playerState.character);
           this.bindActionInput();
           this.bindHeroPositionCheck();
