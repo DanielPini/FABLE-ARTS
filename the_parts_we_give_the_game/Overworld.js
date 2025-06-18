@@ -305,11 +305,22 @@ class Overworld {
         .startCutscene([
           { type: "chop", who: "hero", direction: "right", time: 2200 },
           { type: "stand", direction: "left", who: "Mum" },
+          { type: "walk", direction: "up", who: "Didi" },
+          { type: "walk", direction: "up", who: "Didi" },
+          { type: "walk", direction: "up", who: "Didi" },
+          { type: "walk", direction: "up", who: "Didi" },
+          { type: "walk", direction: "up", who: "Mum" },
+          { type: "walk", direction: "up", who: "Mum" },
+          { type: "walk", direction: "up", who: "Mum" },
+          { type: "walk", direction: "up", who: "Mum" },
+          { type: "walk", direction: "up", who: "Mum" },
+          { type: "stand", direction: "left", who: "Mum" },
           {
             type: "textMessage",
             who: "Mum",
             text: "Here, try this Didi!",
           },
+          { type: "stand", direction: "right", who: "Didi" },
           {
             type: "textMessage",
             who: "Didi",
@@ -327,16 +338,26 @@ class Overworld {
           {
             type: "walk",
             who: "Didi",
-            direction: "left",
+            direction: "down",
           },
           {
             type: "walk",
             who: "Didi",
-            direction: "left",
+            direction: "down",
           },
           {
             type: "walk",
             who: "Didi",
+            direction: "down",
+          },
+          {
+            type: "walk",
+            who: "Didi",
+            direction: "down",
+          },
+          {
+            type: "stand",
+            who: "Mum",
             direction: "left",
           },
           {
@@ -349,21 +370,7 @@ class Overworld {
             who: "Mum",
             direction: "up",
           },
-          {
-            type: "walk",
-            who: "Mum",
-            direction: "up",
-          },
-          {
-            type: "walk",
-            who: "Mum",
-            direction: "up",
-          },
-          {
-            type: "walk",
-            who: "Mum",
-            direction: "up",
-          },
+
           {
             type: "walk",
             who: "Mum",
