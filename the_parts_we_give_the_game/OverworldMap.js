@@ -2623,7 +2623,7 @@ function getCutsceneSpacesForHome(character) {
           {
             who: "Didi",
             type: "textMessage",
-            text: "... 3 minutes down from 112 ? How?? ( • ᴖ • ｡)",
+            text: "... 3 minutes down from 1 hour and 12? How?? ( • ᴖ • ｡)",
           },
           { type: "stand", direction: "up", who: "Jiejie" },
           {
