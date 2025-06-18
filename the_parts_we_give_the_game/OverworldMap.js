@@ -2189,25 +2189,34 @@ function getConfigObjectsForHome(character) {
             { type: "walk", direction: "down", who: "hero" },
             {
               type: "textMessage",
-              text: "Inside, the walls don't move.",
+              text: "Once upon a time, this home was a playground.",
               who: "Didi",
             },
+            { type: "walk", direction: "down", who: "hero" },
+            { type: "stand", direction: "right", who: "hero" },
             {
               who: "Didi",
               type: "textMessage",
-              text: "So I turn them into something else.",
+              text: "Where footsteps turn into a chase.",
             },
+            { type: "stand", direction: "up", who: "hero" },
             {
               who: "Didi",
               type: "textMessage",
-              text: "A fort. A maze. A game.",
+              text: "Where walls don't mean stop.",
             },
+            { type: "stand", direction: "right", who: "hero" },
             {
               who: "Didi",
               type: "textMessage",
-              text: "Until someone calls my name,",
+              text: "Where Yu-Gi-Oh cards slap the ground,",
             },
-            { who: "Didi", type: "textMessage", text: "and the spell breaks." },
+            { type: "stand", direction: "down", who: "hero" },
+            {
+              who: "Didi",
+              type: "textMessage",
+              text: "That was long ago,",
+            },
             { type: "stand", direction: "down", who: "Baba" },
             {
               who: "Baba",
@@ -2617,7 +2626,7 @@ function getCutsceneSpacesForHome(character) {
           {
             who: "Didi",
             type: "textMessage",
-            text: "... 3 minutes down from 112? How?? ( • ᴖ • ｡)",
+            text: "... 3 minutes down from 112 ? How?? ( • ᴖ • ｡)",
           },
           { type: "stand", direction: "up", who: "Jiejie" },
           {
