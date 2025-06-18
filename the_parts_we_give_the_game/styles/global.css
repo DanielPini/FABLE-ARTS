@@ -22,10 +22,20 @@ body {
   overflow: hidden;
   font-family: "Press Start 2P", "Charm", "Ribeye", cursive;
 }
+.back-to-fa {
+  padding: 10px;
+  position: absolute;
+  top: -690px;
+  left: -5px;
+  background: #333;
+  color: white;
+  font-family: "Press Start 2p";
+}
 .how-to-play {
   position: relative;
-  width: 100%;
+  width: 1056px;
   top: 540px;
+  margin: 0 auto;
   left: 0;
   text-align: center;
   font-size: 12px;

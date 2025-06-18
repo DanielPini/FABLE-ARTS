@@ -114,7 +114,10 @@ main {
 .season-info {
   width: 80vw;
   margin: 8vh 20px;
-  flex-flow: row nowrap;
+  flex-flow: column;
+}
+.season-description {
+  width: 80vw;
 }
 .season-title {
   font-style: italic;
@@ -128,6 +131,15 @@ main {
 }
 .pixel-figures {
   width: 80px;
+}
+.tpwg-link {
+  background-color: #333;
+  color: white;
+  margin: 20px auto;
+  height: unset;
+  width: unset;
+  padding: 15px;
+  border-radius: 0;
 }
 .reflection-season {
   display: block;
@@ -235,7 +247,6 @@ main {
   .season-info {
     width: 80vw;
     margin: 0vh 20px;
-    flex-flow: row nowrap;
   }
   .season-title {
     font-style: italic;
