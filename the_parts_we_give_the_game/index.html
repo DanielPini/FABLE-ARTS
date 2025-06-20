@@ -223,5 +223,42 @@
     <script src="Battle/BattleAnimations.js"></script>
 
     <script src="init.js"></script>
+    <script>
+      const gameContainer = document.querySelector(".game-container");
+      const mobileWarningModal = () => {
+        const container = document.createElement("div");
+        container.classList.add("mobileModal");
+
+        const title = document.createElement("h2");
+        title.classList.add("mobileModalTitle");
+
+        const para = document.createElement("p");
+        para.classList.add("mobileModalPara");
+
+        title.innerText = "Warning:";
+        para.innerText =
+          "'The Parts We Give, the Game' is optimised for desktop and may not work as intended on mobile devices.";
+
+        const button = document.createElement("button");
+        button.classList.add("mobileModalAckButton");
+
+        button.innerText = "Go on anyway";
+
+        container.append(title, para, button);
+        gameContainer.append(container);
+
+        button.addEventListener("click", () => {
+          button.parentElement.remove();
+          // button.parent.parent.removeChild();
+        });
+      };
+
+      function isMobile() {
+        return /Android|iPhone|iPad/i.test(navigator.userAgent);
+      }
+      if (isMobile()) {
+        mobileWarningModal();
+      }
+    </script>
   </body>
 </html>

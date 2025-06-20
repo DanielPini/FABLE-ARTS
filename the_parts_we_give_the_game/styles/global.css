@@ -97,3 +97,33 @@ body {
   height: 198px; /* 198 * 3 */
   image-rendering: pixelated; /* optional, for crisp pixels */
 }
+.mobileModal {
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  margin: 0;
+  padding: 8px;
+  top: 30%;
+  left: 50%;
+  translate: -50% -50%;
+  background: var(--dialog-background);
+  font-family: "Press Start 2p";
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  align-items: center;
+}
+.mobileModalTitle {
+  font-size: 12px;
+  text-align: center;
+  padding: 4px;
+}
+.mobileModalPara {
+  font-size: 5px;
+  text-align: center;
+}
+.mobileModalAckButton {
+  margin: 4px;
+  width: 50%;
+  font-family: inherit;
+  font-size: 5px;
+}
