@@ -64,6 +64,9 @@ body {
 .credits a {
   color: inherit;
 }
+.credits ul {
+  text-align: left;
+}
 
 .game-container {
   position: relative;

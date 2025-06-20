@@ -716,7 +716,6 @@ const QUESTS = {
                 ],
               },
               {
-                // despawnNPCs: [ "Mum" ],
                 text: "Give him some slack. He has been working hard too, even if you can't see it.",
                 responses: [
                   {
