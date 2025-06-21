@@ -62,8 +62,11 @@ class EndGameMessage {
     if (this.element && this.element.parentNode) {
       this.element.parentNode.removeChild(this.element);
     }
-    if (this.overworld) {
-      this.overworld.showTitleScreen();
+    // if (this.overworld) {
+    //   this.overworld.showTitleScreen();
+    // }
+    if (window.overworld) {
+      window.overworld.restartGameToTitle();
     }
     if (this.onComplete) this.onComplete();
   }

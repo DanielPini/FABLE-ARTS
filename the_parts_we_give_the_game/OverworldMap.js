@@ -1825,7 +1825,7 @@ function getConfigObjectsForHome(character) {
         },
       ],
     },
-    Mum: {
+    Mama: {
       type: "Person",
       x: utils.withGrid(19),
       y: utils.withGrid(18),
@@ -1848,7 +1848,7 @@ function getConfigObjectsForHome(character) {
                 "Oh, you forgot to pack your own fruit",
                 "You didn't finish lunch yesterday. You gotta eat more food.",
               ],
-              faceHero: "Mum",
+              faceHero: "Mama",
             },
           ],
         },
@@ -1971,7 +1971,7 @@ function getConfigObjectsForHome(character) {
                   text: "EZ moneyyyyyyy.",
                 },
                 {
-                  who: "Mum",
+                  who: "Mama",
                   type: "textMessage",
                   text: "Here. Come get the snack I made you as a reward.",
                 },
@@ -2033,9 +2033,9 @@ function getConfigObjectsForHome(character) {
         },
       ],
     },
-    Mum: {
+    Mama: {
       type: "Person",
-      name: "Mum",
+      name: "Mama",
       x: utils.withGrid(18),
       y: utils.withGrid(17),
       src: "./images/characters/people/Mum.png",
@@ -2050,14 +2050,14 @@ function getConfigObjectsForHome(character) {
           disqualify: ["PLATES_DELIVERED"],
           events: [
             {
-              who: "Mum",
+              who: "Mama",
               type: "randomTextMessage",
               options: [
                 "Such a good boy.",
                 "Have you finished your homework?",
                 "* Sigh * You know when your sister was your age, she got straight 'A's",
               ],
-              faceHero: "Mum",
+              faceHero: "Mama",
             },
           ],
         },
@@ -2065,10 +2065,10 @@ function getConfigObjectsForHome(character) {
           required: ["PLATES_DELIVERED"],
           events: [
             {
-              who: "Mum",
+              who: "Mama",
               type: "textMessage",
               text: "Here, try this. I made a snack just for you!",
-              faceHero: "Mum",
+              faceHero: "Mama",
             },
           ],
         },
@@ -2537,39 +2537,39 @@ function getCutsceneSpacesForHome(character) {
         disqualify: ["SEEN_INTRO"],
         events: [
           { type: "addStoryFlag", flag: "SEEN_INTRO" },
-          { type: "walk", who: "Mum", direction: "up" },
-          { type: "walk", who: "Mum", direction: "up" },
-          { type: "walk", who: "Mum", direction: "up" },
-          { type: "walk", who: "Mum", direction: "up" },
+          { type: "walk", who: "Mama", direction: "up" },
+          { type: "walk", who: "Mama", direction: "up" },
+          { type: "walk", who: "Mama", direction: "up" },
+          { type: "walk", who: "Mama", direction: "up" },
           {
-            who: "Mum",
+            who: "Mama",
             type: "textMessage",
             text: "Guests are arriving!",
-            faceHero: "Mum",
+            faceHero: "Mama",
           },
           {
-            who: "Mum",
+            who: "Mama",
             type: "textMessage",
             text: "We have exactly 1 hour and 12 minutes to get ready and if we round that down...!",
-            faceHero: "Mum",
+            faceHero: "Mama",
           },
           {
-            who: "Mum",
+            who: "Mama",
             type: "textMessage",
             text: "We really only have 1 hour, which means 60 minutes, which is really 45 minutes if we think about plating...",
-            faceHero: "Mum",
+            faceHero: "Mama",
           },
           {
-            who: "Mum",
+            who: "Mama",
             type: "textMessage",
             text: "... and also in case they get lost on the way here which is really 30 minutes because we need to tidy up the house...",
-            faceHero: "Mum",
+            faceHero: "Mama",
           },
           {
-            who: "Mum",
+            who: "Mama",
             type: "textMessage",
             text: "... WHICH IS NOT ENOUGH TIME!!!",
-            faceHero: "Mum",
+            faceHero: "Mama",
           },
           {
             who: "Didi",
@@ -2582,10 +2582,10 @@ function getCutsceneSpacesForHome(character) {
             text: "How the heck did we get from 1 hour and 12 minutes down to 30 minutes...",
           },
           {
-            who: "Mum",
+            who: "Mama",
             type: "textMessage",
             text: "And no one helps me around the house anymore. I have to do EVERYTHING.",
-            faceHero: "Mum",
+            faceHero: "Mama",
           },
           {
             who: "Didi",
@@ -2593,10 +2593,10 @@ function getCutsceneSpacesForHome(character) {
             text: "I can set up the table-",
           },
           {
-            who: "Mum",
+            who: "Mama",
             type: "textMessage",
             text: "But you never do it right. Ayaaaaaa just forget, I'll do it.",
-            faceHero: "Mum",
+            faceHero: "Mama",
           },
           { type: "walk", who: "Jiejie", direction: "up" },
           { type: "walk", who: "Jiejie", direction: "up" },
@@ -2608,17 +2608,17 @@ function getCutsceneSpacesForHome(character) {
             faceHero: "Jiejie",
           },
           { type: "stand", direction: "left", who: "Jiejie" },
-          { type: "stand", direction: "right", who: "Mum" },
+          { type: "stand", direction: "right", who: "Mama" },
           {
             who: "Jiejie",
             type: "textMessage",
             text: "Trust me. Just let Didi do it. It'll be good for him to know how to.",
           },
           {
-            who: "Mum",
+            who: "Mama",
             type: "textMessage",
             text: "But if he doesn't do it right, I'll have to redo it -- and we only have 3 minutes!",
-            faceHero: "Mum",
+            faceHero: "Mama",
           },
           {
             who: "Didi",
@@ -2629,32 +2629,32 @@ function getCutsceneSpacesForHome(character) {
           {
             who: "Jiejie",
             type: "textMessage",
-            text: "Mum, you concentrate on getting the house ready, I'll make sure Didi gets it done",
+            text: "Mama, you concentrate on getting the house ready, I'll make sure Didi gets it done",
           },
           {
-            who: "Mum",
+            who: "Mama",
             type: "stand",
             direction: "right",
           },
           {
-            who: "Mum",
+            who: "Mama",
             type: "stand",
             direction: "down",
           },
           {
-            who: "Mum",
+            who: "Mama",
             type: "stand",
             direction: "right",
           },
           {
-            who: "Mum",
+            who: "Mama",
             type: "textMessage",
             text: "I'll count on you this time. But let me know if he breaks anything!! (¬_¬\")",
           },
-          { type: "walk", who: "Mum", direction: "down" },
-          { type: "walk", who: "Mum", direction: "down" },
-          { type: "walk", who: "Mum", direction: "down" },
-          { type: "walk", who: "Mum", direction: "down" },
+          { type: "walk", who: "Mama", direction: "down" },
+          { type: "walk", who: "Mama", direction: "down" },
+          { type: "walk", who: "Mama", direction: "down" },
+          { type: "walk", who: "Mama", direction: "down" },
           {
             who: "Jiejie",
             type: "textMessage",
@@ -2818,7 +2818,7 @@ function getConfigObjectsForHomeMediation(character) {
         },
       ],
     },
-    // Mum: {
+    // Mama: {
     //   type: "Person",
     //   x: utils.withGrid(19),
     //   y: utils.withGrid(16),
@@ -2834,7 +2834,7 @@ function getConfigObjectsForHomeMediation(character) {
     //             "Oh, you forgot to pack your own fruit",
     //             "You didn't finish lunch yesterday. You gotta eat more food.",
     //           ],
-    //           faceHero: "Mum",
+    //           faceHero: "Mama",
     //         },
     //       ],
     //     },
@@ -2951,7 +2951,7 @@ function getConfigObjectsForHomeMediation(character) {
   //                 text: "EZ moneyyyyyyy.",
   //               },
   //               {
-  //                 who: "Mum",
+  //                 who: "Mama",
   //                 type: "textMessage",
   //                 text: "Here. Come get the snack I made you as a reward.",
   //               },
@@ -3013,12 +3013,12 @@ function getConfigObjectsForHomeMediation(character) {
   //       },
   //     ],
   //   },
-  //   Mum: {
+  //   Mama: {
   //     type: "Person",
-  //     name: "Mum",
+  //     name: "Mama",
   //     x: utils.withGrid(18),
   //     y: utils.withGrid(17),
-  //     src: "./images/characters/people/Mum.png",
+  //     src: "./images/characters/people/Mmum.png",
   //     behaviorLoop: [
   //       { type: "stand", direction: "left", time: 1200 },
   //       { type: "stand", direction: "right", time: 2800 },
@@ -3030,14 +3030,14 @@ function getConfigObjectsForHomeMediation(character) {
   //         disqualify: ["PLATES_DELIVERED"],
   //         events: [
   //           {
-  //             who: "Mum",
+  //             who: "Mama",
   //             type: "randomTextMessage",
   //             options: [
   //               "Such a good boy.",
   //               "Have you finished your homework?",
   //               "* Sigh * You know when your sister was your age, she got straight 'A's",
   //             ],
-  //             faceHero: "Mum",
+  //             faceHero: "Mama",
   //           },
   //         ],
   //       },
@@ -3045,10 +3045,10 @@ function getConfigObjectsForHomeMediation(character) {
   //         required: ["PLATES_DELIVERED"],
   //         events: [
   //           {
-  //             who: "Mum",
+  //             who: "Mama",
   //             type: "textMessage",
   //             text: "Here, try this. I made a snack just for you!",
-  //             faceHero: "Mum",
+  //             faceHero: "Mama",
   //           },
   //         ],
   //       },

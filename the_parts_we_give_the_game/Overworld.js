@@ -304,20 +304,20 @@ class Overworld {
       this.map
         .startCutscene([
           { type: "chop", who: "hero", direction: "right", time: 2200 },
-          { type: "stand", direction: "left", who: "Mum" },
+          { type: "stand", direction: "left", who: "Mama" },
           { type: "walk", direction: "up", who: "Didi" },
           { type: "walk", direction: "up", who: "Didi" },
           { type: "walk", direction: "up", who: "Didi" },
           { type: "walk", direction: "up", who: "Didi" },
-          { type: "walk", direction: "up", who: "Mum" },
-          { type: "walk", direction: "up", who: "Mum" },
-          { type: "walk", direction: "up", who: "Mum" },
-          { type: "walk", direction: "up", who: "Mum" },
-          { type: "walk", direction: "up", who: "Mum" },
-          { type: "stand", direction: "left", who: "Mum" },
+          { type: "walk", direction: "up", who: "Mama" },
+          { type: "walk", direction: "up", who: "Mama" },
+          { type: "walk", direction: "up", who: "Mama" },
+          { type: "walk", direction: "up", who: "Mama" },
+          { type: "walk", direction: "up", who: "Mama" },
+          { type: "stand", direction: "left", who: "Mama" },
           {
             type: "textMessage",
-            who: "Mum",
+            who: "Mama",
             text: "Here, try this Didi!",
           },
           { type: "stand", direction: "right", who: "Didi" },
@@ -327,7 +327,7 @@ class Overworld {
             text: "Yum!!!",
           },
           { type: "stand", direction: "down", who: "hero" },
-          { type: "stand", direction: "down", who: "Mum" },
+          { type: "stand", direction: "down", who: "Mama" },
           { type: "chop", who: "hero", direction: "right", time: 2200 },
           { type: "stand", direction: "down", who: "hero" },
           {
@@ -357,33 +357,33 @@ class Overworld {
           },
           {
             type: "stand",
-            who: "Mum",
+            who: "Mama",
             direction: "left",
           },
           {
             type: "walk",
-            who: "Mum",
+            who: "Mama",
             direction: "up",
           },
           {
             type: "walk",
-            who: "Mum",
+            who: "Mama",
             direction: "up",
           },
 
           {
             type: "walk",
-            who: "Mum",
+            who: "Mama",
             direction: "up",
           },
           {
             type: "stand",
-            who: "Mum",
+            who: "Mama",
             direction: "right",
           },
           {
             type: "textMessage",
-            who: "Mum",
+            who: "Mama",
             text: "Because he is a growing boy.",
           },
           {
@@ -393,22 +393,22 @@ class Overworld {
           },
           {
             type: "stand",
-            who: "Mum",
+            who: "Mama",
             direction: "down",
           },
           {
             type: "textMessage",
-            who: "Mum",
+            who: "Mama",
             text: "Plus, we ladies have to watch our figures.",
           },
           {
             type: "textMessage",
-            who: "Mum",
+            who: "Mama",
             text: "I'm getting pun (fat) the older I get",
           },
           {
             type: "stand",
-            who: "Mum",
+            who: "Mama",
             direction: "right",
           },
           {
@@ -424,57 +424,57 @@ class Overworld {
           { type: "chop", who: "hero", direction: "right", time: 2200 },
           {
             type: "textMessage",
-            who: "Mum",
+            who: "Mama",
             text: "I have my hands full, can you cut up some fruit for the guests and pack some for Didi's Fruito tomorrow?",
           },
           {
             type: "walk",
-            who: "Mum",
+            who: "Mama",
             direction: "down",
           },
           {
             type: "walk",
-            who: "Mum",
+            who: "Mama",
             direction: "down",
           },
           {
             type: "stand",
-            who: "Mum",
+            who: "Mama",
             direction: "right",
           },
           {
             type: "stand",
-            who: "Mum",
+            who: "Mama",
             direction: "up",
           },
           {
             type: "walk",
-            who: "Mum",
+            who: "Mama",
             direction: "down",
           },
           {
             type: "walk",
-            who: "Mum",
+            who: "Mama",
             direction: "down",
           },
           {
             type: "walk",
-            who: "Mum",
+            who: "Mama",
             direction: "down",
           },
           {
             type: "walk",
-            who: "Mum",
+            who: "Mama",
             direction: "down",
           },
           {
             type: "walk",
-            who: "Mum",
+            who: "Mama",
             direction: "down",
           },
           {
             type: "walk",
-            who: "Mum",
+            who: "Mama",
             direction: "down",
           },
           { type: "chop", who: "hero", direction: "right", time: 3000 },
@@ -622,6 +622,40 @@ class Overworld {
         }
         this.startGameLoop();
       });
+  }
+
+  restartGameToTitle() {
+    // --- 1. Reset playerState ---
+    window.playerState = {
+      character: "brother",
+      inventory: [],
+      storyFlags: {},
+      pickedUpQuestObjects: [],
+      sisterUnlocked: false,
+      // Add any other fields you use in playerState here
+    };
+
+    // --- 2. Reset Overworld progress ---
+    if (this.progress) {
+      this.progress.mapId = "Home";
+      this.progress.startingHeroX = utils.withGrid(20);
+      this.progress.startingHeroY = utils.withGrid(10);
+      this.progress.startingHeroDirection = "down";
+      // If you have a .save() method, you may want to clear it here
+      // this.progress.save(); // Optional: clear save file
+    }
+
+    // --- 3. Stop any music ---
+    if (window.currentMusic) {
+      window.currentMusic.stop();
+      window.currentMusic = null;
+      window.lastMusicSrc = null;
+    }
+
+    localStorage.removeItem("FABLE-ARTS-saveFile");
+
+    // --- 4. Show the title screen (will trigger intro cutscene on new game) ---
+    this.showTitleScreen();
   }
 
   async init() {

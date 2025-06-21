@@ -472,7 +472,7 @@ const QUESTS = {
       },
       {
         name: "Jiejie",
-        text: "Mum is so beautiful, if she thinks she’s fat, what does that mean for me? Do I even have a chance?",
+        text: "Mama is so beautiful, if she thinks she’s fat, what does that mean for me? Do I even have a chance?",
       },
       {
         name: "Jiejie",
@@ -484,7 +484,7 @@ const QUESTS = {
       },
       {
         name: "Jiejie",
-        text: "No... Mum was really stressed... We need to lay down some rules in this house. But the look on his face...",
+        text: "No... Mama was really stressed... We need to lay down some rules in this house. But the look on his face...",
       },
     ],
     onStart(overworld) {
@@ -550,7 +550,7 @@ const QUESTS = {
               },
               {
                 type: "textMessage",
-                text: "Mum and Baba have lost it over the stress of the guests.",
+                text: "Mama and Baba have lost it over the stress of the guests.",
                 who: "Jiejie",
               },
               {
@@ -561,12 +561,12 @@ const QUESTS = {
               {
                 type: "textMessage",
                 text: "How can you just stand here and complain when I'm spending all day putting the house in order.",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "textMessage",
                 text: "Do you want to embarrass us?!",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "textMessage",
@@ -578,7 +578,7 @@ const QUESTS = {
           {
             spawnNPCs: [
               {
-                id: "Mum",
+                id: "Mama",
                 type: "Person",
                 x: utils.withGrid(5),
                 y: utils.withGrid(5),
@@ -595,7 +595,7 @@ const QUESTS = {
               },
             ],
             npcPositions: {
-              Mum: {
+              Mama: {
                 x: utils.withGrid(5),
                 y: utils.withGrid(5),
               },
@@ -620,18 +620,18 @@ const QUESTS = {
               {
                 type: "stand",
                 direction: "left",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "textMessage",
                 text: "What I see is you watching me work while you and the kids relax!",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "stand",
                 direction: "down",
                 time: 200,
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "walk",
@@ -651,12 +651,12 @@ const QUESTS = {
               {
                 type: "stand",
                 direction: "right",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "textMessage",
                 text: "Jiejie, set your dad straight.",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "stand",
@@ -681,7 +681,7 @@ const QUESTS = {
               {
                 type: "stand",
                 direction: "left",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "stand",
@@ -691,11 +691,11 @@ const QUESTS = {
             ],
             choices: [
               {
-                text: "Mum is right, she works so hard. You should apologise Baba!",
+                text: "Mama is right, she works so hard. You should apologise Baba!",
                 responses: [
                   {
                     text: "Thank you for seeing my hard work. I thought it went unnoticed.",
-                    name: "Mum",
+                    name: "Mama",
                   },
                   {
                     text: "You really think I don't see all you do?",
@@ -720,7 +720,7 @@ const QUESTS = {
                 responses: [
                   {
                     text: "I suppose you're right. I'm just so worked up about our guests and I don't want to embarrass ourselves in front of them.",
-                    name: "Mum",
+                    name: "Mama",
                   },
                   {
                     text: "Let's work together and it will get done in no time.",
@@ -734,7 +734,7 @@ const QUESTS = {
                   {
                     type: "textMessage",
                     text: "Thanks for that Jiejie",
-                    who: "Mum",
+                    who: "Mama",
                   },
                   {
                     type: "textMessage",
@@ -746,13 +746,13 @@ const QUESTS = {
               {
                 text: "You're both right. It's a disaster. Panic!!!!!",
                 responses: [
-                  { text: "Aaaaaah!", name: "Mum" },
+                  { text: "Aaaaaah!", name: "Mama" },
                   { text: "Aaaaaah!", name: "Baba" },
                   { text: "Aaaaaah!", name: "Jiejie" },
-                  { text: "Aaaaaah!", name: "Mum" },
+                  { text: "Aaaaaah!", name: "Mama" },
                   { text: "Aaaaaah!", name: "Baba" },
-                  { text: "Hmm!", name: "Mum" },
-                  { text: "Maybe we can get back to work now?", name: "Mum" },
+                  { text: "Hmm!", name: "Mama" },
+                  { text: "Maybe we can get back to work now?", name: "Mama" },
                   { text: "...", name: "Jiejie" },
                   { text: "...", name: "Baba" },
                 ],
@@ -842,7 +842,7 @@ const QUESTS = {
               },
               {
                 type: "textMessage",
-                text: "Mum and Baba are occupied...",
+                text: "Mama and Baba are occupied...",
                 who: "Jiejie",
               },
               {
@@ -905,15 +905,15 @@ const QUESTS = {
                 responses: [
                   {
                     text: "I heard that!",
-                    name: "Mum",
+                    name: "Mama",
                   },
                   {
                     text: "Don't waste food!",
-                    name: "Mum",
+                    name: "Mama",
                   },
                   {
                     text: "No takeout. Home cooking is better. Make it work.",
-                    name: "Mum",
+                    name: "Mama",
                   },
                   {
                     text: "* Sigh *",
@@ -925,7 +925,7 @@ const QUESTS = {
                   },
                   {
                     text: "And go check on Didi. He needs you to be a good influence, especially when we have guests coming over.",
-                    name: "Mum",
+                    name: "Mama",
                   },
                   {
                     text: "* Sigh *",
@@ -1035,7 +1035,7 @@ const QUESTS = {
                 responses: [
                   { text: "You need to be strong, Didi.", name: "Jiejie" },
                   {
-                    text: "Mum and Baba need us, especially with the guests coming over.",
+                    text: "Mama and Baba need us, especially with the guests coming over.",
                     name: "Jiejie",
                   },
                   { text: "I guess...", name: "Didi" },
@@ -1043,7 +1043,7 @@ const QUESTS = {
                     text: "I was hoping for a bit of space, but I can try harder Jiejie.",
                     name: "Didi",
                   },
-                  { text: "For Mum and Baba. And for you.", name: "Didi" },
+                  { text: "For Mama and Baba. And for you.", name: "Didi" },
                 ],
               },
             ],
@@ -1051,7 +1051,7 @@ const QUESTS = {
               {
                 type: "textMessage",
                 text: "Kids, hurry up to the table. Our guests are here.",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "textMessage",
@@ -1144,7 +1144,7 @@ const QUESTS = {
             location: { x: utils.withGrid(9), y: utils.withGrid(11) },
             spawnNPCs: [
               {
-                id: "Mum",
+                id: "Mama",
                 type: "Person",
                 x: utils.withGrid(12), // 6, 13, but meeting before the table
                 y: utils.withGrid(17),
@@ -1196,7 +1196,7 @@ const QUESTS = {
               { type: "sit", direction: "down", who: "NPC2" },
               { type: "sit", direction: "left", who: "Baba" },
               { type: "sit", direction: "up", who: "Didi" },
-              { type: "textMessage", text: "Kids! Right on time", who: "Mum" },
+              { type: "textMessage", text: "Kids! Right on time", who: "Mama" },
               {
                 type: "walk",
                 direction: "left",
@@ -1245,7 +1245,7 @@ const QUESTS = {
               {
                 type: "textMessage",
                 text: "Meet our special guests!",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "walk",
@@ -1265,67 +1265,67 @@ const QUESTS = {
               {
                 type: "walk",
                 direction: "left",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "walk",
                 direction: "left",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "walk",
                 direction: "left",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "stand",
                 direction: "up",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "textMessage",
                 text: "We're so glad you could come and share this time with us!",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "walk",
                 direction: "left",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "walk",
                 direction: "left",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "walk",
                 direction: "left",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "walk",
                 direction: "up",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "walk",
                 direction: "up",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "walk",
                 direction: "up",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "walk",
                 direction: "up",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "sit",
                 direction: "right",
-                who: "Mum",
+                who: "Mama",
               },
               {
                 type: "walk",
@@ -1341,7 +1341,7 @@ const QUESTS = {
             dialogue: [
               {
                 text: "Dinner is ready, So let's all sit together and eat!",
-                name: "Mum",
+                name: "Mama",
               },
               { text: "Thank you for the meal!", name: "All" },
               { text: "And thank you for joining us.", name: "Baba" },
@@ -1349,7 +1349,7 @@ const QUESTS = {
                 text: "It has been a big day, but hopefully you learned a bit about each other's perspectives.",
                 name: "Baba",
               },
-              { text: "And ideally had some fun along the way.", name: "Mum" },
+              { text: "And ideally had some fun along the way.", name: "Mama" },
               {
                 text: "This game is just a taste of what is in store with Christine Pan's The Parts We Give, the song cycle.",
                 name: "Christine",
