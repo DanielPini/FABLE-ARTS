@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+*.code-workspace
+
+# Working files that belong outside the site
+*.zip
+*.docx
+*.afdesign
+*.afphoto
+*.HEIC
